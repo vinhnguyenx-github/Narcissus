@@ -1,10 +1,102 @@
 .admin-signup-login-form-container {
   position: absolute;
-  width: 50%;
+  width: 500px;
   border: solid 1px #e0e0e0;
   border-radius: 5px;
   background: #fff;
   align-items: center;
-  left: 30%;
-  top: 30%;
+  left: 31%;
+  margin-top: 100px;
+}
+
+.signup-login-header {
+  position: relative;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 6px 16px 0px 16px;
+}
+
+.signup-login-header button {
+  height: 100%;
+  width: 50%;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #010101;
+  color: #616161;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.signup-login-container {
+  display: block;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.form-row {
+  border-radius: 2px;
+  border: 1px solid #e5e7ea;
+  margin-bottom: 8px;
+  position: relative;
+  height: 60px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.signup-login-field {
+  width: 99%;
+  height: 60px;
+  border: 0px;
+  background: transparent;
+  box-sizing: border-box;
+  padding-left: 10px;
+  margin-left: 2px;
+}
+
+.signup-login-header button.button-disable {
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.login-signup-submit-button button {
+  background: #0f0f0f;
+  color: #fff;
+  border: none;
+  height: 50px;
+  width: 100%;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.login-signup-submit-button {
+  margin-top: 20px;
+}
+
+.login-signup-submit-button button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 1100px) {
+  .admin-signup-login-form-container {
+    left: 20%;
+  }
+}
+
+@media (max-width: 800px) {
+  .admin-signup-login-form-container {
+    left: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-signup-login-form-container {
+    position: static;
+  }
 }

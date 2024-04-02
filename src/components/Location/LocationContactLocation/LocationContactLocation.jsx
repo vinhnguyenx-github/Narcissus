@@ -36,15 +36,11 @@ const LocationContactLocation = () => {
   return (
     <div className="contact-location">
       <h2>Contact Us & Directions</h2>
-      <p>
-        Questions or comments? We want to help! Send us a message through our
-        online form or use our contact information below.
-      </p>
       <div className="contact-location-content">
         <div className="contact-location-content-col">
           <h3>How to Get to the Hotel</h3>
           <p className="contact-location-description">
-            Find your way to Sandman Hotel & Suites Abbotsford or click on View
+            Find your way to Narcissus Hotel & Apartment or click on View
             Directions below. We're looking forward to welcoming you.
           </p>
           <div className="contact-location-info">
