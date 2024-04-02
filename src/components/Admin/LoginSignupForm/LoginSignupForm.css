@@ -1,0 +1,10 @@
+.admin-signup-login-form-container {
+  position: absolute;
+  width: 50%;
+  border: solid 1px #e0e0e0;
+  border-radius: 5px;
+  background: #fff;
+  align-items: center;
+  left: 30%;
+  top: 30%;
+}

@@ -1,0 +1,52 @@
+.home-about {
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.home-about h3 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #606160;
+}
+
+.home-about h2 {
+  font-size: 35px;
+}
+
+.home-about p {
+  margin-bottom: 15px;
+  color: black;
+}
+
+.home-about-left {
+  flex-basis: 48%;
+}
+
+.home-about-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.home-about-right {
+  flex-basis: 48%;
+}
+
+/* --- media --- */
+
+@media (max-width: 800px) {
+  .home-about {
+    flex-direction: column;
+  }
+  .home-about-left {
+    flex-basis: 100%;
+    margin: 20px;
+    order: 2;
+  }
+
+  .about-right {
+    flex-basis: 100%;
+  }
+}

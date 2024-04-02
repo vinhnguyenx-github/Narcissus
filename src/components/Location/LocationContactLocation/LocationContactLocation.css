@@ -1,0 +1,67 @@
+.contact-location {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-location a {
+  font-size: 0.8rem;
+  color: red;
+}
+
+.contact-location h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 30px 0;
+}
+
+.contact-location p {
+  font-size: 0.8rem;
+}
+
+.contact-location-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 30px;
+}
+
+.contact-location-content-col {
+  flex-basis: 49%;
+}
+
+.contact-location-content-col h3 {
+  font-weight: 500;
+}
+
+.contact-location-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.contact-location-icon {
+  margin-right: 10px;
+  width: 20px;
+}
+
+.contact-information {
+  border-left: 1px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-location-description {
+  margin: 20px auto;
+}
+
+@media (max-width: 1200px) {
+  .contact-location-content {
+    flex-direction: column;
+  }
+  .contact-location-content-col {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,22 @@
+.location-page-title {
+  display: flex;
+  flex-direction: row;
+  margin-top: 35px;
+  text-align: center;
+  align-items: center;
+}
+
+.location-page-title p {
+  color: black;
+  font-size: 0.8rem;
+}
+
+.location-page-link {
+  color: black;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
+.location-page-link:hover {
+  text-decoration: underline;
+}
