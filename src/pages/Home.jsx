@@ -7,6 +7,7 @@ import HomeTitle from "../components/Home/HomeTitle/HomeTitle";
 import HomeLocations from "../components/Home/HomeLocations/HomeLocations";
 import HomeContact from "../components/Home/HomeContact/HomeContact";
 import Footer from "../components/Footer/Footer";
+import BubbleChat from "../components/BubbleChat/BubbleChat";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
           return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
         })}
       </HomeHero>
+      <BubbleChat />
       <div className="container">
         <HomeAbout />
         <HomeTitle

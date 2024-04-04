@@ -1,0 +1,38 @@
+.inputContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.inputBox {
+  padding-right: 30px; /* Adjust padding to accommodate the icon */
+}
+
+.arrowIcon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust right offset as needed */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+input.inputBox {
+  font-size: 22px;
+  padding: 5px 8px 4px 8px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.calendarWrap {
+  display: inline-block;
+  position: relative;
+}
+
+.calendarElement {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+  border: 1px solid #ccc;
+  z-index: 999;
+}

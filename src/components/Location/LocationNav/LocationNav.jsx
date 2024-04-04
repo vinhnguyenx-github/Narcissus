@@ -14,7 +14,7 @@ const LocationNav = () => {
       id: 1,
       name: "Location 1",
       path: "/33-tuc-mac",
-      aboutPath: "/33-tuc-mac/about",
+      galleryPath: "/33-tuc-mac/gallery",
       bookPath: "/33-tuc-mac/booking",
       contactAndLocationPath: "/33-tuc-mac/contact-us-directions",
     },
@@ -22,7 +22,7 @@ const LocationNav = () => {
       id: 2,
       name: "Location 2",
       path: "/84-le-duan",
-      aboutPath: "/84-le-duan/about",
+      galleryPath: "/84-le-duan/gallery",
       bookPath: "/84-le-duan/booking",
       contactAndLocationPath: "/84-le-duan/contact-us-directions",
     },
@@ -50,8 +50,8 @@ const LocationNav = () => {
           <li className="nav-link">Rooms</li>
         </Link>
         {currentLocationPath && (
-          <Link to={currentLocationPath.aboutPath}>
-            <li className="nav-link">About Us</li>
+          <Link to={currentLocationPath.galleryPath}>
+            <li className="nav-link">Gallery</li>
           </Link>
         )}
         {currentLocationPath && (
