@@ -8,6 +8,8 @@ import HomeLocations from "../components/Home/HomeLocations/HomeLocations";
 import HomeContact from "../components/Home/HomeContact/HomeContact";
 import Footer from "../components/Footer/Footer";
 
+import RoomComponent from "../components/Room/RoomComponent";
+
 const Home = () => {
   return (
     <div>
@@ -26,6 +28,9 @@ const Home = () => {
         <HomeLocations />
         <HomeTitle subTitle="Get in Touch" title="Reach Out for Assistance" />
         <HomeContact />
+      </div>
+      <div className="containter">
+        <RoomComponent />
       </div>
       <Footer />
     </div>
