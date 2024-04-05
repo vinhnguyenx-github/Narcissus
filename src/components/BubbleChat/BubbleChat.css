@@ -30,3 +30,24 @@
 .bubble-chat-each-icon {
   color: white;
 }
+
+.icon-hover {
+  display: none;
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  width: 120px;
+
+  height: 30px;
+}
+
+.bubble-chat-icon:hover .icon-hover {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: 0.5s ease;
+}

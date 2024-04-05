@@ -11,6 +11,7 @@ const BubbleChat = () => {
       <div className="bubble-chat-icon react-icon">
         <a href="tel:0337248276">
           <FaPhoneAlt className="bubble-chat-each-icon" />
+          <div className="icon-hover">Call us Now</div>
         </a>
       </div>
       <div className="bubble-chat-icon">
@@ -19,7 +20,7 @@ const BubbleChat = () => {
         </a>
       </div>
       <div className="bubble-chat-icon react-icon">
-        <a href="https://www.facebook.com/narcissus.apartment" target="blank">
+        <a href="https://wa.me/0943220192" target="blank">
           <FaWhatsapp size={25} className="bubble-chat-each-icon" />
         </a>
       </div>
