@@ -6,14 +6,11 @@ const HomeAbout = () => {
     <div className="home-about">
       <div className="home-about-left">
         <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/WL11bwvAYWI?si=z9_rjrwTX4Zk5iNx"
+          src="https://www.youtube.com/embed/PC1iMPr4Qbg?si=ftxvIIu3aw30gKMJ"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
+          referrerPolicy="strict-origin-when-cross-origin"
           className="home-about-img"
         ></iframe>
       </div>
@@ -21,16 +18,25 @@ const HomeAbout = () => {
         <h3>About Narcissus</h3>
         <h2>Unveiling Hotel Excellence</h2>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, vel
-          eligendi atque libero minima recusandae commodi dignissimos autem
-          placeat aliquid ipsa fuga consectetur harum aut pariatur! Totam ipsa
-          perspiciatis ut.
+          Narcissus Hotel & Apartment presents 25 opulent rooms, each
+          meticulously designed with distinct styles and lavish furnishings.
+          Guests are treated to a range of amenities, including air
+          conditioning, deluxe seating areas, and flat-screen TVs with an array
+          of cable channels. The private bathrooms are adorned with plush
+          bathrobes, soft slippers, and elegant hairdryers. Every room is
+          equipped with an electric kettle, and complimentary teas and coffees
+          add a touch of luxury.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-          dolorum dolore inventore nulla cum numquam cupiditate, molestiae ex,
-          eaque voluptatibus rem esse amet consequuntur soluta corrupti sed
-          praesentium assumenda reprehenderit.
+          Our 24-hour front desk stands ready to provide unparalleled service,
+          offering assistance with tours, ticket bookings, currency exchange,
+          and secure luggage storage. Additional services such as airport
+          transfers, bike rentals, and motorbike hire are available upon request
+        </p>
+        <p>
+          At Narcissus Hotel & Apartment, our unwavering dedication and genuine
+          passion for hospitality ensure a memorable and unparalleled experience
+          for every guest.
         </p>
       </div>
     </div>

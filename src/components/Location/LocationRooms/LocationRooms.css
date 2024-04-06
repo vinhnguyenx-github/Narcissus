@@ -2,7 +2,7 @@
   margin: 50px auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 60px;
   row-gap: 20px;
   text-align: center;
@@ -51,4 +51,31 @@
   margin-top: 20px;
   margin-bottom: 30px;
   font-size: 0.81rem;
+}
+
+.location-room-readmore {
+  font-size: 0.81rem;
+  margin: 10px;
+  color: black;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.location-room-readmore:hover {
+  text-decoration: underline;
+  text-decoration-color: #606160;
+}
+
+@media (max-width: 800px) {
+  .location-rooms {
+    grid-template-columns: 1fr;
+  }
+
+  .location-room-top > img {
+    width: 100%;
+    height: 350px;
+  }
+  .location-room {
+    height: 650px;
+  }
 }

@@ -45,9 +45,12 @@ function LocationRooms({ location }) {
             <p>{room.description}</p>
           </div>
           <div className="location-room-bottom">
-            <a href="" className="location-room-readmore">
+            <Link
+              to={`/${location}/rooms/${room.name}`}
+              className="location-room-readmore"
+            >
               Read More
-            </a>
+            </Link>
             <p>Prices: {room.pricePerNight}.999 VND</p>
             <Link to={`/${location}/rooms/${room.name}`}>
               <BookBtn />
