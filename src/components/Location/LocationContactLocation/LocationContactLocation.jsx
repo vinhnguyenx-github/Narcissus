@@ -10,8 +10,8 @@ const LocationContactLocation = () => {
   const googleMapPaths = [
     {
       id: 1,
-      name: "Location 1",
       path: "/33-tuc-mac/contact-us-directions",
+      addressLine1: "No. 33 Tuc Mac lane, Cua Nam ward,",
       mapURL:
         "https://www.google.com/maps/dir//Narcissus+Hotel+%26+Apartment+33+Ng.+T%E1%BB%A9c+M%E1%BA%B7c+C%E1%BB%ADa+Nam+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0228222,105.8426037,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3135ab908a6fcba1:0x70d3b6ce6055d2ff!2m2!1d105.8426037!2d21.0228222?entry=ttu",
       googleMapURL:
@@ -19,8 +19,8 @@ const LocationContactLocation = () => {
     },
     {
       id: 2,
-      name: "Location 2",
       path: "/84-le-duan/contact-us-directions",
+      addressLine1: "No. 84 Le Duan, Van Mieu ward,",
       mapURL:
         "https://www.google.com/maps/dir//Narcissus+Hotel+%26+Apartment+33+Ng.+T%E1%BB%A9c+M%E1%BA%B7c+C%E1%BB%ADa+Nam+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0228222,105.8426037,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3135ab908a6fcba1:0x70d3b6ce6055d2ff!2m2!1d105.8426037!2d21.0228222?entry=ttu",
       googleMapURL:
@@ -47,7 +47,7 @@ const LocationContactLocation = () => {
             <img src={icon1} alt="" className="contact-location-icon" />
             <div className="contact-information">
               <a href={currentGoogleMapPath.mapURL}>View Directions</a>
-              <p>No. 33 Tuc Mac lane, Cua Nam ward,</p>
+              <p>{currentGoogleMapPath.addressLine1}</p>
               <p>Hoan Kiem district, Ha Noi, Viet Nam</p>
             </div>
           </div>

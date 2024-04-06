@@ -9,19 +9,21 @@ const LocationHero = () => {
   const imagesPath = [
     {
       id: 1,
-      name: "Location 1",
       path: "/33-tuc-mac/contact-us-directions",
       imageURL: Location1ContactImage,
     },
     {
       id: 2,
-      name: "Location 1",
       path: "/33-tuc-mac",
       imageURL: Location1HomeImage,
     },
     {
+      id: 4,
+      path: "/84-le-duan",
+      imageURL: Location1HomeImage,
+    },
+    {
       id: 3,
-      name: "Location 2",
       path: "/84-le-duan/contact-us-directions",
       imageURL: location2Image,
     },

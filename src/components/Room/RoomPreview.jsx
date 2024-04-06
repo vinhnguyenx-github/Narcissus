@@ -114,7 +114,7 @@ function RoomPreview() {
               <a href="" className="card-readmore">
                 Read More
               </a>
-              <p>Prices: {room.pricePerNight}</p>
+              <p>Prices: {room.pricePerNight}.999 VND</p>
               <BookBtn />
             </div>
           </div>

@@ -8,7 +8,7 @@ import RoomPreview from "../../../components/Room/RoomPreview";
 import Footer from "../../../components/Footer/Footer";
 import LocationServices from "../../../components/Location/LocationServices/LocationServices";
 
-const Home1 = () => {
+const Home2 = () => {
   return (
     <div>
       <LocationNav />
@@ -30,4 +30,4 @@ const Home1 = () => {
   );
 };
 
-export default Home1;
+export default Home2;

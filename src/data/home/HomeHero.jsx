@@ -12,7 +12,7 @@ const home_hero_images = [
     imgAlt: "img-1",
   },
   {
-    imgURL: "src/assets/Home/HomeHeroImages/banner4.jpg",
+    imgURL: "src/assets/Home/HomeHeroImages/banner4.jpeg",
     imgAlt: "img-1",
   },
   {

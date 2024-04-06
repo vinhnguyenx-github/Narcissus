@@ -14,7 +14,7 @@ const ContactLocation = () => {
       <BubbleChat />
       <div className="container">
         <LocationPageTitle
-          url="/33-tuc-mac"
+          url="/84-le-duan"
           current="Contact Us & Directions"
         />
         <LocationContactLocation />
