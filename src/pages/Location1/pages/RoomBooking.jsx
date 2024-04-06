@@ -11,7 +11,7 @@ const RoomBooking1 = () => {
       <LocationHero />
       <div className="container">
         <LocationPageTitle url="/33-tuc-mac" current="Rooms" />
-        <LocationRooms />
+        <LocationRooms location="33-tuc-mac" />
       </div>
     </div>
   );
