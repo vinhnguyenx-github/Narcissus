@@ -1,0 +1,115 @@
+.slider-container {
+  width: 100%;
+  margin: 50px auto;
+}
+
+.slick-slide > div {
+  margin: 0 20px;
+}
+.slick-list {
+  margin: 0 -20px;
+}
+
+.card {
+  border: 2px solid #cdcfd2;
+  background: white;
+  overflow: hidden;
+  height: 600px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card-top h4 {
+  font-size: 1.6rem;
+  margin: 20px;
+  color: black;
+  text-align: center;
+  font-weight: 450;
+}
+
+.card-top p {
+  font-size: 0.81rem;
+  margin: 15px 20px;
+  color: black;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.card-top > img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  background: black;
+}
+
+.card-bottom {
+  display: flex;
+  margin: 10px 83px;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.card-bottom p {
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 0.81rem;
+}
+
+.room-preview-btn {
+  border: 1px solid #606160;
+  height: 45px;
+  width: 190px;
+  color: #606160;
+  border-radius: 5px;
+  background-color: white;
+  transition: 0.2s ease;
+}
+
+.room-preview-btn:hover {
+  border: none;
+  background-color: #606160;
+  color: white;
+  outline: none;
+}
+
+.category {
+  position: relative;
+}
+.category::before {
+  content: "";
+  background: rgb(255, 61, 61);
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.card-readmore {
+  font-size: 0.81rem;
+  margin: 10px;
+  color: black;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.card-readmore:hover {
+  text-decoration: underline;
+  text-decoration-color: #606160;
+}
+
+.next-arrow {
+  margin-left: 0px;
+}
+
+@media (max-width: 1150px) {
+  .card-top > img {
+    height: 300px;
+  }
+
+  .card {
+    height: 600px;
+  }
+}

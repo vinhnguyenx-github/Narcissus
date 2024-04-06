@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./RoomPreview.css";
 import default_img from "../../assets/default_img.png";
 import APIService from "../../services/APIService";
-import { LiaAngleRightSolid } from "react-icons/lia";
-import { LiaAngleLeftSolid } from "react-icons/lia";
+import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
+import BookBtn from "../Location/BookBtn/BookBtn";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -105,12 +106,16 @@ function RoomPreview() {
         {rooms.map((room) => (
           <div key={room.id} className="card">
             <div className="card-top">
+              <img src={default_img} alt="" />
               <h4>{room.name}</h4>
               <p>{room.description}</p>
             </div>
             <div className="card-bottom">
+              <a href="" className="card-readmore">
+                Read More
+              </a>
               <p>Prices: {room.pricePerNight}</p>
-              <p>Capacity: {room.capacity}</p>
+              <BookBtn />
             </div>
           </div>
         ))}

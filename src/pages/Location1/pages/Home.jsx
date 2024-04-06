@@ -5,6 +5,8 @@ import LocationAbout from "../../../components/Location/LocationAbout/LocationAb
 import BubbleChat from "../../../components/BubbleChat/BubbleChat";
 import LocationTitle from "../../../components/Location/LocationTitle/LocationTitle";
 import RoomPreview from "../../../components/Room/RoomPreview";
+import Footer from "../../../components/Footer/Footer";
+import LocationServices from "../../../components/Location/LocationServices/LocationServices";
 
 const Home1 = () => {
   return (
@@ -16,7 +18,13 @@ const Home1 = () => {
         <LocationAbout />
         <LocationTitle left="Rooms" right="See all Rooms" />
         <RoomPreview />
+        <LocationTitle
+          left="Services & Amenities"
+          right="Explore More Amenities"
+        />
+        <LocationServices />
       </div>
+      <Footer />
     </div>
   );
 };

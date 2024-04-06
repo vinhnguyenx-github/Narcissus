@@ -6,15 +6,16 @@
 
 .location-title h4 {
   color: black;
-  font-size: 25px;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .location-title-link {
   color: #47463c;
-  transition: 0.2s ease;
+  font-size: 0.9rem;
 }
 
 .location-title-link:hover {
   color: #606160;
-  border-bottom: 1px solid #47463c;
+  text-decoration: underline;
 }
