@@ -16,8 +16,12 @@ const Home1 = () => {
       <BubbleChat />
       <div className="container">
         <LocationAbout />
-        <LocationTitle left="Rooms" right="See all Rooms" />
-        <RoomPreview />
+        <LocationTitle
+          left="Rooms"
+          right="See all Rooms"
+          rightURL="/33-tuc-mac/rooms"
+        />
+        <RoomPreview location="33-tuc-mac" />
         <LocationTitle
           left="Services & Amenities"
           right="Explore More Amenities"

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -35,7 +35,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-function RoomPreview() {
+function RoomPreview({ location }) {
   const [rooms, setRooms] = useState([]);
   const [defaultImage, setDefaultImage] = useState({});
 
@@ -115,7 +115,9 @@ function RoomPreview() {
                 Read More
               </a>
               <p>Prices: {room.pricePerNight}.999 VND</p>
-              <BookBtn />
+              <Link to={`/${location}/rooms/${room.name}`}>
+                <BookBtn />
+              </Link>
             </div>
           </div>
         ))}

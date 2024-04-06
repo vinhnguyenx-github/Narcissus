@@ -1,0 +1,54 @@
+.location-rooms {
+  margin: 50px auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 20px;
+  text-align: center;
+}
+
+.location-room {
+  border: 2px solid #cdcfd2;
+  background: white;
+  overflow: hidden;
+  height: 650px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.location-room-top > img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.location-room-top p {
+  font-size: 0.8rem;
+  margin: 15px 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.location-room-top h4 {
+  font-size: 1.6rem;
+  margin: 20px;
+  color: black;
+  text-align: center;
+  font-weight: 450;
+}
+
+.location-room-bottom {
+  display: flex;
+  margin: 10px 83px;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.location-room-bottom p {
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 0.81rem;
+}

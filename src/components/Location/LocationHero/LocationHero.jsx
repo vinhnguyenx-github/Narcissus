@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import "./LocationHero.css";
 import Location1ContactImage from "../../../assets/Location/LocationHeroImage/banner3.jpg";
 import Location1HomeImage from "../../../assets/Location/LocationHeroImage/homehero1.jpg";
+import Location1RoomImage from "../../../assets/Location/LocationHeroImage/location1room.jpg";
 import location2Image from "../../../assets/Location/LocationHeroImage/banner3.jpg";
 
 const LocationHero = () => {
@@ -15,7 +16,12 @@ const LocationHero = () => {
     {
       id: 2,
       path: "/33-tuc-mac",
-      imageURL: Location1HomeImage,
+      imageURL: Location1RoomImage,
+    },
+    {
+      id: 6,
+      path: "/33-tuc-mac/rooms",
+      imageURL: Location1RoomImage,
     },
     {
       id: 4,
