@@ -1,0 +1,25 @@
+.admin-room-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 30px;
+  position: relative;
+}
+
+.admin-room-item p {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.admin-room-item {
+  border: 2px solid white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .admin-room-grid {
+    grid-template-columns: 1fr;
+  }
+}

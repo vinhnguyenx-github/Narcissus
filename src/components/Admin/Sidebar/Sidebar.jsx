@@ -20,7 +20,7 @@ const AdminSidebar = ({ activeItem }) => {
       </Link>
       <div className="admin-menu-list">
         <Link
-          to=""
+          to="/admin/dashboard"
           className={`admin-item ${
             activeItem === "home" ? "admin-item-active" : ""
           }`}
@@ -48,7 +48,7 @@ const AdminSidebar = ({ activeItem }) => {
           Quản Trị Thông Tin Khách Hàng
         </Link>
         <Link
-          to=""
+          to="/admin/rooms"
           className={`admin-item ${
             activeItem === "rooms" ? "admin-item-active" : ""
           }`}
@@ -57,7 +57,7 @@ const AdminSidebar = ({ activeItem }) => {
           Quản Trị Thông Tin Phòng
         </Link>
         <Link
-          to=""
+          to="/admin/gallery"
           className={`admin-item ${
             activeItem === "gallery" ? "admin-item-active" : ""
           }`}
