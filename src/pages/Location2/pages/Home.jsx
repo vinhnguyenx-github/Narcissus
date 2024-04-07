@@ -21,7 +21,7 @@ const Home2 = () => {
         <LocationTitle
           left="Services & Amenities"
           right="Explore More Amenities"
-          rightURL="/33-tuc-mac/amenities"
+          rightURL="/84-le-duan/amenities"
         />
         <LocationServices />
       </div>
