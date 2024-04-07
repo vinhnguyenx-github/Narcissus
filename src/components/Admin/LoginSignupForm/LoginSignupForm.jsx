@@ -7,7 +7,7 @@ const LoginSignupForm = () => {
     <div className="login-form-container">
       <div className="login-form-left">
         <h1>Đăng Nhập</h1>
-        <form action="#">
+        <form action="#" method="post">
           <div className="login-input">
             <span>
               <FaUserCircle />

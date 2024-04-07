@@ -1,0 +1,13 @@
+.admin-dashboard {
+  gap: 20px;
+  display: flex;
+  padding: 20px;
+}
+
+.admin-dashboard-content {
+  background-color: #606160;
+  flex: 1;
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+}
