@@ -10,18 +10,18 @@ const LocationHero = () => {
   const imagesPath = [
     {
       id: 1,
+      path: "/33-tuc-mac/rooms",
+      imageURL: Location1RoomImage,
+    },
+    {
+      id: 2,
       path: "/33-tuc-mac/contact-us-directions",
       imageURL: Location1ContactImage,
     },
     {
-      id: 2,
+      id: 1,
       path: "/33-tuc-mac",
-      imageURL: Location1RoomImage,
-    },
-    {
-      id: 6,
-      path: "/33-tuc-mac/rooms",
-      imageURL: Location1RoomImage,
+      imageURL: Location1HomeImage,
     },
     {
       id: 4,
@@ -29,7 +29,7 @@ const LocationHero = () => {
       imageURL: Location1HomeImage,
     },
     {
-      id: 3,
+      id: 5,
       path: "/84-le-duan/contact-us-directions",
       imageURL: location2Image,
     },
