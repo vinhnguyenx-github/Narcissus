@@ -33,7 +33,7 @@
 .home-contact-col p {
   max-width: 450px;
   list-style: 0.3;
-  font-size: 16px;
+  font-size: 0.9rem;
   color: black;
 }
 
@@ -42,6 +42,22 @@
   align-items: center;
   margin: 20px 0;
   font-size: 13px;
+}
+
+.home-contact-col ul li p {
+  font-size: 0.8rem;
+  color: #676767;
+}
+
+.home-contact-col ul li p a {
+  font-size: 0.8rem;
+  color: #676767;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.home-contact-col ul li p a:hover {
+  text-decoration: underline;
 }
 
 .submit-button {

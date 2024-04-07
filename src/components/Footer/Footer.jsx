@@ -14,20 +14,22 @@ const Footer = () => {
               No. 33 Tuc Mac lane, Cua Nam ward, Hoan Kiem district, Ha Noi,
               Viet Nam
             </h5>
-            <p>Tel: </p>
           </div>
           <div className="address">
             <h5>
-              No. 33 Tuc Mac lane, Cua Nam ward, Hoan Kiem district, Ha Noi,
-              Viet Nam
+              No. 84 Le Duan, Van Mieu ward, Hoan Kiem district, Ha Noi, Viet
+              Nam
             </h5>
-            <p>Tel: </p>
           </div>
         </div>
         <div className="footer-col">
           <h4>Contact us</h4>
-          <p>Tel: </p>
-          <p>Email: </p>
+          <p>
+            Tel: <a href="tel:0337248276">0337248276</a>
+          </p>
+          <p>
+            Email: <a href="mailto:">testemail@gmail.com</a>
+          </p>
         </div>
         <div className="footer-col">
           <h4>Social Media</h4>

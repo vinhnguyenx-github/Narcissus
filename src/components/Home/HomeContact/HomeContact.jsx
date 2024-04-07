@@ -17,15 +17,24 @@ const HomeContact = () => {
         <ul>
           <li>
             <LuPhoneCall size={20} className="icon" />
-            Tel: (+84.24)7303 2662
+            <p>
+              Telephone: <a href="tel:">0123456789</a>
+            </p>
           </li>
           <li>
             <LuMail size={20} className="icon" />
-            Email: narcissus.com.vn
+            <p>
+              Email: <a href="mailto:">testemail@gmail.com</a>
+            </p>
           </li>
           <li>
             <LuFacebook size={20} className="icon" />
-            Facebook: Narcissus Apartment
+            <p>
+              Facebook:{" "}
+              <a href="https://www.facebook.com/narcissus.apartment">
+                Narcissus Apartment
+              </a>
+            </p>
           </li>
         </ul>
       </div>

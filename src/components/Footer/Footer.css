@@ -30,6 +30,7 @@
   font-size: 0.8rem;
   line-height: 15px;
   color: white;
+  font-weight: 500;
 }
 
 hr {
@@ -86,8 +87,17 @@ hr {
   color: white;
 }
 
-p {
+.footer-col p {
+  font-size: 0.9rem;
+}
+
+.footer-col p a {
   color: white;
+  font-weight: 600;
+}
+
+.footer-col p a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 840px) {
