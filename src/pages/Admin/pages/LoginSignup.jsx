@@ -3,7 +3,7 @@ import LoginSignupForm from "../../../components/Admin/LoginSignupForm/LoginSign
 
 const LoginSignup = () => {
   return (
-    <div className="admin-container">
+    <div className="admin-login-container">
       <div>
         <LoginSignupForm />
       </div>

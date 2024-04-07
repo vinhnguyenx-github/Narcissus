@@ -26,8 +26,9 @@ p {
   padding: 0 10%;
 }
 
-.admin-container {
-  position: relative;
+.admin-login-container {
+  display: flex;
+  justify-content: center;
 }
 
 /* --- media --- */

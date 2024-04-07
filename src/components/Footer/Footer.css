@@ -74,6 +74,10 @@ hr {
   margin: 1rem;
 }
 
+.footer-link a p {
+  font-size: 0.8rem;
+}
+
 .footer-col a {
   margin-right: 10px;
 }

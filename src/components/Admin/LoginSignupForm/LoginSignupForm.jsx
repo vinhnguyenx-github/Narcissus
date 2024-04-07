@@ -1,59 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import "./LoginSignupForm.css";
+import { FaUserCircle, FaLock } from "react-icons/fa";
 
 const LoginSignupForm = () => {
-  const [isLogin, setIsLogin] = useState(true); // State to track whether it's login or signup view
-
-  const toggleView = () => {
-    setIsLogin((prevIsLogin) => !prevIsLogin); // Toggle between login and signup views
-  };
-
   return (
-    <div className="admin-signup-login-form-container">
-      <div className="signup-login-header">
-        {/* Toggle buttons */}
-        <button
-          onClick={toggleView}
-          className={isLogin ? "" : "button-disable"}
-        >
-          Đăng Nhập
-        </button>
-        <button
-          onClick={toggleView}
-          className={!isLogin ? "" : "button-disable"}
-        >
-          Đăng Kí
-        </button>
-      </div>
-      <div className="signup-login-container">
-        <form>
-          <div className="signup-login-form-names">
-            <div className="form-row">
-              <input
-                type="text"
-                placeholder="Tên Đăng Nhập"
-                className="signup-login-field"
-              />
-            </div>
-            <div className="form-row">
-              <input
-                type="text"
-                placeholder="Mật Khẩu"
-                className="signup-login-field"
-              />
-            </div>
-            {/* Conditional rendering based on isLogin state */}
-            {isLogin ? (
-              <div className="login-signup-submit-button">
-                <button type="submit">Đăng Nhập</button>
-              </div>
-            ) : (
-              <div className="login-signup-submit-button">
-                <button type="submit">Đăng Kí</button>
-              </div>
-            )}
+    <div className="login-form-container">
+      <div className="login-form-left">
+        <h1>Đăng Nhập</h1>
+        <form action="#">
+          <div className="login-input">
+            <span>
+              <FaUserCircle />
+            </span>
+            <input
+              type="text"
+              placeholder="Tên Đăng Nhập: "
+              name="username"
+              required
+            />
           </div>
+          <div className="login-input">
+            <span>
+              <FaLock />
+            </span>
+            <input
+              type="password"
+              placeholder="Mật Khẩu"
+              name="password"
+              required
+            />
+          </div>
+          <button>Đăng Nhập</button>
         </form>
+      </div>
+      <div className="login-form-right">
+        <h1>Xin Chào!</h1>
+        <p>
+          Bạn quên mật khẩu hay muốn tạo tài khoản? Liên hệ với admin bằng cách
+          nhấn vào nút bên dưới
+        </p>
+        <a href="mailto:vinh.nguyen09102003@gmail.com">
+          <button>Gửi Email</button>
+        </a>
       </div>
     </div>
   );
