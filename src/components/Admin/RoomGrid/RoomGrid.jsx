@@ -30,6 +30,8 @@ const AdminRoomGrid = () => {
     if (!showOverlay) {
       setSelectedRoom(room);
       setShowOverlay(true);
+    } else {
+      setShowOverlay(false);
     }
   };
 
@@ -46,7 +48,7 @@ const AdminRoomGrid = () => {
           className="admin-room-item"
           onClick={() => handleRoomClick(room)}
         >
-          <p>Chỉnh sửa ảnh phòng {room.name} cơ sở ?</p>
+          <p>Chỉnh sửa thông tin phòng {room.name} cơ sở ?</p>
         </div>
       ))}
 

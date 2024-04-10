@@ -37,13 +37,13 @@ const Footer = () => {
             href="https://www.facebook.com/narcissus.apartment"
             target="_blank"
           >
-            <FaFacebookSquare size={30} style={{ fill: "white" }} />
+            <FaFacebookSquare size={25} style={{ fill: "white" }} />
           </a>
           <a
             href="https://www.facebook.com/narcissus.apartment"
             target="_blank"
           >
-            <FaInstagram size={30} style={{ fill: "white" }} />
+            <FaInstagram size={25} style={{ fill: "white" }} />
           </a>
         </div>
       </div>

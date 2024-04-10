@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import LocationNav from "../../../components/Location/LocationNav/LocationNav";
 
 const RoomTypeBooking2 = () => {

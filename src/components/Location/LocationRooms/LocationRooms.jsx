@@ -52,7 +52,17 @@ function LocationRooms({ location }) {
               Read More
             </Link>
             <p>Prices: {room.pricePerNight}.999 VND</p>
-            <Link to={`/${location}/rooms/${room.name}`}>
+            <Link
+              to={{
+                pathname: `/${location}/rooms/${room.name}`,
+                state: {
+                  roomID: 1,
+                  roomName: room.name,
+                  roomDescription: room.description,
+                  roomPrice: room.pricePerNight,
+                },
+              }}
+            >
               <BookBtn />
             </Link>
           </div>

@@ -31,3 +31,10 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .location-services {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+}

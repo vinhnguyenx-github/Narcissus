@@ -5,9 +5,10 @@
 }
 
 .admin-dashboard-content {
-  background-color: #606160;
+  background-color: #8d8d8d;
   flex: 1;
   border-radius: 20px;
   padding: 2rem;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
 }

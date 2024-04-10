@@ -12,7 +12,7 @@
 
 .admin-sidebar-logo {
   text-align: center;
-  color: #606160;
+  color: #34332d;
   align-items: center;
   gap: 20px;
   padding: 20px;
@@ -34,13 +34,13 @@
   text-decoration: none;
   font-weight: 600;
   padding: 10px;
-  color: #606160;
+  color: #34332d;
   transition: 0.2s ease-in-out;
   border-radius: 10px;
 }
 
 .admin-menu-list .admin-item:hover,
 .admin-item-active {
-  background-color: #606160;
+  background-color: #8d8d8d;
   color: white !important;
 }

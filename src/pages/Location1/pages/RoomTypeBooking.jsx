@@ -1,15 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import LocationNav from "../../../components/Location/LocationNav/LocationNav";
+import RoomTypeBooking from "../../../components/Location/RoomTypeBooking/RoomTypeBooking";
 
 const RoomTypeBooking1 = () => {
-  const { type } = useParams(); // Access the room type from the route parameter
-
   return (
     <div>
       <LocationNav />
       <div className="container">
-        <h1>Booking Page for {type} Room</h1>;
+        <RoomTypeBooking />
       </div>
     </div>
   );
