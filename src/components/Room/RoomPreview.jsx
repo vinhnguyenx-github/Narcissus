@@ -4,8 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./RoomPreview.css";
-import default_img from "../../assets/default_img.png";
-import APIService from "../../services/APIService";
+import { useRoomData } from "../../provider/roomtype/roomTypeProvider.jsx";
 import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
 import BookBtn from "../Location/BookBtn/BookBtn";
 
@@ -36,26 +35,7 @@ function SamplePrevArrow(props) {
 }
 
 function RoomPreview({ location }) {
-  const [rooms, setRooms] = useState([]);
-  const [defaultImage, setDefaultImage] = useState({});
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await APIService.getTypes();
-        const { data } = response;
-        if (Array.isArray(data)) {
-          setRooms(data);
-        } else {
-          console.error("Data received from API is not an array:", data);
-        }
-      } catch (error) {
-        console.error("Failed to fetch room data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const { rooms, defaultImage } = useRoomData();
 
   const settings = {
     infinite: true,
@@ -106,7 +86,7 @@ function RoomPreview({ location }) {
         {rooms.map((room) => (
           <div key={room.id} className="card">
             <div className="card-top">
-              <img src={default_img} alt="" />
+              <img src={defaultImage[room.id]} alt="" />
               <h4>{room.name}</h4>
               <p>{room.description}</p>
             </div>

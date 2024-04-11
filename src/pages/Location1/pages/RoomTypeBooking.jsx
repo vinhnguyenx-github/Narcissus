@@ -7,9 +7,7 @@ const RoomTypeBooking1 = () => {
   return (
     <div>
       <LocationNav />
-      <div className="container">
-        <RoomTypeBooking />
-      </div>
+      <RoomTypeBooking />
     </div>
   );
 };

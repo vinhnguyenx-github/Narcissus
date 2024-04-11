@@ -1,6 +1,8 @@
 .inputContainer {
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .inputBox {
@@ -8,10 +10,7 @@
 }
 
 .arrowIcon {
-  position: absolute;
-  top: 50%;
-  right: 10px; /* Adjust right offset as needed */
-  transform: translateY(-50%);
+  margin-left: 10px;
   cursor: pointer;
 }
 
@@ -24,6 +23,7 @@ input.inputBox {
 }
 
 .calendarWrap {
+  margin-left: 200px;
   display: inline-block;
   position: relative;
 }

@@ -56,7 +56,7 @@ function LocationRooms({ location }) {
               to={{
                 pathname: `/${location}/rooms/${room.name}`,
                 state: {
-                  roomID: 1,
+                  roomID: room.type_id,
                   roomName: room.name,
                   roomDescription: room.description,
                   roomPrice: room.pricePerNight,

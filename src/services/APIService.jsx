@@ -1,13 +1,14 @@
-import axios from 'axios';
+import axios from "axios";
 
-const ROOM_API_REST_URL = "http://localhost:8080/api/roomType/find";
+const BASE_URL = "http://localhost:8080/api/roomType";
 
 class APIService {
-    
-    getTypes(){
-        return axios.get(ROOM_API_REST_URL);
-    }
-
+  getTypes() {
+    return axios.get(`${BASE_URL}/find`);
+  }
+  getImageUrl(id) {
+    return `${BASE_URL}/getImage/${id}`;
+  }
 }
 
 export default new APIService();
