@@ -11,7 +11,6 @@ const BubbleChat = () => {
       <div className="bubble-chat-icon react-icon">
         <a href="tel:0337248276">
           <FaPhoneAlt className="bubble-chat-each-icon" />
-          <div className="icon-hover">Call us Now</div>
         </a>
       </div>
       <div className="bubble-chat-icon">

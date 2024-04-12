@@ -36,7 +36,6 @@ function SamplePrevArrow(props) {
 
 function RoomPreview({ location }) {
   const { rooms, defaultImage } = useRoomData();
-
   const settings = {
     infinite: true,
     speed: 600,

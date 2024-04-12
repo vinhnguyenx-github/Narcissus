@@ -10,6 +10,7 @@ import RoomTypeDescription from "../RoomTypeDescription/RoomTypeDescription";
 import RoomTypeServices from "../RoomTypeServices/RoomTypeServices";
 import RoomTypeExtraServices from "../RoomTypeExtraServices/RoomTypeExtraServices";
 import PickDate from "../PickDate/PickDate";
+import BubbleChat from "../../BubbleChat/BubbleChat";
 
 const RoomTypeBooking = () => {
   const { type } = useParams();
@@ -45,6 +46,7 @@ const RoomTypeBooking = () => {
     <div className="room-type-booking">
       <LocationTitle left={type} />
       <RoomTypeImages />
+      <BubbleChat />
       <div className="room-type-main">
         <div className="room-type-information">
           <h5 className="heading-description">
