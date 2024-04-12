@@ -5,7 +5,7 @@ import "./BookingForm.css";
 const BookingForm = () => {
   return (
     <div className="booking-form">
-      <div>a</div>
+      <div>Booking Form</div>
     </div>
   );
 };
