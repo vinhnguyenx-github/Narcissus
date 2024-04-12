@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -86,7 +86,10 @@ function RoomPreview({ location }) {
               <a href="" className="card-readmore">
                 Read More
               </a>
-              <p>Prices: {room.pricePerNight}.999 VND</p>
+              <p>
+                Prices: {new Intl.NumberFormat("en").format(room.pricePerNight)}
+                VND
+              </p>
               <Link to={`/${location}/rooms/${room.name}`}>
                 <BookBtn />
               </Link>

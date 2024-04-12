@@ -31,7 +31,10 @@ const HomeContact = () => {
             <LuFacebook size={20} className="icon" />
             <p>
               Facebook:{" "}
-              <a href="https://www.facebook.com/narcissus.apartment">
+              <a
+                href="https://www.facebook.com/narcissus.apartment"
+                target="blank"
+              >
                 Narcissus Apartment
               </a>
             </p>

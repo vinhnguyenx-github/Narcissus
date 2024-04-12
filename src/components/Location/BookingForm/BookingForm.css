@@ -3,6 +3,120 @@
   border-radius: 12px;
   padding: 24px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
-  height: 300px;
   width: 100%;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+.booking-form-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.booking-form-header h5 {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.booking-form-header p {
+  font-size: 0.9rem;
+  color: #606160;
+}
+
+.checkin-checkout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.checkin {
+  width: 50%;
+  padding: 15px;
+  border-right: 0;
+  border-bottom: 0;
+  outline: none;
+  border-left: 1px solid #b0b0b0;
+  border-top: 1px solid #b0b0b0;
+  border-top-left-radius: 10px;
+}
+
+.checkout {
+  width: 50%;
+  padding: 15px;
+  outline: none;
+  border: 1px solid #b0b0b0;
+  border-top-right-radius: 10px;
+  border-bottom: 0;
+}
+
+.checkin:focus,
+.checkout:focus,
+.select-people:focus {
+  border: 1px solid black;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button {
+  cursor: pointer;
+}
+
+.select-people {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #b0b0b0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  outline: none;
+  font-size: 0.9rem;
+  color: #606160;
+}
+
+.reserve-button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 10px;
+  background-color: #606160;
+  border: none;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.reserve-button:hover {
+  background-color: #7f807f;
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.total-price p {
+  font-size: 0.9rem;
+}
+
+.service-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+.service-price p {
+  font-size: 0.9rem;
+}
+
+.final-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.final-price h6 {
+  font-size: 0.9rem;
 }

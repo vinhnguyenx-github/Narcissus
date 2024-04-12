@@ -3,19 +3,18 @@ import { useParams } from "react-router-dom";
 import APIService from "../../../services/APIService";
 import LocationTitle from "../LocationTitle/LocationTitle";
 import mvp from "../../../assets/angel.png";
-import rating from "../../../assets/rating.png";
-
 import "./RoomTypeBooking.css";
 import RoomTypeImages from "../RoomTypeImages/RoomTypeImages";
 import BookingForm from "../BookingForm/BookingForm";
 import RoomTypeDescription from "../RoomTypeDescription/RoomTypeDescription";
 import RoomTypeServices from "../RoomTypeServices/RoomTypeServices";
 import RoomTypeExtraServices from "../RoomTypeExtraServices/RoomTypeExtraServices";
+import PickDate from "../PickDate/PickDate";
 
 const RoomTypeBooking = () => {
   const { type } = useParams();
-  const [rooms, setRooms] = useState([]);
   const [roomId, setRoomId] = useState(null);
+  const [roomPrice, setRoomPrice] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +22,14 @@ const RoomTypeBooking = () => {
         const response = await APIService.getTypes();
         const { data } = response;
         if (Array.isArray(data)) {
-          setRooms(data);
+          const filteredRooms = data.filter((room) => room.name === type);
+          if (filteredRooms.length > 0) {
+            const { id, pricePerNight } = filteredRooms[0];
+            setRoomId(id);
+            setRoomPrice(pricePerNight);
+          } else {
+            console.error("Room not found for type:", type);
+          }
         } else {
           console.error("Data received from API is not an array:", data);
         }
@@ -33,14 +39,7 @@ const RoomTypeBooking = () => {
     };
 
     fetchData();
-  }, []);
-
-  useEffect(() => {
-    const room = rooms.find((room) => room.name === type);
-    if (room) {
-      setRoomId(room.id);
-    }
-  }, [type, rooms]);
+  }, [type]);
 
   return (
     <div className="room-type-booking">
@@ -57,31 +56,29 @@ const RoomTypeBooking = () => {
             <li className="room-type-information-li">1 bath</li>
             <li className="room-type-information-li">1 kitchen</li>
           </ol>
-          <div className="room-type-review">
-            <div className="mvp">
-              <img src={mvp} alt="" />
-              <h5>Popular choice</h5>
+          {roomId === 1 && (
+            <div className="room-type-review">
+              <div className="mvp">
+                <img src={mvp} alt="" />
+                <h5>Popular choice</h5>
+              </div>
+              <div>
+                <h5 className="mvp-description">
+                  A highly-rated and beloved Narcissus room known for its
+                  exceptional ratings and reliability.
+                </h5>
+              </div>
             </div>
-            <div>
-              <h5 className="mvp-description">
-                A highly-rated and beloved Narcissus room known for its
-                exceptional ratings and reliability.
-              </h5>
-            </div>
-            <div className="rating">
-              <h5>4.91</h5>
-              <img src={rating} alt="" />
-            </div>
-          </div>
+          )}
           <RoomTypeDescription />
           <RoomTypeServices />
-          <RoomTypeExtraServices />
         </div>
         <div className="room-type-right">
-          <BookingForm />
+          <BookingForm price={roomPrice} />
+          <PickDate />
         </div>
       </div>
-      {/* {roomId && <p>Room ID: {roomId}</p>} */}
+      <RoomTypeExtraServices />
     </div>
   );
 };

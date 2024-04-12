@@ -36,7 +36,7 @@
   align-items: center;
   align-items: center;
   text-align: center;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 .mvp img {
@@ -66,19 +66,9 @@
   font-size: 0.9rem;
 }
 
-.rating {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 20px;
-}
-
-.rating img {
-  width: 40px;
-}
-
 .room-type-right {
   display: flex;
+  flex-direction: column;
   flex-basis: 35%;
   margin-left: 100px;
 }
