@@ -72,14 +72,6 @@ function RoomPreview({ location }) {
     ],
   };
 
-  const handleErrorImage = (data) => {
-    setDefaultImage((prev) => ({
-      ...prev,
-      [data.target.alt]: data.target.alt,
-      linkDefault: default_img, // Make sure to import default_img from the correct path
-    }));
-  };
-
   return (
     <div className="slider-container">
       <Slider {...settings}>

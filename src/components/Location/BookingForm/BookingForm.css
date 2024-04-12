@@ -1,31 +1,8 @@
 .booking-form {
-  margin-top: 100px;
-  max-width: 370px;
   border: 1px solid rgb(221, 221, 221);
   border-radius: 12px;
   padding: 24px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
-}
-
-.booking-price {
-  display: flex;
-  align-items: flex-end;
-}
-
-.price-text {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-.price-text h2 {
-  margin: 0;
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin-right: 10px;
-}
-
-.price-text p {
-  margin: 0;
-  font-size: 0.9rem;
+  height: 300px;
+  width: 100%;
 }

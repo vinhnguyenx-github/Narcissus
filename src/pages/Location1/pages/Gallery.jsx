@@ -4,6 +4,7 @@ import LocationPageTitle from "../../../components/Location/LocationPageTitle/Lo
 import HomeTitle from "../../../components/Home/HomeTitle/HomeTitle";
 import BookingForm from "../../../components/Location/BookingForm/BookingForm";
 import PickDate from "../../../components/Location/PickDate/PickDate";
+import Footer from "../../../components/Footer/Footer";
 
 const Gallery1 = () => {
   return (
@@ -13,8 +14,8 @@ const Gallery1 = () => {
         <div style={{ margin: "130px" }}></div>
         <LocationPageTitle current="Gallery" url="/33-tuc-mac" />
         <HomeTitle title="Gallery" />
-        <PickDate />
       </div>
+      <Footer />
     </div>
   );
 };

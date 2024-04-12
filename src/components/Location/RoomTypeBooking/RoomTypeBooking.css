@@ -1,3 +1,100 @@
 .room-type-booking {
   margin-top: 130px;
+  width: 100%;
+}
+
+.room-type-information {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+}
+
+.room-type-main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.room-type-review {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border: 1px solid #cbcbcb;
+  border-radius: 15px;
+}
+
+.room-type-review h5 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.mvp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  text-align: center;
+  padding-right: 20px;
+}
+
+.mvp img {
+  width: 40px;
+}
+
+.room-type-information ol {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.room-type-information-li::before {
+  display: inline-block;
+  content: "\2022";
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.heading-description {
+  font-size: 1.3rem;
+}
+
+.mvp-description {
+  font-size: 0.9rem;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.rating img {
+  width: 40px;
+}
+
+.room-type-right {
+  display: flex;
+  flex-basis: 35%;
+  margin-left: 100px;
+}
+
+@media (max-width: 800px) {
+  .room-type-main {
+    flex-direction: column;
+  }
+
+  .room-type-information {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .room-type-right {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
 }

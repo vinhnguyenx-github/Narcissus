@@ -1,0 +1,51 @@
+.room-type-services {
+  border-top: 1px solid #cbcbcb;
+  padding-top: 25px;
+}
+
+.room-type-services h5 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.services-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+  row-gap: 20px;
+  margin-bottom: 30px;
+}
+
+.room-type-service p {
+  color: black;
+  font-size: 0.9rem;
+}
+
+.room-type-service {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.room-type-service-icon {
+  color: black;
+  width: 40px;
+  margin-right: 15px;
+}
+
+.room-services-button {
+  padding: 15px 30px;
+  border-radius: 13px;
+  outline: none;
+  background-color: #606160;
+  border: none;
+  color: white;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+}
+
+.room-services-button:hover {
+  background-color: #7f807f;
+}
