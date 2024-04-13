@@ -18,15 +18,15 @@
   margin-bottom: 30px;
 }
 
-.room-type-service p {
-  color: black;
-  font-size: 0.9rem;
-}
-
 .room-type-service {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 0.9rem;
+}
+
+.disable-service {
+  text-decoration: line-through;
 }
 
 .room-type-service-icon {
