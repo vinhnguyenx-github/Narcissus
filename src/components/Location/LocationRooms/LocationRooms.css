@@ -2,9 +2,9 @@
   margin: 50px auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 60px;
-  row-gap: 20px;
+  row-gap: 40px;
   text-align: center;
 }
 

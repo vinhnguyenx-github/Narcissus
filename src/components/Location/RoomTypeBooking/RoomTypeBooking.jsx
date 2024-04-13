@@ -16,6 +16,16 @@ const RoomTypeBooking = () => {
   const { type } = useParams();
   const [roomId, setRoomId] = useState(null);
   const [roomPrice, setRoomPrice] = useState(null);
+  const [checkInDate, setCheckInDate] = useState(null);
+  const [checkOutDate, setCheckOutDate] = useState(null);
+
+  const handleCheckInChange = (newCheckInDate) => {
+    setCheckInDate(newCheckInDate);
+  };
+
+  const handleCheckOutChange = (newCheckOutDate) => {
+    setCheckOutDate(newCheckOutDate);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -76,8 +86,25 @@ const RoomTypeBooking = () => {
           <RoomTypeServices />
         </div>
         <div className="room-type-right">
-          <BookingForm price={roomPrice} />
-          <PickDate />
+          <BookingForm
+            price={roomPrice}
+            onCheckInChange={handleCheckInChange}
+            onCheckOutChange={handleCheckOutChange}
+          />
+          <PickDate
+            selectedRange={[
+              {
+                startDate: new Date(checkInDate),
+                endDate: new Date(checkOutDate),
+                key: "selection",
+              },
+            ]}
+            minDate={new Date(checkInDate)}
+            onRangeChange={(newRange) => {
+              handleCheckInChange(newRange.startDate);
+              handleCheckOutChange(newRange.endDate);
+            }}
+          />
         </div>
       </div>
       <RoomTypeExtraServices />

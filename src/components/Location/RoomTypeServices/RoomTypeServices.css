@@ -39,7 +39,7 @@
   padding: 15px 30px;
   border-radius: 13px;
   outline: none;
-  background-color: #606160;
+  background-color: #a5a5a5;
   border: none;
   color: white;
   transition: 0.3s ease;
@@ -47,5 +47,5 @@
 }
 
 .room-services-button:hover {
-  background-color: #7f807f;
+  background-color: #c0c0c0;
 }

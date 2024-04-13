@@ -4,9 +4,10 @@ import format from "date-fns/format";
 import differenceInDays from "date-fns/differenceInDays";
 import { addDays } from "date-fns";
 
-const BookingForm = ({ price }) => {
+const BookingForm = ({ price, onCheckInChange, onCheckOutChange }) => {
   const currentDate = new Date();
   const minCheckOutDate = addDays(currentDate, 1);
+
   const [checkInDate, setCheckInDate] = useState(
     format(currentDate, "yyyy-MM-dd")
   );
@@ -20,6 +21,7 @@ const BookingForm = ({ price }) => {
     const parsedCheckInDate = new Date(newCheckInDate);
     const newMinCheckOutDate = addDays(parsedCheckInDate, 3);
     setCheckOutDate(format(newMinCheckOutDate, "yyyy-MM-dd"));
+    onCheckInChange(newCheckInDate); // Call the callback with new check-in date
   };
 
   const handleCheckOutChange = (e) => {
@@ -29,8 +31,8 @@ const BookingForm = ({ price }) => {
     }
 
     setCheckOutDate(newCheckOutDate);
+    onCheckOutChange(newCheckOutDate); // Call the callback with new check-out date
   };
-
   const lengthOfStay = differenceInDays(
     new Date(checkOutDate),
     new Date(checkInDate)

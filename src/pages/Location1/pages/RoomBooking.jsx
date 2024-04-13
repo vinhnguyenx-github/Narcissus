@@ -4,6 +4,7 @@ import LocationHero from "../../../components/Location/LocationHero/LocationHero
 import LocationPageTitle from "../../../components/Location/LocationPageTitle/LocationPageTitle";
 import LocationRooms from "../../../components/Location/LocationRooms/LocationRooms";
 import BubbleChat from "../../../components/BubbleChat/BubbleChat";
+import Footer from "../../../components/Footer/Footer";
 
 const RoomBooking1 = () => {
   return (
@@ -15,6 +16,7 @@ const RoomBooking1 = () => {
         <LocationPageTitle url="/33-tuc-mac" current="Rooms" />
         <LocationRooms location="33-tuc-mac" />
       </div>
+      <Footer />
     </div>
   );
 };

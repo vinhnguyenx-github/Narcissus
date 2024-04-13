@@ -1,8 +1,14 @@
-import React from "react";
+import { useState } from "react";
 import "./RoomTypeServices.css";
 import roomServices from "../../../data/location/RoomServices.jsx";
+import RoomTypeAllServices from "../RoomTypeAllServices/RoomTypeAllServices.jsx";
 
 const RoomTypeServices = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOverlay = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className="room-type-services">
       <h5>What you will experience</h5>
@@ -18,7 +24,13 @@ const RoomTypeServices = () => {
           </div>
         ))}
       </div>
-      <button className="room-services-button">Show All Services</button>
+      <button className="room-services-button" onClick={toggleOverlay}>
+        Show All Services
+      </button>
+
+      <RoomTypeAllServices isOpen={isOpen} onClose={toggleOverlay}>
+        <h1>Content in Overlay</h1>
+      </RoomTypeAllServices>
     </div>
   );
 };
