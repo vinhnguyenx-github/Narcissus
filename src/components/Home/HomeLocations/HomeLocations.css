@@ -15,7 +15,7 @@
 }
 
 .home-location-caption:hover {
-  opacity: 1;
+  opacity: 0;
 }
 
 .home-location {
@@ -34,13 +34,13 @@
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
-  background: rgba(244, 247, 244, 0.14);
-  opacity: 0;
+  background: rgba(244, 247, 244, 0.2);
+  opacity: 1;
   transition: 0.2s ease;
 }
 
 .home-location-caption p {
-  color: black;
+  color: white;
   font-size: 25px;
   font-weight: 500;
 }
@@ -48,7 +48,7 @@
 .home-location-caption-icon {
   width: 60px;
   margin-bottom: 10px;
-  color: black;
+  color: white;
 }
 
 /* --- media --- */

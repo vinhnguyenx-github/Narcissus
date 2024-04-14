@@ -43,9 +43,21 @@
   border: none;
   color: white;
   transition: 0.3s ease;
-  cursor: not-allowed;
+  cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .room-services-button:hover {
   background-color: #c0c0c0;
+}
+
+.service-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-subtitle {
+  font-size: 0.8rem;
+  color: #868686;
+  width: 60%;
 }

@@ -34,8 +34,9 @@ function SamplePrevArrow(props) {
   );
 }
 
-function RoomPreview({ location }) {
+function RoomPreview({ location, start, end }) {
   const { rooms, defaultImage } = useRoomData();
+  const firstTwoRooms = rooms.slice(start, end);
   const settings = {
     infinite: true,
     speed: 600,
@@ -71,10 +72,12 @@ function RoomPreview({ location }) {
     ],
   };
 
+  console.log(rooms);
+
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {rooms.map((room) => (
+        {firstTwoRooms.map((room) => (
           <div key={room.id} className="card">
             <div className="card-top">
               <img src={defaultImage[room.id]} alt="" />

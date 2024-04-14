@@ -9,23 +9,13 @@ import BookingForm from "../BookingForm/BookingForm";
 import RoomTypeDescription from "../RoomTypeDescription/RoomTypeDescription";
 import RoomTypeServices from "../RoomTypeServices/RoomTypeServices";
 import RoomTypeExtraServices from "../RoomTypeExtraServices/RoomTypeExtraServices";
-import PickDate from "../PickDate/PickDate";
 import BubbleChat from "../../BubbleChat/BubbleChat";
+import PickDate from "../PickDate/PickDate";
 
 const RoomTypeBooking = () => {
   const { type } = useParams();
   const [roomId, setRoomId] = useState(null);
   const [roomPrice, setRoomPrice] = useState(null);
-  const [checkInDate, setCheckInDate] = useState(null);
-  const [checkOutDate, setCheckOutDate] = useState(null);
-
-  const handleCheckInChange = (newCheckInDate) => {
-    setCheckInDate(newCheckInDate);
-  };
-
-  const handleCheckOutChange = (newCheckOutDate) => {
-    setCheckOutDate(newCheckOutDate);
-  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -84,30 +74,13 @@ const RoomTypeBooking = () => {
           )}
           <RoomTypeDescription />
           <RoomTypeServices />
+          <RoomTypeExtraServices />
         </div>
         <div className="room-type-right">
-          <BookingForm
-            price={roomPrice}
-            onCheckInChange={handleCheckInChange}
-            onCheckOutChange={handleCheckOutChange}
-          />
-          <PickDate
-            selectedRange={[
-              {
-                startDate: new Date(checkInDate),
-                endDate: new Date(checkOutDate),
-                key: "selection",
-              },
-            ]}
-            minDate={new Date(checkInDate)}
-            onRangeChange={(newRange) => {
-              handleCheckInChange(newRange.startDate);
-              handleCheckOutChange(newRange.endDate);
-            }}
-          />
+          <BookingForm price={roomPrice} />
+          <PickDate />
         </div>
       </div>
-      <RoomTypeExtraServices />
     </div>
   );
 };

@@ -6,6 +6,7 @@ import ContactLocation from "./pages/ContactLocation";
 import RoomBooking1 from "./pages/RoomBooking";
 import RoomTypeBooking1 from "./pages/RoomTypeBooking";
 import { RoomDataProvider } from "../../provider/roomtype/roomTypeProvider";
+import Amenities1 from "./pages/Amenities";
 
 const App1 = () => {
   return (
@@ -16,6 +17,7 @@ const App1 = () => {
         <Route path="/contact-us-directions" element={<ContactLocation />} />
         <Route path="/rooms" element={<RoomBooking1 />} />
         <Route path="/rooms/:type" element={<RoomTypeBooking1 />} />
+        <Route path="/amenities" element={<Amenities1 />} />
       </Routes>
     </RoomDataProvider>
   );

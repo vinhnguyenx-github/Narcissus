@@ -24,6 +24,7 @@ const roomServices = [
     id: 5,
     iconURL: "../../../src/assets/Location/RoomServices/hairdryer.png",
     iconDescription: "Hair Dryer",
+    type: "bathroom",
   },
   {
     id: 6,
@@ -49,6 +50,44 @@ const roomServices = [
     id: 10,
     iconURL: "src/assets/Location/AssetsAndAmenitites/free-parking.png",
     iconDescription: "Free Parking",
+  },
+  {
+    id: 11,
+    iconURL: "../../../src/assets/Location/RoomServices/shampoo.png",
+    iconDescription: "Shampoo and conditioner",
+    type: "bathroom",
+  },
+  {
+    id: 12,
+    iconURL: "../../../src/assets/Location/RoomServices/tooth-care.png",
+    iconDescription: "Toothbrush and Toothpaste",
+    type: "bathroom",
+  },
+  {
+    id: 13,
+    iconURL: "../../../src/assets/Location/RoomServices/towels.png",
+    iconDescription: "Towels",
+    type: "bathroom",
+  },
+  {
+    id: 14,
+    iconURL: "../../../src/assets/Location/RoomServices/bathtub.png",
+    iconDescription: "Hot Water",
+    type: "bathroom",
+  },
+  {
+    id: 15,
+    iconURL: "../../../src/assets/Location/RoomServices/hanger.png",
+    iconDescription: "Hanger for Clothing",
+    type: "bedroom",
+  },
+  {
+    id: 16,
+    iconURL: "../../../src/assets/Location/RoomServices/folding.png",
+    iconDescription: "Extra Amenities",
+    type: "bedroom",
+    subtitle:
+      "For extra pilows, blankets or additional Amenities, Please contact the Receptionist for further assistance.",
   },
 ];
 

@@ -68,6 +68,29 @@ const BookingForm = ({ price, onCheckInChange, onCheckOutChange }) => {
             onChange={handleCheckOutChange}
           />
         </div>
+        <div className="booking-user-info">
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name: "
+            className="user-input"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email: "
+            className="user-input"
+            required
+          />
+          <input
+            type="tel"
+            name="telephone"
+            placeholder="Contact Number: "
+            className="user-input"
+            required
+          />
+        </div>
         <select className="select-people" defaultValue="1 Guest">
           <option value="1 Guest">1 Guest</option>
           <option value="2 Guests">2 Guests</option>
@@ -84,7 +107,7 @@ const BookingForm = ({ price, onCheckInChange, onCheckOutChange }) => {
         <p>{formattedTotalPrice} VND</p>
       </div>
       <div className="service-price">
-        <p>0 VND</p>
+        <p>Service Fees</p>
         <p>0 VND</p>
       </div>
       <div className="final-price">

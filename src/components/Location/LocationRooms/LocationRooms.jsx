@@ -6,10 +6,11 @@ import { useRoomData } from "../../../provider/roomtype/roomTypeProvider.jsx";
 
 function LocationRooms({ location }) {
   const { rooms, defaultImage } = useRoomData();
+  const firstTwoRooms = rooms.slice(0, 2);
 
   return (
     <div className="location-rooms">
-      {rooms.map((room) => (
+      {firstTwoRooms.map((room) => (
         <div key={room.id} className="location-room">
           <div className="location-room-top">
             <img src={defaultImage[room.id]} alt="" />

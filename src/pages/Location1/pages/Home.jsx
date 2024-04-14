@@ -21,7 +21,7 @@ const Home1 = () => {
           right="See all Rooms"
           rightURL="/33-tuc-mac/rooms"
         />
-        <RoomPreview location="33-tuc-mac" />
+        <RoomPreview location="33-tuc-mac" start={0} end={2} />
         <LocationTitle
           left="Services & Amenities"
           right="Explore More Amenities"

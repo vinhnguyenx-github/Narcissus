@@ -6,7 +6,7 @@ import LocationHero from "../../../components/Location/LocationHero/LocationHero
 import LocationPageTitle from "../../../components/Location/LocationPageTitle/LocationPageTitle";
 import BubbleChat from "../../../components/BubbleChat/BubbleChat";
 
-const ContactLocation = () => {
+const ContactLocation1 = () => {
   return (
     <div>
       <LocationNav />
@@ -24,4 +24,4 @@ const ContactLocation = () => {
   );
 };
 
-export default ContactLocation;
+export default ContactLocation1;
