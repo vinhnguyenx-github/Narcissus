@@ -13,10 +13,16 @@
 
 .location-title-link {
   color: #47463c;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .location-title-link:hover {
   color: #606160;
   text-decoration: underline;
+}
+
+@media (max-width: 840px) {
+  .location-title-link {
+    text-align: right;
+  }
 }

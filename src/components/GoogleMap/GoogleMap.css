@@ -6,6 +6,12 @@
 
 @media (max-width: 1200px) {
   .google-map {
-    width: 100%px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .google-map {
+    height: 200px;
   }
 }

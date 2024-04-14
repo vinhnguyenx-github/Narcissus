@@ -20,7 +20,7 @@
 .home-contact-col h3 {
   color: #000f38;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,7 +33,7 @@
 .home-contact-col p {
   max-width: 450px;
   list-style: 0.3;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: black;
 }
 
@@ -41,11 +41,10 @@
   display: flex;
   align-items: center;
   margin: 20px 0;
-  font-size: 13px;
 }
 
 .home-contact-col ul li p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #676767;
 }
 

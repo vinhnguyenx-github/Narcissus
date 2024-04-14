@@ -1,14 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./RoomTypeServices.css";
 import roomServices from "../../../data/location/RoomServices.jsx";
 import RoomTypeAllServices from "../RoomTypeAllServices/RoomTypeAllServices.jsx";
 
 const RoomTypeServices = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showItems, setShowItems] = useState([]);
 
   const toggleOverlay = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const updateItemsToShow = () => {
+      const screenWidth = window.innerWidth;
+      const itemsToShow = screenWidth < 525 ? 4 : 8;
+      setShowItems(roomServices.slice(0, itemsToShow));
+    };
+
+    updateItemsToShow();
+
+    window.addEventListener("resize", updateItemsToShow);
+
+    return () => {
+      window.removeEventListener("resize", updateItemsToShow);
+    };
+  }, []);
 
   const bathrooms = roomServices.filter(
     (bathroom) => bathroom.type === "bathroom"
@@ -19,7 +36,7 @@ const RoomTypeServices = () => {
     <div className="room-type-services">
       <h5>What you will experience</h5>
       <div className="services-grid">
-        {roomServices.slice(0, 8).map((service) => (
+        {showItems.slice(0, 8).map((service) => (
           <div key={service.id} className="room-type-service">
             <img
               alt=""
@@ -35,7 +52,7 @@ const RoomTypeServices = () => {
       </button>
 
       <RoomTypeAllServices isOpen={isOpen} onClose={toggleOverlay}>
-        <h5>What you will experience</h5>
+        <h5 st>What you will experience</h5>
         <div className="services-overlay">
           <h6>Bathroom</h6>
           <ul>

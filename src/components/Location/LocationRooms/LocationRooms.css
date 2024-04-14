@@ -79,3 +79,17 @@
     height: 650px;
   }
 }
+
+@media (max-width: 600px) {
+  .location-rooms {
+    grid-template-columns: 1fr;
+  }
+
+  .location-room-top > img {
+    width: 100%;
+    height: 200px;
+  }
+  .location-room {
+    height: 550px;
+  }
+}

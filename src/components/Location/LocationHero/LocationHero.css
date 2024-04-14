@@ -1,6 +1,6 @@
 .location-hero {
   width: 100%;
-  min-height: 80vh;
+  height: 80vh;
   position: relative;
 }
 
@@ -11,4 +11,10 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (max-width: 480px) {
+  .location-hero {
+    height: 50vh;
+  }
 }

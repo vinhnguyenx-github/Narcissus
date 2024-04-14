@@ -9,7 +9,6 @@ import BookingForm from "../BookingForm/BookingForm";
 import RoomTypeDescription from "../RoomTypeDescription/RoomTypeDescription";
 import RoomTypeServices from "../RoomTypeServices/RoomTypeServices";
 import RoomTypeExtraServices from "../RoomTypeExtraServices/RoomTypeExtraServices";
-import BubbleChat from "../../BubbleChat/BubbleChat";
 import PickDate from "../PickDate/PickDate";
 
 const RoomTypeBooking = () => {
@@ -46,7 +45,6 @@ const RoomTypeBooking = () => {
     <div className="room-type-booking">
       <LocationTitle left={type} />
       <RoomTypeImages />
-      <BubbleChat />
       <div className="room-type-main">
         <div className="room-type-information">
           <h5 className="heading-description">

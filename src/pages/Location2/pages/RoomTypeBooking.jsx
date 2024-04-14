@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams, useLocation } from "react-router-dom";
 import LocationNav from "../../../components/Location/LocationNav/LocationNav";
+import RoomTypeBooking from "../../../components/Location/RoomTypeBooking/RoomTypeBooking";
+import BubbleChat from "../../../components/BubbleChat/BubbleChat";
 
 const RoomTypeBooking2 = () => {
   const { type } = useParams(); // Access the room type from the route parameter
@@ -8,8 +10,9 @@ const RoomTypeBooking2 = () => {
   return (
     <div>
       <LocationNav />
+      <BubbleChat />
       <div className="container">
-        <h1>Booking Page for {type} Room</h1>;
+        <RoomTypeBooking />
       </div>
     </div>
   );

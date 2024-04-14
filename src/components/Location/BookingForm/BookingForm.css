@@ -136,3 +136,12 @@ input[type="date"]::-webkit-inner-spin-button {
 .user-input::placeholder {
   color: black;
 }
+
+@media (max-width: 933px) {
+  .checkin,
+  .user-input,
+  .reserve-button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

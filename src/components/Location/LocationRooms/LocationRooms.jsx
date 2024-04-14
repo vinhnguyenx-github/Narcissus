@@ -4,9 +4,9 @@ import "./LocationRooms.css";
 import BookBtn from "../BookBtn/BookBtn";
 import { useRoomData } from "../../../provider/roomtype/roomTypeProvider.jsx";
 
-function LocationRooms({ location }) {
+function LocationRooms({ location, start, end }) {
   const { rooms, defaultImage } = useRoomData();
-  const firstTwoRooms = rooms.slice(0, 2);
+  const firstTwoRooms = rooms.slice(start, end);
 
   return (
     <div className="location-rooms">

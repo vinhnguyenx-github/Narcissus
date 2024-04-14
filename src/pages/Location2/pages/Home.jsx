@@ -17,7 +17,7 @@ const Home2 = () => {
       <div className="container">
         <LocationAbout />
         <LocationTitle left="Rooms" right="See all Rooms" />
-        <RoomPreview />
+        <RoomPreview location="84-le-duan" start={2} end={7} />
         <LocationTitle
           left="Services & Amenities"
           right="Explore More Amenities"

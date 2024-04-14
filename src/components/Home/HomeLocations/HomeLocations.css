@@ -36,7 +36,7 @@
   cursor: pointer;
   background: rgba(244, 247, 244, 0.2);
   opacity: 1;
-  transition: 0.2s ease;
+  transition: opacity 0.5s ease;
 }
 
 .home-location-caption p {
@@ -61,5 +61,11 @@
   .home-location {
     flex-basis: 100%;
     margin: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-locations {
+    margin: 0;
   }
 }

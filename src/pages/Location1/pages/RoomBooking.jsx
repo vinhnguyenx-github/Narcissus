@@ -14,7 +14,7 @@ const RoomBooking1 = () => {
       <BubbleChat />
       <div className="container">
         <LocationPageTitle url="/33-tuc-mac" current="Rooms" />
-        <LocationRooms location="33-tuc-mac" />
+        <LocationRooms location="33-tuc-mac" start={0} end={2} />
       </div>
       <Footer />
     </div>

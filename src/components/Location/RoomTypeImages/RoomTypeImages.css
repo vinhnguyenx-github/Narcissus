@@ -29,6 +29,9 @@
   width: 100%;
   object-fit: cover;
   height: 33.333333333%;
+  transition: 0.3s ease;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .image-show-all {
@@ -70,5 +73,11 @@
 @media (max-width: 600px) {
   .room-type-images {
     height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .room-type-images {
+    height: 40vh;
   }
 }

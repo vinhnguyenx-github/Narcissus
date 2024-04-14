@@ -15,6 +15,7 @@ const RoomTypeImages = () => {
     <div className="room-type-images">
       <div className="image-left">
         <img src={image_1} className="image1" />
+        <div className="overlay-images"></div>
       </div>
       <div className="image-right">
         <img src={image_2} className="image2" />

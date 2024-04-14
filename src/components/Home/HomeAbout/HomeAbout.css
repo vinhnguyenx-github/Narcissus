@@ -8,12 +8,12 @@
 
 .home-about h3 {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   color: #606160;
 }
 
 .home-about h2 {
-  font-size: 35px;
+  font-size: 1.3rem;
 }
 
 .home-about p {
@@ -51,5 +51,15 @@
 
   .about-right {
     flex-basis: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-about-img {
+    height: 300px;
+  }
+
+  .home-about {
+    margin: 0;
   }
 }
