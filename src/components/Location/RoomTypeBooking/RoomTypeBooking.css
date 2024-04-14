@@ -86,5 +86,6 @@
   .room-type-right {
     flex-basis: 100%;
     margin-left: 0;
+    margin-bottom: 20px;
   }
 }

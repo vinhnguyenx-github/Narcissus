@@ -30,6 +30,12 @@ const RoomTypeServices = () => {
   const bathrooms = roomServices.filter(
     (bathroom) => bathroom.type === "bathroom"
   );
+  const extra_services = roomServices.filter(
+    (extra_service) => extra_service.type === "extra-services"
+  );
+  const entertainments = roomServices.filter(
+    (entertainment) => entertainment.type === "entertainment"
+  );
   const bedrooms = roomServices.filter((bedroom) => bedroom.type === "bedroom");
 
   return (
@@ -75,6 +81,42 @@ const RoomTypeServices = () => {
           <h6>Bedroom</h6>
           <ul>
             {bedrooms.map((service) => (
+              <li key={service.id}>
+                <img
+                  alt=""
+                  src={service.iconURL}
+                  className="room-type-service-icon"
+                />
+                <div className="service-description">
+                  <p>{service.iconDescription}</p>
+                  <div className="service-subtitle">{service.subtitle}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="services-overlay">
+          <h6>Entertainments</h6>
+          <ul>
+            {entertainments.map((service) => (
+              <li key={service.id}>
+                <img
+                  alt=""
+                  src={service.iconURL}
+                  className="room-type-service-icon"
+                />
+                <div className="service-description">
+                  <p>{service.iconDescription}</p>
+                  <div className="service-subtitle">{service.subtitle}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="services-overlay">
+          <h6>Extra Services</h6>
+          <ul>
+            {extra_services.map((service) => (
               <li key={service.id}>
                 <img
                   alt=""
