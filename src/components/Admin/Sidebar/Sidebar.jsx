@@ -30,7 +30,7 @@ const AdminSidebar = ({ activeItem }) => {
         </Link>
         <h2>Dữ liệu</h2>
         <Link
-          to=""
+          to="/admin/staff"
           className={`admin-item ${
             activeItem === "employees" ? "admin-item-active" : ""
           }`}

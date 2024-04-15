@@ -1,0 +1,9 @@
+.staff-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.staff-table h2 {
+  margin-bottom: 20px;
+}

@@ -60,6 +60,27 @@
   margin-right: 10px;
 }
 
+.all-images-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 100;
+  transition: 0.3s ease;
+  padding: 5% 10%;
+}
+
+.close-gallery-btn {
+  float: right;
+  cursor: pointer;
+}
+
+.toggle-gallery {
+  right: -100%;
+}
+
 @media (max-width: 800px) {
   .image-right {
     display: none;

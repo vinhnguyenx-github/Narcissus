@@ -89,17 +89,20 @@ function RoomPreview({ location, start, end }) {
               <p>{room.description}</p>
             </div>
             <div className="card-bottom">
-              <a href="" className="card-readmore">
-                Read More
-              </a>
+              {!disabledRoomIds.includes(room.id) && (
+                <Link
+                  to={`/${location}/rooms/${room.name}`}
+                  className="card-readmore"
+                >
+                  Read More
+                </Link>
+              )}
               <p>
                 Prices: {new Intl.NumberFormat("en").format(room.pricePerNight)}
                 VND
               </p>
               {disabledRoomIds.includes(room.id) ? (
-                <div className="disable-room">
-                  This room is currently unavailable
-                </div>
+                <button className="disable-button">Unavailable</button>
               ) : (
                 <Link to={`/${location}/rooms/${room.name}`}>
                   <BookBtn />

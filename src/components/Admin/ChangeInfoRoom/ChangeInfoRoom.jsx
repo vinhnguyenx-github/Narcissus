@@ -1,10 +1,21 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect, useRef } from "react";
 import "./ChangeInfoRoom.css";
 
 const ChangeInfoRoom = ({ room, isOpen, onClose, preview_image }) => {
   const [roomName, setRoomName] = useState(room.name);
   const [roomDescription, setRoomDescription] = useState(room.description);
   const [roomPrice, setRoomPrice] = useState(room.pricePerNight);
+  const imageRef = useRef(null);
+  const [image, setImage] = useState("");
+
+  const handleImageClick = () => {
+    imageRef.current.click();
+  };
+
+  const handleImagechange = (event) => {
+    event.target.files[0];
+    setImage(event.target.files[0]);
+  };
 
   // Update state when room prop changes
   useEffect(() => {
@@ -72,9 +83,22 @@ const ChangeInfoRoom = ({ room, isOpen, onClose, preview_image }) => {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="room-form-row">
-                <label>Chỉnh sửa ảnh preview</label>
-                <input type="file" accept="image/*" />
+              <div className="room-form-image">
+                <label style={{ color: "black" }}>Chỉnh sửa ảnh preview</label>
+                <div className="image-area" onClick={handleImageClick}>
+                  {image ? (
+                    <img src={URL.createObjectURL(image)} />
+                  ) : (
+                    <img src={preview_image[room.id]} />
+                  )}
+                  <input
+                    type="file"
+                    accept="image/*"
+                    ref={imageRef}
+                    style={{ display: "none" }}
+                    onChange={handleImagechange}
+                  />
+                </div>
               </div>
               <button className="save-form-btn" type="submit">
                 Lưu

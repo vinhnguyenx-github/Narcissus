@@ -85,7 +85,7 @@ nav ul li:hover {
   }
 
   .toggle-menu {
-    right: -950px;
+    right: -100%;
   }
 
   nav ul li:hover {

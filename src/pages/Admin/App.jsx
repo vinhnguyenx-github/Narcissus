@@ -4,6 +4,7 @@ import Login from "./pages/LoginSignup";
 import HomeAdmin from "./pages/Home";
 import AdminRooms from "./pages/Rooms";
 import { RoomDataProvider } from "../../provider/roomtype/roomTypeProvider";
+import AdminStaff from "./pages/Staff";
 
 const AppAdmin = () => {
   return (
@@ -11,6 +12,7 @@ const AppAdmin = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<HomeAdmin />} />
+        <Route path="/staff" element={<AdminStaff />} />
         <Route path="/rooms" element={<AdminRooms />} />
       </Routes>
     </RoomDataProvider>

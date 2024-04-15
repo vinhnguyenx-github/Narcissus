@@ -56,20 +56,21 @@ const RoomTypeBooking = () => {
             <li className="room-type-information-li">1 bath</li>
             <li className="room-type-information-li">1 kitchen</li>
           </ol>
-          {roomId === 1 && (
-            <div className="room-type-review">
-              <div className="mvp">
-                <img src={mvp} alt="" />
-                <h5>Popular choice</h5>
+          {roomId === 1 ||
+            (roomId === 3 && (
+              <div className="room-type-review">
+                <div className="mvp">
+                  <img src={mvp} alt="" />
+                  <h5>Popular choice</h5>
+                </div>
+                <div>
+                  <h5 className="mvp-description">
+                    A highly-rated and beloved Narcissus room known for its
+                    exceptional ratings and reliability.
+                  </h5>
+                </div>
               </div>
-              <div>
-                <h5 className="mvp-description">
-                  A highly-rated and beloved Narcissus room known for its
-                  exceptional ratings and reliability.
-                </h5>
-              </div>
-            </div>
-          )}
+            ))}
           <RoomTypeDescription />
           <RoomTypeServices />
           <RoomTypeExtraServices />
