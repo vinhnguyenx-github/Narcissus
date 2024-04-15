@@ -62,4 +62,8 @@
   .home-about {
     margin: 0;
   }
+
+  .home-about h3 {
+    margin-top: 30px;
+  }
 }

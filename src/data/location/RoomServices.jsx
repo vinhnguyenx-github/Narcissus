@@ -66,25 +66,25 @@ const roomServices = [
     type: "bathroom",
   },
   {
-    id: 11,
+    id: 12,
     iconURL: "../../../src/assets/Location/RoomServices/towels.png",
     iconDescription: "Towels",
     type: "bathroom",
   },
   {
-    id: 12,
+    id: 13,
     iconURL: "../../../src/assets/Location/RoomServices/bathtub.png",
     iconDescription: "Hot Water",
     type: "bathroom",
   },
   {
-    id: 13,
+    id: 14,
     iconURL: "../../../src/assets/Location/RoomServices/hanger.png",
     iconDescription: "Hanger for Clothing",
     type: "bedroom",
   },
   {
-    id: 14,
+    id: 15,
     iconURL: "../../../src/assets/Location/RoomServices/folding.png",
     iconDescription: "Extra Amenities",
     type: "bedroom",
@@ -92,7 +92,7 @@ const roomServices = [
       "For extra pilows, blankets or additional Amenities, Please contact the Receptionist for further assistance.",
   },
   {
-    id: 15,
+    id: 16,
     iconURL: "../../../src/assets/Location/RoomServices/wipe.png",
     iconDescription: "Room Cleaning",
     type: "extra-services",
@@ -100,7 +100,7 @@ const roomServices = [
       "Please tell us if you need room service or privacy. Hang 'Do Not Disturb' for privacy; ask Reception for amenities.",
   },
   {
-    id: 16,
+    id: 17,
     iconURL: "../../../src/assets/Location/RoomServices/event.png",
     iconDescription: "Long stay allowed",
     type: "extra-services",

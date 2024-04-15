@@ -37,6 +37,7 @@ function SamplePrevArrow(props) {
 function RoomPreview({ location, start, end }) {
   const { rooms, defaultImage } = useRoomData();
   const firstTwoRooms = rooms.slice(start, end);
+  const disabledRoomIds = [5, 6];
   const settings = {
     infinite: true,
     speed: 600,
@@ -95,6 +96,11 @@ function RoomPreview({ location, start, end }) {
               <Link to={`/${location}/rooms/${room.name}`}>
                 <BookBtn />
               </Link>
+              {disabledRoomIds.includes(room.id) ? (
+                <div className="disable-room">
+                  This room is currently unavailable
+                </div>
+              ) : null}
             </div>
           </div>
         ))}

@@ -17,6 +17,7 @@
   height: 650px;
   color: #fff;
   cursor: pointer;
+  position: relative;
 }
 
 .card-top h4 {
@@ -102,6 +103,15 @@
 
 .next-arrow {
   margin-left: 0px;
+}
+
+.disable-room {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5qq);
 }
 
 @media (max-width: 1150px) {

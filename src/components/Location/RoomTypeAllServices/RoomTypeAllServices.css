@@ -7,7 +7,7 @@
   left: 0;
   cursor: pointer;
   z-index: 10;
-  inset: 0;
+  overflow-y: scroll;
 }
 
 .overlay__container {

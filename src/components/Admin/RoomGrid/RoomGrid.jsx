@@ -1,12 +1,26 @@
 import React, { useState, useEffect } from "react";
 import APIService from "../../../services/APIService";
 import "./RoomGrid.css";
-import ChangeInfoRoom from "../ChangeInfoRoom/ChangeInfoRoom";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Button,
+  useDisclosure,
+  FormControl,
+  FormLabel,
+  FormHelperText,
+  Input,
+} from "@chakra-ui/react";
 
 const AdminRoomGrid = () => {
   const [rooms, setRooms] = useState([]);
-  const [showOverlay, setShowOverlay] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,35 +40,19 @@ const AdminRoomGrid = () => {
     fetchData();
   }, []);
 
-  const handleRoomClick = (room) => {
-    if (!showOverlay) {
-      setSelectedRoom(room);
-      setShowOverlay(true);
-    } else {
-      setShowOverlay(false);
-    }
-  };
-
-  const handleOverlayClose = () => {
-    setShowOverlay(false);
-    setSelectedRoom(null);
-  };
-
   return (
     <div className="admin-room-grid">
       {rooms.map((room) => (
-        <div
-          key={room.id}
-          className="admin-room-item"
-          onClick={() => handleRoomClick(room)}
-        >
-          <p>Chỉnh sửa thông tin phòng {room.name} cơ sở ?</p>
-        </div>
+        <>
+          <Button onClick={onOpen} className="admin-item-button">
+            Chỉnh sửa phòng {room.name}
+          </Button>
+          <Modal isOpen={isOpen} onClose={onClose} size="md">
+            <ModalOverlay />
+            <ModalBody>Hello World</ModalBody>
+          </Modal>
+        </>
       ))}
-
-      {showOverlay && (
-        <ChangeInfoRoom room={selectedRoom} onClose={handleOverlayClose} />
-      )}
     </div>
   );
 };

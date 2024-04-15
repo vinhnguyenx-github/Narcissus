@@ -9,6 +9,7 @@ const RoomTypeServices = () => {
 
   const toggleOverlay = () => {
     setIsOpen(!isOpen);
+    document.body.style.overflow = isOpen ? "auto" : "hidden";
   };
 
   useEffect(() => {
@@ -27,16 +28,14 @@ const RoomTypeServices = () => {
     };
   }, []);
 
-  const bathrooms = roomServices.filter(
-    (bathroom) => bathroom.type === "bathroom"
-  );
-  const extra_services = roomServices.filter(
-    (extra_service) => extra_service.type === "extra-services"
-  );
-  const entertainments = roomServices.filter(
-    (entertainment) => entertainment.type === "entertainment"
-  );
-  const bedrooms = roomServices.filter((bedroom) => bedroom.type === "bedroom");
+  const filterServicesByType = (type) => {
+    return roomServices.filter((service) => service.type === type);
+  };
+
+  const bathrooms = filterServicesByType("bathroom");
+  const extra_services = filterServicesByType("extra-services");
+  const entertainments = filterServicesByType("entertainment");
+  const bedrooms = filterServicesByType("bedroom");
 
   return (
     <div className="room-type-services">
@@ -58,7 +57,7 @@ const RoomTypeServices = () => {
       </button>
 
       <RoomTypeAllServices isOpen={isOpen} onClose={toggleOverlay}>
-        <h5 st>What you will experience</h5>
+        <h5>What you will experience</h5>
         <div className="services-overlay">
           <h6>Bathroom</h6>
           <ul>

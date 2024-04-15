@@ -17,6 +17,7 @@
 
 @media (max-width: 480px) {
   .home-title {
-    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 0;
   }
 }
