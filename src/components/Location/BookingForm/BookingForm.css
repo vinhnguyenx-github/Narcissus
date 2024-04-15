@@ -96,7 +96,6 @@ input[type="date"]::-webkit-inner-spin-button {
 
 .total-price p {
   font-size: 0.9rem;
-  text-align: right;
 }
 
 .service-price {

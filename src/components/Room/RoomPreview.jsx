@@ -73,13 +73,16 @@ function RoomPreview({ location, start, end }) {
     ],
   };
 
-  console.log(rooms);
-
   return (
     <div className="slider-container">
       <Slider {...settings}>
         {firstTwoRooms.map((room) => (
-          <div key={room.id} className="card">
+          <div
+            key={room.id}
+            className={`card ${
+              disabledRoomIds.includes(room.id) ? "disabled-card" : ""
+            }`}
+          >
             <div className="card-top">
               <img src={defaultImage[room.id]} alt="" />
               <h4>{room.name}</h4>
@@ -93,14 +96,15 @@ function RoomPreview({ location, start, end }) {
                 Prices: {new Intl.NumberFormat("en").format(room.pricePerNight)}
                 VND
               </p>
-              <Link to={`/${location}/rooms/${room.name}`}>
-                <BookBtn />
-              </Link>
               {disabledRoomIds.includes(room.id) ? (
                 <div className="disable-room">
                   This room is currently unavailable
                 </div>
-              ) : null}
+              ) : (
+                <Link to={`/${location}/rooms/${room.name}`}>
+                  <BookBtn />
+                </Link>
+              )}
             </div>
           </div>
         ))}
