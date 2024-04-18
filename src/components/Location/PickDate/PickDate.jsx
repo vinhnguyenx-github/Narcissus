@@ -18,7 +18,6 @@ const PickDate = () => {
   ]);
 
   const handleSelect = (ranges) => {
-    // Update the selected date range when the user makes a selection
     setSelectedDateRange([ranges.selection]);
   };
 

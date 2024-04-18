@@ -9,5 +9,16 @@
 .additional-info h5 {
   font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.additional-info-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.additional-info-row img {
+  width: 20px;
+  margin-right: 10px;
 }

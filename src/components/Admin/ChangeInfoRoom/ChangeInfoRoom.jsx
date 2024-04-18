@@ -46,7 +46,7 @@ const ChangeInfoRoom = ({ room, isOpen, onClose, preview_image }) => {
       {isOpen && room && (
         <div className="overlay">
           <div className="overlay__background" onClick={onClose} />
-          <div className="overlay__container">
+          <div className="overlay__container" style={{ paddingTop: "20px" }}>
             <div className="overlay__controls">
               <button
                 className="overlay__close"

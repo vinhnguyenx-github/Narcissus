@@ -55,11 +55,7 @@
 }
 
 .contact-location-description {
-  margin: 20px auto;
-}
-
-.contact-location-description {
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 @media (max-width: 1200px) {

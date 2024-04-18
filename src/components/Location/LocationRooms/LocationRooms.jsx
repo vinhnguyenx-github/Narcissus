@@ -7,40 +7,42 @@ import { useRoomData } from "../../../provider/roomtype/roomTypeProvider.jsx";
 function LocationRooms({ location, start, end }) {
   const { rooms, defaultImage } = useRoomData();
   const firstTwoRooms = rooms.slice(start, end);
+  const disabledRoomIds = [5, 6];
 
   return (
     <div className="location-rooms">
       {firstTwoRooms.map((room) => (
-        <div key={room.id} className="location-room">
+        <div
+          key={room.id}
+          className={`card ${
+            disabledRoomIds.includes(room.id) ? "disabled-card" : ""
+          }`}
+        >
           <div className="location-room-top">
             <img src={defaultImage[room.id]} alt="" />
             <h4>{room.name}</h4>
             <p>{room.description}</p>
           </div>
           <div className="location-room-bottom">
-            <Link
-              to={`/${location}/rooms/${room.name}`}
-              className="location-room-readmore"
-            >
-              Read More
-            </Link>
+            {!disabledRoomIds.includes(room.id) && (
+              <Link
+                to={`/${location}/rooms/${room.name}`}
+                className="card-readmore"
+              >
+                Read More
+              </Link>
+            )}
             <p>
               Prices: {new Intl.NumberFormat("en").format(room.pricePerNight)}{" "}
               VND
             </p>
-            <Link
-              to={{
-                pathname: `/${location}/rooms/${room.name}`,
-                state: {
-                  roomID: room.type_id,
-                  roomName: room.name,
-                  roomDescription: room.description,
-                  roomPrice: room.pricePerNight,
-                },
-              }}
-            >
-              <BookBtn />
-            </Link>
+            {disabledRoomIds.includes(room.id) ? (
+              <button className="disable-button">Unavailable</button>
+            ) : (
+              <Link to={`/${location}/rooms/${room.name}`}>
+                <BookBtn />
+              </Link>
+            )}
           </div>
         </div>
       ))}

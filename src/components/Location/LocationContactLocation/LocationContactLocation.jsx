@@ -29,7 +29,6 @@ const LocationContactLocation = () => {
   ];
   const googleMapPath = useLocation();
 
-  // Get the current location's ID based on the pathname
   const currentGoogleMapPath = googleMapPaths.find((loc) =>
     googleMapPath.pathname.startsWith(loc.path)
   );
@@ -41,7 +40,10 @@ const LocationContactLocation = () => {
           <h3>How to Get to the Hotel</h3>
           <p className="contact-location-description">
             Find your way to Narcissus Hotel & Apartment or click on View
-            Directions below. We're looking forward to welcoming you.
+            Directions below.
+          </p>
+          <p style={{ marginBottom: "20px" }}>
+            We're looking forward to welcoming you.
           </p>
           <div className="contact-location-info">
             <img src={icon1} alt="" className="contact-location-icon" />
