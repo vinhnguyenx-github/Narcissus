@@ -18,13 +18,16 @@ const HomeContact = () => {
           <li>
             <LuPhoneCall size={20} className="icon" />
             <p>
-              Telephone: <a href="tel:">12345678910jqka</a>
+              Telephone: <a href="tel:0337248276">0337248276</a>
             </p>
           </li>
           <li>
             <LuMail size={20} className="icon" />
             <p>
-              Email: <a href="mailto:">xuanvinhratdeptrai@gmail.com</a>
+              Email:{" "}
+              <a href="mailto:Narcissus84leduan@gmail.com">
+                Narcissus84leduan@gmail.com
+              </a>
             </p>
           </li>
           <li>

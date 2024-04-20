@@ -50,14 +50,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: not-allowed;
 }
 
 .image-show-all:hover {
   background-color: #e0e0e0;
-}
-
-.show-all-icon {
-  margin-right: 10px;
 }
 
 .all-images-container {

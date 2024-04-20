@@ -14,13 +14,6 @@ const RoomTypeImages = () => {
   const { rooms, defaultImage } = useRoomData();
   const { type } = useParams();
   const [showGallery, setShowGallery] = useState(false);
-  const toggleGallery = () => {
-    setShowGallery(!showGallery);
-  };
-
-  const closeGallery = () => {
-    setShowGallery(false);
-  };
 
   return (
     <div className="room-type-images">
@@ -33,7 +26,7 @@ const RoomTypeImages = () => {
         <img src={image_4} className="image4" alt="Image 4" />
       </div>
 
-      <button className="image-show-all" onClick={toggleGallery}>
+      <button className="image-show-all">
         <AiOutlineMenu className="show-all-icon" />
         Show All Photos
       </button>
@@ -44,11 +37,7 @@ const RoomTypeImages = () => {
             showGallery ? "all-images-container " : "all-images-container"
           }
         >
-          <FaAngleRight
-            size={30}
-            className="close-gallery-btn"
-            onClick={closeGallery}
-          />
+          <FaAngleRight size={30} className="close-gallery-btn" />
           <RoomTypeAllImages />
         </div>
       )}

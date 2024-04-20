@@ -9,7 +9,6 @@ import BookingForm from "../BookingForm/BookingForm";
 import RoomTypeDescription from "../RoomTypeDescription/RoomTypeDescription";
 import RoomTypeServices from "../RoomTypeServices/RoomTypeServices";
 import RoomTypeExtraServices from "../RoomTypeExtraServices/RoomTypeExtraServices";
-import PickDate from "../PickDate/PickDate";
 
 const RoomTypeBooking = () => {
   const { type } = useParams();
@@ -76,7 +75,6 @@ const RoomTypeBooking = () => {
         </div>
         <div className="room-type-right">
           <BookingForm price={roomPrice} />
-          <PickDate />
         </div>
       </div>
     </div>

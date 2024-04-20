@@ -50,7 +50,7 @@ const LocationNav = () => {
           </Link>
         )}
         {currentLocationPath && (
-          <Link to={currentLocationPath.galleryPath}>
+          <Link>
             <li className="nav-link">Gallery</li>
           </Link>
         )}

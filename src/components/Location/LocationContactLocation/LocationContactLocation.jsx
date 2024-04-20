@@ -57,7 +57,7 @@ const LocationContactLocation = () => {
             <img src={icon2} alt="" className="contact-location-icon" />
             <div className="contact-information">
               <p>
-                Telephone : <a href="">094-291-2003</a>
+                Telephone :<a href="tel:0337248276">0337248276</a>
               </p>
               <p>
                 Representatives are available every day from 3:00 am to 11:00 pm
@@ -69,7 +69,9 @@ const LocationContactLocation = () => {
           <div className="contact-location-info">
             <img src={icon3} alt="" className="contact-location-icon" />
             <div className="contact-information">
-              <a href="">xuanvinhdeptrai@gmail.com</a>
+              <a href="mailto:Narcissus84leduan@gmail.com">
+                Narcissus84leduan@gmail.com
+              </a>
             </div>
           </div>
         </div>

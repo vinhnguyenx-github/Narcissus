@@ -1,13 +1,34 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api/roomType";
+const ROOM_URL = "http://localhost:8080/api/roomType";
+
+const GALLERY_URL = "http://localhost:8080/api/gallery";
+
+function fixImagePath(imagePath) {
+  return imagePath.replace(/\\/g, "/");
+}
 
 class APIService {
+  // Room
   getTypes() {
-    return axios.get(`${BASE_URL}/find`);
+    return axios.get(`${ROOM_URL}/find`);
   }
   getImageUrl(id) {
-    return `${BASE_URL}/getImage/${id}`;
+    return axios.get(`${ROOM_URL}/getImage/${id}`);
+  }
+  getHotel(id) {
+    return axios.get(`${ROOM_URL}/findHotel/${id}`);
+  }
+  // Gallery
+  getAllImages() {
+    return axios.get(`${GALLERY_URL}/find`);
+  }
+  getImage(imageURL, format) {
+    const fixedImagePath = fixImagePath(imageURL);
+    return axios.get(
+      `${GALLERY_URL}/getImage?url=${fixedImagePath}&format=${format}`,
+      { responseType: "arraybuffer" }
+    );
   }
 }
 
