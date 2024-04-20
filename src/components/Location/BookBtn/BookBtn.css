@@ -6,6 +6,10 @@
   border-radius: 5px;
   background-color: white;
   transition: 0.2s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .BookBtn:hover {

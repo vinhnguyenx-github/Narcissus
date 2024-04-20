@@ -78,6 +78,7 @@ const LocationContactLocation = () => {
         <div className="contact-location-content-col">
           <GoogleMap url={currentGoogleMapPath.googleMapURL} />
         </div>
+        <div style={{ marginBottom: "30px" }}></div>
       </div>
     </div>
   );

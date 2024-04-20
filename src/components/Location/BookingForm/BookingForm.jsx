@@ -93,6 +93,7 @@ const BookingForm = ({ price }) => {
           <option value="1 Guest">1 Guest</option>
           <option value="2 Guests">2 Guests</option>
           <option value="3 Guests">3 Guests</option>
+          <option value="4 Guests">4 Guests</option>
         </select>
         <button className="reserve-button" type="submit">
           Reservation

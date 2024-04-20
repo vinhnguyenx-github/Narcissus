@@ -14,7 +14,7 @@ function LocationRooms({ location, start, end }) {
       {firstTwoRooms.map((room) => (
         <div
           key={room.id}
-          className={`card ${
+          className={`location-room ${
             disabledRoomIds.includes(room.id) ? "disabled-card" : ""
           }`}
         >
