@@ -35,5 +35,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "vite": "^5.2.0"
+  },
+  "scripts": {
+    "build": "npm run react-build",
+    "react-build": "react-scripts build && mv build public"
   }
 }
