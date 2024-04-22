@@ -15,13 +15,7 @@ const Home = () => {
       <HomeNav />
       <HomeHero>
         {images.map((image, index) => {
-          return (
-            <img
-              key={index}
-              src={process.env.PUBLIC_URL + "/" + image.imgURL}
-              alt={image.imgAlt}
-            />
-          );
+          return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
         })}
       </HomeHero>
       <BubbleChat />
