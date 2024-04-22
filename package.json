@@ -37,7 +37,6 @@
     "vite": "^5.2.0"
   },
   "scripts": {
-    "build": "npm run react-build",
-    "react-build": "react-scripts build && mv build public"
+    "build": "[my-framework] build --output public"
   }
 }
