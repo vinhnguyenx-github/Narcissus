@@ -36,7 +36,6 @@ function SamplePrevArrow(props) {
 
 function RoomPreview({ location, start, end }) {
   const { rooms, defaultImage } = useRoomData();
-  console.log(rooms);
   const firstTwoRooms = rooms.slice(start, end);
   const disabledRoomIds = [5, 6];
   const settings = {
@@ -85,7 +84,9 @@ function RoomPreview({ location, start, end }) {
             }`}
           >
             <div className="card-top">
-              <img src={defaultImage[room.id]} alt="" />
+              <img
+                src={`http://localhost:8080/api/roomType/getImage/${room.id}`}
+              />
               <h4>{room.name}</h4>
               <p>{room.description}</p>
             </div>

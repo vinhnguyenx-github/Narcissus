@@ -19,7 +19,9 @@ function LocationRooms({ location, start, end }) {
           }`}
         >
           <div className="location-room-top">
-            <img src={defaultImage[room.id]} alt="" />
+            <img
+              src={`http://localhost:8080/api/roomType/getImage/${room.id}`}
+            />
             <h4>{room.name}</h4>
             <p>{room.description}</p>
           </div>

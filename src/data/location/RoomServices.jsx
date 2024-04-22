@@ -106,6 +106,24 @@ const roomServices = [
     type: "extra-services",
     subtitle: "Allow stay for 1 month or more",
   },
+  {
+    id: 18,
+    iconURL: "../../../src/assets/Location/RoomServices/clothes.png",
+    iconDescription: "Clothing Storage",
+    type: "bedroom",
+  },
+  {
+    id: 19,
+    iconURL: "../../../src/assets/Location/RoomServices/air-conditioner.png",
+    iconDescription: "Air Conditioner",
+    type: "bedroom",
+  },
+  {
+    id: 20,
+    iconURL: "../../../src/assets/Location/RoomServices/water-bottle.png",
+    iconDescription: "Free Water",
+    type: "extra-services",
+  },
 ];
 
 export default roomServices;

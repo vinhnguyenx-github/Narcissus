@@ -16,7 +16,7 @@ const Home2 = () => {
       <BubbleChat />
       <div className="container">
         <LocationAbout />
-        <LocationTitle left="Rooms" right="See all Rooms" />
+        <LocationTitle left="Rooms" right="See all Rooms" rightURL="rooms" />
         <RoomPreview location="84-le-duan" start={2} end={7} />
         <LocationTitle
           left="Services & Amenities"

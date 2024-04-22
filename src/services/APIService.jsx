@@ -23,6 +23,9 @@ class APIService {
   getAllImages() {
     return axios.get(`${GALLERY_URL}/find`);
   }
+  getImageByRoom(id) {
+    return axios.get(`${GALLERY_URL}/find/${id}`);
+  }
   getImage(imageURL, format) {
     const fixedImagePath = fixImagePath(imageURL);
     return axios.get(
