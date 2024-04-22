@@ -1,4 +1,4 @@
-import image1 from "../../assets/Home/HomeHeroImages/banner1.jpg";
+import image1 from "../assets/Home/HomeHeroImages/banner1.jpg";
 
 const home_hero_images = [
   {
