@@ -1,6 +1,8 @@
+import image1 from "../../assets/Home/HomeHeroImages/banner1.jpg";
+
 const home_hero_images = [
   {
-    imgURL: "src/assets/Home/HomeHeroImages/banner1.png",
+    imgURL: image1,
     imgAlt: "img-1",
   },
   {
