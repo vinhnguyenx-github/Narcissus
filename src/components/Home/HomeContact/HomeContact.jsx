@@ -56,7 +56,7 @@ const HomeContact = () => {
           <label>Your Phone Number</label>
           <input
             type="tel"
-            name="phone"
+            name="tel"
             placeholder="enter your phone number"
             required
           />
