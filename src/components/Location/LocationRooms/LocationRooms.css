@@ -67,6 +67,20 @@
   text-decoration-color: #606160;
 }
 
+@media (max-width: 1200px) {
+  .location-rooms {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .location-room-top > img {
+    width: 100%;
+    height: 250px;
+  }
+  .location-room {
+    height: 550px;
+  }
+}
+
 @media (max-width: 900px) {
   .location-rooms {
     grid-template-columns: 1fr;
@@ -89,20 +103,6 @@
   .location-room-top > img {
     width: 100%;
     height: 200px;
-  }
-  .location-room {
-    height: 550px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .location-rooms {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .location-room-top > img {
-    width: 100%;
-    height: 250px;
   }
   .location-room {
     height: 550px;
