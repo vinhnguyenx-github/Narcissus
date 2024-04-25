@@ -20,7 +20,7 @@
 .home-contact-col h3 {
   color: #000f38;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,7 +33,6 @@
 .home-contact-col p {
   max-width: 450px;
   list-style: 0.3;
-  font-size: 1.1rem;
   color: black;
 }
 
@@ -73,6 +72,7 @@
   justify-content: center;
   cursor: pointer;
   transition: 0.2s ease;
+  margin-bottom: 15px;
 }
 
 .submit-button:hover {

@@ -13,19 +13,19 @@ import freeParkingIcon from "../../../assets/Location/AssetsAndAmenitites/free-p
 
 const LocationServices = () => {
   const servicesAndAmenities = [
-    { iconURL: icon1, iconDescription: "Free Breakfast" },
-    { iconURL: airportServiceIcon, iconDescription: "Airport shuttle service" },
-    { iconURL: freeWifiIcon, iconDescription: "Free Wifi" },
-    { iconURL: smokeAreaIcon, iconDescription: "Smoking area" },
-    { iconURL: motorbikeRentalIcon, iconDescription: "Motorbike Rental" },
-    { iconURL: laundryServiceIcon, iconDescription: "Laundry Service" },
-    { iconURL: twentyFourHoursIcon, iconDescription: "24-hour Front Desk" },
+    { iconURL: icon1, iconDescription: "Buffet sáng miễn phí" },
+    { iconURL: airportServiceIcon, iconDescription: "Xe đưa đón sân bay" },
+    { iconURL: freeWifiIcon, iconDescription: "Wifi miễn phí" },
+    { iconURL: smokeAreaIcon, iconDescription: "Chỗ hút thuốc" },
+    { iconURL: motorbikeRentalIcon, iconDescription: "Cho thuê xe máy" },
+    { iconURL: laundryServiceIcon, iconDescription: "Dịch vụ giặt là" },
+    { iconURL: twentyFourHoursIcon, iconDescription: "Dịch vụ 24/7" },
     {
       iconURL: excelRoomServiceIcon,
-      iconDescription: "Excellent Room Service",
+      iconDescription: "Dịch vụ phòng xuất sắc",
     },
-    { iconURL: rooftopCoffeShopIcon, iconDescription: "Rooftop Coffee Shop" },
-    { iconURL: freeParkingIcon, iconDescription: "Free Parking" },
+    { iconURL: rooftopCoffeShopIcon, iconDescription: "Rooftop Coffee" },
+    { iconURL: freeParkingIcon, iconDescription: "Đỗ xe miễn phí" },
   ];
 
   return (

@@ -60,29 +60,12 @@ const BookingForm = ({ roomId, price }) => {
     format(minCheckOutDate, "yyyy-MM-dd")
   );
 
-  const handleCheckInChange = (e) => {
-    const newCheckInDate = e.target.value || null;
-    if (!newCheckInDate || new Date(newCheckInDate) < minCheckOutDate) {
-      return; // Don't update state or perform further actions
-    }
-    setCheckInDate(newCheckInDate);
-    const parsedCheckInDate = new Date(newCheckInDate);
-    const newMinCheckOutDate = addDays(parsedCheckInDate, 3);
-    setCheckOutDate(format(newMinCheckOutDate, "yyyy-MM-dd"));
-  };
-
-  const handleCheckOutChange = (e) => {
-    const newCheckOutDate = e.target.value || null;
-    if (!newCheckOutDate || new Date(newCheckOutDate) < new Date(checkInDate)) {
-      return; // Don't update state or perform further actions
-    }
-    setCheckOutDate(newCheckOutDate);
-  };
-
   const lengthOfStay = differenceInDays(
     new Date(checkOutDate),
     new Date(checkInDate)
   );
+
+  console.log(checkInDate, checkOutDate);
 
   const totalPrice = lengthOfStay * price;
   const formattedPrice = new Intl.NumberFormat("en").format(price);

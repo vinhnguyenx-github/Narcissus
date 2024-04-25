@@ -33,7 +33,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Home
+              Trang chủ
             </Link>
           </li>
           <li>
@@ -44,7 +44,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              About Us
+              Giới thiệu
             </Link>
           </li>
           <li>
@@ -56,7 +56,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Locations
+              Cơ Sở
             </Link>
           </li>
           <li>
@@ -67,7 +67,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Contact Us
+              Liên hệ
             </Link>
           </li>
         </ul>

@@ -13,10 +13,7 @@ const ContactLocation1 = () => {
       <LocationHero />
       <BubbleChat />
       <div className="container">
-        <LocationPageTitle
-          url="/33-tuc-mac"
-          current="Contact Us & Directions"
-        />
+        <LocationPageTitle url="/33-tuc-mac" current="Liên Hệ" />
         <LocationContactLocation />
       </div>
       <Footer />

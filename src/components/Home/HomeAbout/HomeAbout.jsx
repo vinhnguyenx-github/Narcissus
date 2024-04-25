@@ -15,28 +15,28 @@ const HomeAbout = () => {
         ></iframe>
       </div>
       <div className="home-about-right">
-        <h3>About Narcissus</h3>
-        <h2>Unveiling Hotel Excellence</h2>
+        <h3>Về Narcissus</h3>
+        <h2>Khám Phá Sự Xuất Sắc của Khách Sạn</h2>
         <p>
-          Narcissus Hotel & Apartment presents 25 opulent rooms, each
-          meticulously designed with distinct styles and lavish furnishings.
-          Guests are treated to a range of amenities, including air
-          conditioning, deluxe seating areas, and flat-screen TVs with an array
-          of cable channels. The private bathrooms are adorned with plush
-          bathrobes, soft slippers, and elegant hairdryers. Every room is
-          equipped with an electric kettle, and complimentary teas and coffees
-          add a touch of luxury.
+          Với 25 phòng nghỉ sang trọng, trang nhã. Chúng tôi chia theo những
+          phong cách khác nhau Tất cả các phòng nghỉ đều được trang bị đầy đủ
+          tiện nghi với máy lạnh, khu vực ghế ngồi, truyền hình cáp màn hình
+          phẳng và phòng tắm riêng với vòi sen, áo choàng tắm, dép, máy sấy tóc.
+          Các phòng có ấm đun nước điện, trà & cà phê miễn phí trong khi một số
+          phòng có ban công nhìn ra phố và những phòng khác còn có cửa sổ nhìn
+          ra quang cảnh thành phố. Narcissus Hotel & Apartment tất cả các phòng
+          đều có khăn trải giường và khăn tắm.
         </p>
         <p>
-          Our 24-hour front desk stands ready to provide unparalleled service,
-          offering assistance with tours, ticket bookings, currency exchange,
-          and secure luggage storage. Additional services such as airport
-          transfers, bike rentals, and motorbike hire are available upon request
+          Khách sạn & Căn hộ Narcissus có lễ tân hoạt động 24 giờ. Nhân viên có
+          thể hỗ trợ quý khách với nhiều dịch vụ khác nhau, bao gồm các tour du
+          lịch, đặt vé, thu đổi ngoại tệ và giữ hành lý. Dịch vụ đưa đón sân
+          bay, cho thuê xe đạp và xe máy có thể được sắp xếp với một khoản phí.
         </p>
         <p>
-          At Narcissus Hotel & Apartment, our unwavering dedication and genuine
-          passion for hospitality ensure a memorable and unparalleled experience
-          for every guest.
+          Narcissus Hotel & Apartment là niềm đam mê bất tận của chúng tôi.
+          Chúng tôi luôn tôn trọng nghề nghiệp của mình để phục vụ bạn bằng
+          nhiệt huyết và trái tim của mình
         </p>
       </div>
     </div>

@@ -8,24 +8,24 @@ const LocationAbout = () => {
     {
       id: 1,
       path: "/33-tuc-mac",
-      header: "Narcissus Tuc Mac",
+      header: "Narcissus Tục Mặc",
       description1:
-        "Conveniently located in the Hoan Kiem district of Hanoi, Narcissus 2 Hotel & Apartment is set 1.4 km from Trang Tien Plaza, 1.2 km from St. Joseph Cathedral and 1 km from Imperial Citadel. Offering private parking, the aparthotel is less than 1 km from the Hanoi Temple of Literature. The property is 1.3 km from the city centre and 300 metres from Ha Noi Railway station.",
+        "Tại cơ sở Tục Mặc, các phòng đều đi kèm với điều hòa, khu vực ghế ngồi, TV màn hình phẳng có truyền hình vệ tinh, bếp, khu vực ăn uống, phòng tắm riêng, đồ vệ sinh cá nhân miễn phí, vòi sen và máy sấy tóc.",
       description2:
-        "All units feature a private bathroom and have air conditioning, a flat-screen TV and a minibar.",
+        "Tại Narcissus Hotel & Apartment, mỗi phòng đều có ga trải giường và khăn tắm. Các điểm tham quan nổi tiếng gần chỗ nghỉ bao gồm Văn Miếu - Quốc Tử Giám, Tràng Tiền Plaza và Nhà thờ Thánh Joseph. Sân bay gần nhất là Sân bay Quốc tế Nội Bài, cách đây khoảng 25 km.",
       description3:
-        "Popular points of interest near Narcissus 2 Hotel & Apartment include the Imperial Citadel, Vietnam Fine Arts Museum and Hoan Kiem Lake. The nearest airport is Noi Bai International, 25 km from the accommodation, and the property offers a paid airport shuttle service.",
+        "Ngoài ra, đây là địa điểm yêu thích của các cặp đôi theo các trang booking uy tín",
     },
     {
       id: 2,
       path: "/84-le-duan",
-      header: "Narcissus Le Duan",
+      header: "Narcissus Lê Duẩn",
       description1:
-        "Conveniently located in the Hoan Kiem district of Hanoi, Narcissus 2 Hotel & Apartment is set 1.4 km from Trang Tien Plaza, 1.2 km from St. Joseph Cathedral and 1 km from Imperial Citadel. Offering private parking, the aparthotel is less than 1 km from the Hanoi Temple of Literature. The property is 1.3 km from the city centre and 300 metres from Ha Noi Railway station.",
+        "Tọa lạc tại vị trí thuận tiện ở quận Hoàn Kiếm của Hà Nội, Narcissus 2 Hotel & Apartment cách Tràng Tiền Plaza 1,4 km, Nhà thờ Lớn 1,2 km và Hoàng Thành 1 km. Với bãi đậu xe riêng, khách sạn căn hộ này cách Văn Miếu Hà Nội chưa đến 1 km. Nơi nghỉ cách trung tâm thành phố 1,3 km và cách Ga Hà Nội 300 m.",
       description2:
-        "All units feature a private bathroom and have air conditioning, a flat-screen TV and a minibar.",
+        "Tất cả các phòng đều có phòng tắm riêng, máy điều hòa, TV màn hình phẳng và minibar.",
       description3:
-        "Popular points of interest near Narcissus 2 Hotel & Apartment include the Imperial Citadel, Vietnam Fine Arts Museum and Hoan Kiem Lake. The nearest airport is Noi Bai International, 25 km from the accommodation, and the property offers a paid airport shuttle service.",
+        "Các điểm tham quan nổi tiếng gần Narcissus 2 Hotel & Apartment bao gồm Hoàng thành, Bảo tàng Mỹ thuật Việt Nam và Hồ Hoàn Kiếm. Sân bay gần nhất là Quốc tế Nội Bài, cách chỗ ở 25 km và khách sạn cung cấp dịch vụ đưa đón sân bay có trả phí.",
     },
   ];
   const aboutContent = useLocation();
