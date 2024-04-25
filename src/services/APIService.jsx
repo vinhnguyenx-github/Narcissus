@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://narcissus-backend.de.r.appspot.com/api";
+const BASE_URL = "https://narcissus-backend.de.r.appspot.com";
 
 function fixImagePath(imagePath) {
   return imagePath.replace(/\\/g, "/");
@@ -27,13 +27,6 @@ class APIService {
   }
   getImageByRoom(id) {
     return axios.get(`${BASE_URL}/gallery/find/${id}`);
-  }
-  getImage(imageURL, format) {
-    const fixedImagePath = fixImagePath(imageURL);
-    return axios.get(
-      `${BASE_URL}/gallery/getImage?url=${fixedImagePath}&format=${format}`,
-      { responseType: "arraybuffer" }
-    );
   }
 }
 

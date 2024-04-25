@@ -75,7 +75,7 @@ const RoomTypeBooking = () => {
           <RoomTypeExtraServices />
         </div>
         <div className="room-type-right">
-          <BookingForm price={roomPrice} />
+          <BookingForm roomId={roomId} price={roomPrice} />
           <PickDate />
         </div>
       </div>

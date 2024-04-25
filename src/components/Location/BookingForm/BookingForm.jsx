@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./BookingForm.css";
 import format from "date-fns/format";
 import differenceInDays from "date-fns/differenceInDays";
@@ -8,7 +8,7 @@ import APIService from "../../../services/APIService";
 const BookingForm = ({ roomId, price }) => {
   // console.log(roomId + " " + typeof roomId);
   const initialBookingState = {
-    room: roomId,
+    room: "",
     checkInDate: "",
     checkOutDate: "",
     fullName: "",
@@ -19,24 +19,27 @@ const BookingForm = ({ roomId, price }) => {
   const [booking, setBooking] = useState(initialBookingState);
   const [submitted, setSubmitted] = useState(false);
   const [bookingResult, setBookingResult] = useState(null);
+  const [room, setRoom] = useState("");
+
+  useEffect(() => {
+    setRoom(roomId);
+  }, [roomId]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setBooking({ ...booking, [name]: value });
+    setBooking({ ...booking, room: room, [name]: value });
   };
+
 
   const saveBooking = (event) => {
     event.preventDefault();
-    if (!booking.checkInDate || !booking.checkOutDate) {
-      // If check-in or check-out date is not selected, set them to default values
-      setBooking({
-        ...booking,
-        checkInDate: format(currentDate, "yyyy-MM-dd"),
-        checkOutDate: format(minCheckOutDate, "yyyy-MM-dd"),
-      });
-    }
-    console.log("Booking state:", booking);
-    APIService.booking(booking)
+    const updatedBooking = {
+      ...booking,
+      checkInDate,
+      checkOutDate,
+    };
+    console.log("Booking state:", updatedBooking);
+    APIService.booking(updatedBooking)
       .then((response) => {
         setSubmitted(true);
         setBookingResult(response.data);
@@ -91,23 +94,43 @@ const BookingForm = ({ roomId, price }) => {
         <h5>{formattedPrice} VND</h5>
         <p>per night</p>
       </div>
+        <input
+            type="hidden"
+            name="room"
+            className="user-input"
+            value={booking.room}
+          />
       <form>
-        <div className="checkin-checkout">
+      <div className="checkin-checkout">
           <input
             type="date"
             className="checkin"
             name="checkInDate"
             value={checkInDate}
             min={format(currentDate, "yyyy-MM-dd")}
-            onChange={handleCheckInChange}
+            onChange={(e) => {
+              const selectedDate = e.target.value;
+              setCheckInDate(selectedDate);
+              if (new Date(selectedDate) >= new Date(checkOutDate)) {
+                setCheckOutDate(
+                  format(addDays(new Date(selectedDate), 1), "yyyy-MM-dd")
+                );
+              }
+            }}
           />
+
           <input
             type="date"
             className="checkout"
             name="checkOutDate"
-            min={format(new Date(checkOutDate), "yyyy-MM-dd")}
+            min={format(new Date(checkInDate), "yyyy-MM-dd")}
             value={checkOutDate}
-            onChange={handleCheckOutChange}
+            onChange={(e) => {
+              const selectedDate = e.target.value;
+              if (new Date(selectedDate) >= new Date(checkInDate)) {
+                setCheckOutDate(selectedDate);
+              }
+            }}
           />
         </div>
         <div className="booking-user-info">
@@ -176,8 +199,6 @@ const BookingForm = ({ roomId, price }) => {
       {submitted && bookingResult && (
         <div className="booking-result">
           <h2>Booking Successful!</h2>
-          <p>Booking ID: {bookingResult.id}</p>
-          {/* Hiển thị các thông tin khác từ kết quả */}
         </div>
       )}
     </div>

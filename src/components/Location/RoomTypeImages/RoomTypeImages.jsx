@@ -10,76 +10,42 @@ const RoomTypeImages = ({ id }) => {
   const { type } = useParams();
   const [showGallery, setShowGallery] = useState(false);
   const [roomImages, setRoomImages] = useState([]);
-  const [images, setImages] = useState({}); // Sử dụng useState với kiểu dữ liệu phù hợp
   const imagesLeft = roomImages.slice(1, 4);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await APIService.getImageByRoom(id);
-        const { data } = response;
-        if (Array.isArray(data)) {
-          setRoomImages(data);
-        } else {
-          console.error("Data received from API is not an array:", data);
-        }
-      } catch (error) {
-        console.error("Failed to fetch data:", error);
-      }
-    };
-    fetchData();
-  }, [id]);
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const imageRequests = roomImages.map(async (image) => {
-          try {
-            if (image) {
-              const response = await APIService.getImage(
-                image.image_url,
-                image.image_format
-              );
-              const imageBlob = new Blob([response.data]);
-              const imageUrl = URL.createObjectURL(imageBlob);
-              return { id: image.id, imageUrl: imageUrl };
-            }
-          } catch (error) {
-            console.error("Failed to fetch image: ", error);
-            return null;
-          }
-        });
-
-        const images = await Promise.all(imageRequests);
-        const filteredImages = images.filter((image) => image !== null);
-        const imageMap = filteredImages.reduce((acc, curr) => {
-          acc[curr.id] = curr.imageUrl;
-          return acc;
-        }, {});
-
-        setImages(imageMap); // Sửa tên state thành defaultImages
+        const response = await APIService.getImageByRoom(id);
+        if (response && response.data) {
+          const imageUrls = response.data.map(image => image.image_url);
+          console.log(imageUrls);
+          setRoomImages(imageUrls);
+        }
       } catch (error) {
         console.error("Error fetching images: ", error);
       }
     };
-
+  
     fetchImages();
-  }, [roomImages]);
+  }, [id]);
+  
+  
 
   return (
     <div className="room-type-images">
       <div className="image-left">
         <img
-          src={`http://localhost:8080/api/roomType/getImage/${id}`}
+          src={`https://narcissus-backend.de.r.appspot.com/api/roomType/getImage/${id}`}
           className="image1"
           alt="Image 1"
         />
       </div>
       <div className="image-right">
-        {imagesLeft.map((image) => (
+      {imagesLeft.map((image, index) => (
           <img
-            src={images[image.id]}
-            alt="Images"
+            key={index}
+            src={roomImages[index]}
+            alt={`Room Image ${image.id}`}
             className={`image${image.id}`}
           />
         ))}
