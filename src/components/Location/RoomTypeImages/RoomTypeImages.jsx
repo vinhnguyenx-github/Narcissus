@@ -10,7 +10,7 @@ const RoomTypeImages = ({ id }) => {
   const { type } = useParams();
   const [showGallery, setShowGallery] = useState(false);
   const [roomImages, setRoomImages] = useState([]);
-  const imagesLeft = roomImages.slice(1, 4);
+  const imagesLeft = roomImages.slice(0);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -41,14 +41,17 @@ const RoomTypeImages = ({ id }) => {
         />
       </div>
       <div className="image-right">
-      {imagesLeft.map((image, index) => (
-          <img
-            key={index}
-            src={roomImages[index]}
-            alt={`Room Image ${image.id}`}
-            className={`image${image.id}`}
-          />
-        ))}
+      {imagesLeft.map((image, index) => {
+          if (index === 0) return null;
+          return (
+            <img
+              key={index}
+              src={image}
+              alt={`Room Image ${index}`}
+              className={`image${index}`}
+            />
+          );
+        })}
       </div>
 
       <button className="image-show-all">

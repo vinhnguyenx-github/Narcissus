@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://narcissus-backend.de.r.appspot.com";
+const BASE_URL = "https://narcissus-backend.de.r.appspot.com/api";
 
 function fixImagePath(imagePath) {
   return imagePath.replace(/\\/g, "/");

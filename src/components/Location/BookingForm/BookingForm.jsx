@@ -38,7 +38,6 @@ const BookingForm = ({ roomId, price }) => {
       checkInDate,
       checkOutDate,
     };
-    console.log("Booking state:", updatedBooking);
     APIService.booking(updatedBooking)
       .then((response) => {
         setSubmitted(true);
@@ -65,7 +64,6 @@ const BookingForm = ({ roomId, price }) => {
     new Date(checkInDate)
   );
 
-  console.log(checkInDate, checkOutDate);
 
   const totalPrice = lengthOfStay * price;
   const formattedPrice = new Intl.NumberFormat("en").format(price);
