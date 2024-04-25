@@ -32,6 +32,9 @@
 }
 
 .checkin {
+  appearance: none; /* Removes default browser styling */
+  -webkit-appearance: none; /* For WebKit browsers */
+  -moz-appearance: none; /* For Firefox */
   width: 50%;
   padding: 15px;
   border: 1px solid #b0b0b0;
@@ -41,6 +44,9 @@
 }
 
 .checkout {
+  appearance: none; /* Removes default browser styling */
+  -webkit-appearance: none; /* For WebKit browsers */
+  -moz-appearance: none; /* For Firefox */
   width: 50%;
   padding: 15px;
   outline: none;
