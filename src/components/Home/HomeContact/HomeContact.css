@@ -72,6 +72,7 @@
   justify-content: center;
   cursor: pointer;
   transition: 0.2s ease;
+  margin-bottom: 15px;
 }
 
 .submit-button:hover {

@@ -9,10 +9,10 @@ const HomeContact = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
+    setResult("Đang gửi...");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "d779c17d-d467-439e-b226-75e8083b00b9");
+    formData.append("access_key", "2f145dfc-caed-407a-96b6-a1b5d6ca415e");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -22,7 +22,7 @@ const HomeContact = () => {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult("Lời nhắn của bạn đã được gửi thành công");
       event.target.reset();
     } else {
       console.log("Error", data);
@@ -91,6 +91,7 @@ const HomeContact = () => {
             Gửi Ngay
           </button>
         </form>
+        <span>{result}</span>
       </div>
     </div>
   );
