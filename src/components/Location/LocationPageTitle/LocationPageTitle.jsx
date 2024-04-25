@@ -6,7 +6,7 @@ const LocationPageTitle = ({ url, current }) => {
   return (
     <div className="location-page-title">
       <Link to={url} className="location-page-link">
-        Home
+        Trang Chủ
       </Link>
       <p> &gt; {current}</p>
     </div>

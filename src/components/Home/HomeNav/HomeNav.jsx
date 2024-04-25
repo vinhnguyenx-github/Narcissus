@@ -14,6 +14,31 @@ const HomeNav = () => {
     setMobileMenu(false);
   };
 
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <nav className="container">
       <a href="">
@@ -33,7 +58,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Home
+              Trang chủ
             </Link>
           </li>
           <li>
@@ -44,7 +69,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              About Us
+              Giới thiệu
             </Link>
           </li>
           <li>
@@ -56,7 +81,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Locations
+              Cơ Sở
             </Link>
           </li>
           <li>
@@ -67,7 +92,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Contact Us
+              Liên hệ
             </Link>
           </li>
         </ul>

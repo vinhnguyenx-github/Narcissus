@@ -42,26 +42,26 @@ const LocationNav = () => {
       </Link>
       <ul className={mobileMenu ? "" : "toggle-menu"}>
         <Link to={currentLocationPath ? currentLocationPath.path : "/"}>
-          <li className="nav-link">Home</li>
+          <li className="nav-link">Trang chủ</li>
         </Link>
         {currentLocationPath && (
           <Link to={currentLocationPath.bookPath}>
-            <li className="nav-link">Rooms</li>
+            <li className="nav-link">Các loại phòng</li>
           </Link>
         )}
         {currentLocationPath && (
           <Link>
-            <li className="nav-link">Gallery</li>
+            <li className="nav-link">Thư viện ảnh</li>
           </Link>
         )}
         {currentLocationPath && (
           <Link to={currentLocationPath.contactAndLocationPath}>
-            <li className="nav-link">Contacts & Directions</li>
+            <li className="nav-link">Liên hệ</li>
           </Link>
         )}
         {currentLocationPath && (
           <Link to={currentLocationPath.bookPath}>
-            <button className="NavBtn">Book Now</button>
+            <button className="NavBtn">Đặt phòng</button>
           </Link>
         )}
       </ul>

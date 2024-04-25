@@ -8,31 +8,29 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-top">
         <div className="footer-col">
-          <h4>Address</h4>
+          <h4>Địa chỉ</h4>
           <div className="address">
             <h5>
-              No. 33 Tuc Mac lane, Cua Nam ward, Hoan Kiem district, Ha Noi,
-              Viet Nam
+              33 ngõ Tục Mặc, phường Cửa Nam, quận Hoàn Kiếm, Hà Nội, Việt Nam
             </h5>
           </div>
           <div className="address">
             <h5>
-              No. 84 Le Duan, Van Mieu ward, Hoan Kiem district, Ha Noi, Viet
-              Nam
+              84 Lê Duẩn, phường Văn Miếu, quận Hoàn Kiếm, Hà Nội, Việt Nam
             </h5>
           </div>
         </div>
         <div className="footer-col">
-          <h4>Contact us</h4>
+          <h4>Liên hệ</h4>
           <p>
-            Tel: <a href="tel:0337248276">0337248276</a>
+            Số điện thoại: <a href="tel:0337248276">0337248276</a>
           </p>
           <p>
             Email: <a href="mailto:">testemail@gmail.com</a>
           </p>
         </div>
         <div className="footer-col">
-          <h4>Social Media</h4>
+          <h4>Mạng xã hội</h4>
           <a
             href="https://www.facebook.com/narcissus.apartment"
             target="_blank"
@@ -50,23 +48,23 @@ const Footer = () => {
       <hr></hr>
       <div className="footer-bottom">
         <div className="footer-copyright">
-          @{new Date().getFullYear()} Narcissus. All right reserved.
+          @{new Date().getFullYear()} Narcissus. Bảo lưu mọi quyền.
         </div>
         <div className="footer-below">
           <div className="footer-link">
             <a href="">
               <div>
-                <p>Terms & Conditions</p>
+                <p>Điều khoản & Điều kiện</p>
               </div>
             </a>
             <a href="">
               <div>
-                <p>Privacy</p>
+                <p>Quyền riêng tư</p>
               </div>
             </a>
             <a href="">
               <div>
-                <p>Security</p>
+                <p>Bảo mật</p>
               </div>
             </a>
           </div>

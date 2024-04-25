@@ -13,7 +13,7 @@ const HomeLocations = () => {
           <img src={location1} alt="" />
           <div className="home-location-caption">
             <LuExternalLink size={40} className="home-location-caption-icon" />
-            <p>33 Tuc Mac</p>
+            <p>33 Tục Mặc</p>
           </div>
         </Link>
       </div>
@@ -22,7 +22,7 @@ const HomeLocations = () => {
           <img src={location2} alt="" />
           <div className="home-location-caption">
             <LuExternalLink size={40} className="home-location-caption-icon" />
-            <p>84 Le Duan</p>
+            <p>84 Lê Duẩn</p>
           </div>
         </Link>
       </div>

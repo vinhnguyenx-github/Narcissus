@@ -53,11 +53,11 @@ const Home = () => {
       <div className="container">
         <HomeAbout />
         <HomeTitle
-          subTitle="Our Locations"
-          title="Discover Our Hotels' Destinations"
+          subTitle="Các Cơ sở"
+          title="KHÁM PHÁ ĐỊA ĐIỂM KHÁCH SẠN CỦA CHÚNG TÔI"
         />
         <HomeLocations />
-        <HomeTitle subTitle="Get in Touch" title="Reach Out for Assistance" />
+        <HomeTitle subTitle="Liên Hệ" title="Liên Hệ Để Hỗ Trợ" />
         <HomeContact />
       </div>
       <Footer />

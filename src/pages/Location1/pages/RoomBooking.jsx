@@ -13,7 +13,7 @@ const RoomBooking1 = () => {
       <LocationHero />
       <BubbleChat />
       <div className="container">
-        <LocationPageTitle url="/33-tuc-mac" current="Rooms" />
+        <LocationPageTitle url="/33-tuc-mac" current="Các loại phòng" />
         <LocationRooms location="33-tuc-mac" start={0} end={2} />
       </div>
       <Footer />
