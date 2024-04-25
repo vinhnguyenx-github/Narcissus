@@ -20,7 +20,7 @@ function LocationRooms({ location, start, end }) {
         >
           <div className="location-room-top">
             <img
-              src={`http://localhost:8080/api/roomType/getImage/${room.id}`}
+              src={`https://narcissus-backend.de.r.appspot.com/api/roomType/getImage/${room.id}`}
             />
             <h4>{room.name}</h4>
             <p>{room.description}</p>
