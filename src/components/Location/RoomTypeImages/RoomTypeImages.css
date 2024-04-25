@@ -78,7 +78,7 @@
   right: -100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .image-right {
     display: none;
   }
@@ -86,11 +86,21 @@
   .image-left {
     width: 100%;
   }
+
+  .room-type-images {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .room-type-images {
+    height: 50vh;
+  }
 }
 
 @media (max-width: 600px) {
   .room-type-images {
-    height: 50vh;
+    height: 40vh;
   }
 }
 
