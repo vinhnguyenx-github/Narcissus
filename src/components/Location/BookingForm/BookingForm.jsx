@@ -27,16 +27,13 @@ const BookingForm = ({ roomId, price }) => {
 
   const saveBooking = (event) => {
     event.preventDefault();
-    if (!booking.checkInDate || !booking.checkOutDate) {
-      // If check-in or check-out date is not selected, set them to default values
-      setBooking({
-        ...booking,
-        checkInDate: format(currentDate, "yyyy-MM-dd"),
-        checkOutDate: format(minCheckOutDate, "yyyy-MM-dd"),
-      });
-    }
-    console.log("Booking state:", booking);
-    APIService.booking(booking)
+    const updatedBooking = {
+      ...booking,
+      checkInDate,
+      checkOutDate,
+    };
+    console.log("Booking state:", updatedBooking);
+    APIService.booking(updatedBooking)
       .then((response) => {
         setSubmitted(true);
         setBookingResult(response.data);
@@ -57,29 +54,12 @@ const BookingForm = ({ roomId, price }) => {
     format(minCheckOutDate, "yyyy-MM-dd")
   );
 
-  const handleCheckInChange = (e) => {
-    const newCheckInDate = e.target.value || null;
-    if (!newCheckInDate || new Date(newCheckInDate) < minCheckOutDate) {
-      return; // Don't update state or perform further actions
-    }
-    setCheckInDate(newCheckInDate);
-    const parsedCheckInDate = new Date(newCheckInDate);
-    const newMinCheckOutDate = addDays(parsedCheckInDate, 3);
-    setCheckOutDate(format(newMinCheckOutDate, "yyyy-MM-dd"));
-  };
-
-  const handleCheckOutChange = (e) => {
-    const newCheckOutDate = e.target.value || null;
-    if (!newCheckOutDate || new Date(newCheckOutDate) < new Date(checkInDate)) {
-      return; // Don't update state or perform further actions
-    }
-    setCheckOutDate(newCheckOutDate);
-  };
-
   const lengthOfStay = differenceInDays(
     new Date(checkOutDate),
     new Date(checkInDate)
   );
+
+  console.log(checkInDate, checkOutDate);
 
   const totalPrice = lengthOfStay * price;
   const formattedPrice = new Intl.NumberFormat("en").format(price);
@@ -99,15 +79,29 @@ const BookingForm = ({ roomId, price }) => {
             name="checkInDate"
             value={checkInDate}
             min={format(currentDate, "yyyy-MM-dd")}
-            onChange={handleCheckInChange}
+            onChange={(e) => {
+              const selectedDate = e.target.value;
+              setCheckInDate(selectedDate);
+              if (new Date(selectedDate) >= new Date(checkOutDate)) {
+                setCheckOutDate(
+                  format(addDays(new Date(selectedDate), 1), "yyyy-MM-dd")
+                );
+              }
+            }}
           />
+
           <input
             type="date"
             className="checkout"
             name="checkOutDate"
-            min={format(new Date(checkOutDate), "yyyy-MM-dd")}
+            min={format(new Date(checkInDate), "yyyy-MM-dd")}
             value={checkOutDate}
-            onChange={handleCheckOutChange}
+            onChange={(e) => {
+              const selectedDate = e.target.value;
+              if (new Date(selectedDate) >= new Date(checkInDate)) {
+                setCheckOutDate(selectedDate);
+              }
+            }}
           />
         </div>
         <div className="booking-user-info">
