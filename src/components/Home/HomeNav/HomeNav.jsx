@@ -44,7 +44,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Giới thiệu l
+              Giới thiệu
             </Link>
           </li>
           <li>
