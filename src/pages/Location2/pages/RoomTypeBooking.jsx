@@ -11,9 +11,7 @@ const RoomTypeBooking2 = () => {
   const { rooms } = useRoomData();
   const navigate = useNavigate();
 
-  const roomExists = rooms.some((room) => room.type === type);
-
-  if (!roomExists) {
+  if (!rooms) {
     // Redirect to the /rooms route if the room type doesn't exist
     navigate("/84-le-duan/rooms");
     return null; // Return null to prevent rendering anything for this case
