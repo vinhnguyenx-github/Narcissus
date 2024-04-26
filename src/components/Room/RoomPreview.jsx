@@ -37,7 +37,6 @@ function SamplePrevArrow(props) {
 function RoomPreview({ location, start, end }) {
   const { rooms, defaultImage } = useRoomData();
   const firstTwoRooms = rooms.slice(start, end);
-  const disabledRoomIds = [5, 6];
   const settings = {
     infinite: true,
     speed: 600,
@@ -77,12 +76,7 @@ function RoomPreview({ location, start, end }) {
     <div className="slider-container">
       <Slider {...settings}>
         {firstTwoRooms.map((room) => (
-          <div
-            key={room.id}
-            className={`card ${
-              disabledRoomIds.includes(room.id) ? "disabled-card" : ""
-            }`}
-          >
+          <div key={room.id} className="card">
             <div className="card-top">
               <img
                 src={defaultImage[room.id]} // Sử dụng defaultImage[room.id]
@@ -92,25 +86,19 @@ function RoomPreview({ location, start, end }) {
               <p>{room.description}</p>
             </div>
             <div className="card-bottom">
-              {!disabledRoomIds.includes(room.id) && (
-                <Link
-                  to={`/${location}/rooms/${room.name}`}
-                  className="card-readmore"
-                >
-                  Read More
-                </Link>
-              )}
+              <Link
+                to={`/${location}/rooms/${room.name}`}
+                className="card-readmore"
+              >
+                Xem thêm
+              </Link>
               <p>
-                Prices: {new Intl.NumberFormat("en").format(room.pricePerNight)}
+                Giá: {new Intl.NumberFormat("en").format(room.pricePerNight)}{" "}
                 VND
               </p>
-              {disabledRoomIds.includes(room.id) ? (
-                <button className="disable-button">Ngừng Kinh Doanh</button>
-              ) : (
-                <Link to={`/${location}/rooms/${room.name}`}>
-                  <BookBtn />
-                </Link>
-              )}
+              <Link to={`/${location}/rooms/${room.name}`}>
+                <BookBtn />
+              </Link>
             </div>
           </div>
         ))}
