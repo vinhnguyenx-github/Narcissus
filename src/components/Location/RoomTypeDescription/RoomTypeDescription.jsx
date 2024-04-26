@@ -7,11 +7,11 @@ const RoomTypeDescription = () => {
   return (
     <div className="room-type-description">
       <p>
-        Enjoy a luxurious stay in our spacious {type}, complete with modern
-        amenities such as a private kitchen, en-suite bathroom, air
-        conditioning, smart TV, and more. Benefit from additional conveniences
-        like in-room breakfast service and the option to rent a motorbike for
-        exploring the area.
+        Tận hưởng một kỳ nghỉ sang trọng tại căn phòng rộng rãi của chúng tôi,
+        với đầy đủ tiện nghi hiện đại như bếp riêng, phòng tắm riêng, điều hòa
+        không khí, TV thông minh và nhiều hơn nữa. Hưởng lợi từ những tiện ích
+        bổ sung như dịch vụ ăn sáng tại phòng và lựa chọn thuê xe máy để khám
+        phá khu vực.
       </p>
     </div>
   );

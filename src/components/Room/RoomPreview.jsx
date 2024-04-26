@@ -105,7 +105,7 @@ function RoomPreview({ location, start, end }) {
                 VND
               </p>
               {disabledRoomIds.includes(room.id) ? (
-                <button className="disable-button">Unavailable</button>
+                <button className="disable-button">Ngừng Kinh Doanh</button>
               ) : (
                 <Link to={`/${location}/rooms/${room.name}`}>
                   <BookBtn />

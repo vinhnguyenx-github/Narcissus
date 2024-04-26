@@ -28,13 +28,13 @@ const RoomTypeBooking = () => {
             setRoomId(id);
             setRoomPrice(pricePerNight);
           } else {
-            console.error("Room not found for type:", type);
+            console.error("Không tìm thấy phòng cho loại:", type);
           }
         } else {
-          console.error("Data received from API is not an array:", data);
+          console.error("Dữ liệu nhận từ API không phải là mảng:", data);
         }
       } catch (error) {
-        console.error("Failed to fetch room data:", error);
+        console.error("Lỗi khi lấy dữ liệu phòng:", error);
       }
     };
 
@@ -48,24 +48,24 @@ const RoomTypeBooking = () => {
       <div className="room-type-main">
         <div className="room-type-information">
           <h5 className="heading-description">
-            Luxury comfort in elegant setting.
+            Sự thoải mái sang trọng trong không gian tinh tế.
           </h5>
           <ol>
-            <li>3 guests</li>
-            <li className="room-type-information-li">1 bed</li>
-            <li className="room-type-information-li">1 bath</li>
-            <li className="room-type-information-li">1 kitchen</li>
+            <li>3 khách</li>
+            <li className="room-type-information-li">1 giường</li>
+            <li className="room-type-information-li">1 phòng tắm</li>
+            <li className="room-type-information-li">1 nhà bếp</li>
           </ol>
           {(roomId === 1 || roomId === 3) && (
             <div className="room-type-review">
               <div className="mvp">
                 <img src={mvp} alt="" />
-                <h5>Popular choice</h5>
+                <h5>Lựa chọn phổ biến</h5>
               </div>
               <div>
                 <h5 className="mvp-description">
-                  A highly-rated and beloved Narcissus room known for its
-                  exceptional ratings and reliability.
+                  {type} được đánh giá cao và được yêu thích với những đánh giá
+                  xuất sắc và đáng tin cậy.
                 </h5>
               </div>
             </div>

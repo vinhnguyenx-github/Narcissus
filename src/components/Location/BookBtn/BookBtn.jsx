@@ -2,7 +2,7 @@ import React from "react";
 import "./BookBtn.css";
 
 const BookBtn = () => {
-  return <button className="BookBtn">Book Now</button>;
+  return <button className="BookBtn">Đặt Phòng</button>;
 };
 
 export default BookBtn;
