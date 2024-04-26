@@ -11,7 +11,7 @@ const LocationContactLocation = () => {
     {
       id: 1,
       path: "/33-tuc-mac/contact-us-directions",
-      addressLine1: "Số 33 ngõ Tục Mặc, phường Cửa Nam,",
+      addressLine1: "Số 33 ngõ Tức Mặc, phường Cửa Nam,",
       mapURL:
         "https://www.google.com/maps/dir//Narcissus+Hotel+%26+Apartment+33+Ng.+T%E1%BB%A9c+M%E1%BA%B7c+C%E1%BB%ADa+Nam+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0228222,105.8426037,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3135ab908a6fcba1:0x70d3b6ce6055d2ff!2m2!1d105.8426037!2d21.0228222?entry=ttu",
       googleMapURL:

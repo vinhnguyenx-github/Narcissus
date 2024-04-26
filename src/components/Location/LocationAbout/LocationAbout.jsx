@@ -8,7 +8,7 @@ const LocationAbout = () => {
     {
       id: 1,
       path: "/33-tuc-mac",
-      header: "Narcissus Tục Mặc",
+      header: "Narcissus Tức Mặc",
       description1:
         "Tại cơ sở Tục Mặc, các phòng đều đi kèm với điều hòa, khu vực ghế ngồi, TV màn hình phẳng có truyền hình vệ tinh, bếp, khu vực ăn uống, phòng tắm riêng, đồ vệ sinh cá nhân miễn phí, vòi sen và máy sấy tóc.",
       description2:
