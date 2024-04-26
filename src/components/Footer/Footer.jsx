@@ -11,7 +11,7 @@ const Footer = () => {
           <h4>Địa chỉ</h4>
           <div className="address">
             <h5>
-              33 ngõ Tục Mặc, phường Cửa Nam, quận Hoàn Kiếm, Hà Nội, Việt Nam
+              33 ngõ Tức Mặc, phường Cửa Nam, quận Hoàn Kiếm, Hà Nội, Việt Nam
             </h5>
           </div>
           <div className="address">
@@ -26,7 +26,10 @@ const Footer = () => {
             Số điện thoại: <a href="tel:0337248276">0337248276</a>
           </p>
           <p>
-            Email: <a href="mailto:">testemail@gmail.com</a>
+            Email:{" "}
+            <a href="mailto:Narcissus84leduan@gmail.com">
+              Narcissus84leduan@gmail.com
+            </a>
           </p>
         </div>
         <div className="footer-col">
