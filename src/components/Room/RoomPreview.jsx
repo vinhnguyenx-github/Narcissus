@@ -36,7 +36,6 @@ function SamplePrevArrow(props) {
 
 function RoomPreview({ location, start, end }) {
   const { rooms, defaultImage } = useRoomData();
-  console.log(defaultImage);
   const firstTwoRooms = rooms.slice(start, end);
   const disabledRoomIds = [5, 6];
   const settings = {

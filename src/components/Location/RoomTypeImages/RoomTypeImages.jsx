@@ -20,7 +20,6 @@ const RoomTypeImages = ({ id }) => {
         const response = await APIService.getImageByRoom(id);
         if (response && response.data) {
           const imageUrls = response.data.map(image => image.image_url);
-          console.log(imageUrls);
           setRoomImages(imageUrls);
         }
       } catch (error) {
