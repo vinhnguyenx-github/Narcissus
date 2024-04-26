@@ -15,6 +15,7 @@ const BookingForm = ({ roomId, price }) => {
     phone: "",
     email: "",
     address: "",
+    totalPrice: "",
   };
   const [booking, setBooking] = useState(initialBookingState);
   const [submitted, setSubmitted] = useState(false);
@@ -37,6 +38,7 @@ const BookingForm = ({ roomId, price }) => {
       ...booking,
       checkInDate,
       checkOutDate,
+      totalPrice,
     };
     APIService.booking(updatedBooking)
       .then((response) => {
