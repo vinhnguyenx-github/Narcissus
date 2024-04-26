@@ -57,7 +57,7 @@ const Home = () => {
           title="KHÁM PHÁ ĐỊA ĐIỂM KHÁCH SẠN CỦA CHÚNG TÔI"
         />
         <HomeLocations />
-        <HomeTitle subTitle="Liên Hệ" title="Liên Hệ Để Hỗ Trợ" />
+        <HomeTitle subTitle="Liên Hệ" title="Kết nối với chúng tôi" />
         <HomeContact />
       </div>
       <Footer />
