@@ -4,10 +4,12 @@ import "./RoomTypeImages.css";
 import APIService from "../../../services/APIService";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaAngleRight } from "react-icons/fa";
+import { useRoomData } from "../../../provider/roomtype/roomTypeProvider.jsx";
 import RoomTypeAllImages from "../RoomTypeAllImages/RoomTypeAllImages";
 
 const RoomTypeImages = ({ id }) => {
   const { type } = useParams();
+  const { defaultImage } = useRoomData();
   const [showGallery, setShowGallery] = useState(false);
   const [roomImages, setRoomImages] = useState([]);
   const imagesLeft = roomImages.slice(0);
@@ -35,9 +37,9 @@ const RoomTypeImages = ({ id }) => {
     <div className="room-type-images">
       <div className="image-left">
         <img
-          src={`https://narcissus-backend.de.r.appspot.com/api/roomType/getImage/${id}`}
+          src={defaultImage[id]} // Sử dụng defaultImage[room.id]
+          alt= "image1"
           className="image1"
-          alt="Image 1"
         />
       </div>
       <div className="image-right">

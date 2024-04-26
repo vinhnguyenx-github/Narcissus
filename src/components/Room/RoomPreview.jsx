@@ -36,6 +36,7 @@ function SamplePrevArrow(props) {
 
 function RoomPreview({ location, start, end }) {
   const { rooms, defaultImage } = useRoomData();
+  console.log(defaultImage);
   const firstTwoRooms = rooms.slice(start, end);
   const disabledRoomIds = [5, 6];
   const settings = {
@@ -85,7 +86,8 @@ function RoomPreview({ location, start, end }) {
           >
             <div className="card-top">
               <img
-                src={`https://narcissus-backend.de.r.appspot.com/api/roomType/getImage/${room.id}`}
+                src={defaultImage[room.id]} // Sử dụng defaultImage[room.id]
+                alt={room.name} // Thêm alt cho ảnh
               />
               <h4>{room.name}</h4>
               <p>{room.description}</p>

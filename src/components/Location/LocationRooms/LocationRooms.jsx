@@ -20,8 +20,9 @@ function LocationRooms({ location, start, end }) {
         >
           <div className="location-room-top">
             <img
-              src={`https://narcissus-backend.de.r.appspot.com/api/roomType/getImage/${room.id}`}
-            />
+                src={defaultImage[room.id]} // Sử dụng defaultImage[room.id]
+                alt={room.name} // Thêm alt cho ảnh
+              />
             <h4>{room.name}</h4>
             <p>{room.description}</p>
           </div>

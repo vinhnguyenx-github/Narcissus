@@ -32,7 +32,8 @@ export const RoomDataProvider = ({ children }) => {
       const imageRequests = rooms.map(async (room) => {
         try {
           if (room) {
-            const url = await APIService.getImageUrl(room.id);
+            const response = await APIService.getImageUrl(room.id);
+            const url = response.data;
             return { id: room.id, url };
           }
         } catch (error) {
@@ -45,17 +46,17 @@ export const RoomDataProvider = ({ children }) => {
           return null;
         }
       });
-
+  
       const images = await Promise.all(imageRequests);
       const filteredImages = images.filter((image) => image !== null);
       const imageMap = filteredImages.reduce((acc, curr) => {
         acc[curr.id] = curr.url;
         return acc;
       }, {});
-
+  
       setDefaultImage(imageMap);
     };
-
+  
     fetchImagesForRooms();
   }, [rooms]);
 
