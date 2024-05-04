@@ -15,7 +15,7 @@ const BubbleChat = () => {
       </div>
       <div className="bubble-chat-icon">
         <a href="https://zalo.me/0912666360" target="blank">
-          <img src={zalo} alt="" />
+          <img src={zalo} alt="Zalo icon" loading="lazy" title="Zalo Icon" />
         </a>
       </div>
       <div className="bubble-chat-icon react-icon">

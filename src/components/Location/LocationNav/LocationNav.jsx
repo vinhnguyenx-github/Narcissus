@@ -38,6 +38,7 @@ const LocationNav = () => {
           src={logo}
           alt="logo"
           className={mobileMenu ? "toggle-logo" : "logo"}
+          width={180}
         />
       </Link>
       <ul className={mobileMenu ? "" : "toggle-menu"}>

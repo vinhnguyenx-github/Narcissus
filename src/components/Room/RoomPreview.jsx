@@ -80,9 +80,11 @@ function RoomPreview({ location, start, end }) {
             <div className="card-top">
               <img
                 src={defaultImage[room.id]} // Sử dụng defaultImage[room.id]
-                alt={room.name} // Thêm alt cho ảnh
+                alt={room.name}
+                loading="lazy"
+                title="Room Image" // Thêm alt cho ảnh
               />
-              <h4>{room.name}</h4>
+              <h3>{room.name}</h3>
               <p>{room.description}</p>
             </div>
             <div className="card-bottom">

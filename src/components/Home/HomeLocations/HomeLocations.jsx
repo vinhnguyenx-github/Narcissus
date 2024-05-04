@@ -10,7 +10,12 @@ const HomeLocations = () => {
     <div className="home-locations">
       <div className="home-location">
         <Link to="33-tuc-mac" target="blank">
-          <img src={location1} alt="" />
+          <img
+            src={location1}
+            alt="Location 1 Image"
+            loading="lazy"
+            title="Ảnh cơ sở Tức Mặc"
+          />
           <div className="home-location-caption">
             <LuExternalLink size={40} className="home-location-caption-icon" />
             <p>33 Tức Mặc</p>
@@ -19,7 +24,12 @@ const HomeLocations = () => {
       </div>
       <div className="home-location">
         <Link to="84-le-duan" target="blank">
-          <img src={location2} alt="" />
+          <img
+            src={location2}
+            alt="Location 2 Image"
+            loading="lazy"
+            title="Ảnh cơ sở Lê Duẩn"
+          />
           <div className="home-location-caption">
             <LuExternalLink size={40} className="home-location-caption-icon" />
             <p>84 Lê Duẩn</p>

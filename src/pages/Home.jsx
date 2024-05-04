@@ -22,27 +22,33 @@ const Home = () => {
   const home_hero_images = [
     {
       imgURL: image1,
-      imgAlt: "image-1",
+      imgAlt: "Home Hero Image 1",
+      title: "Home Hero Image 1",
     },
     {
       imgURL: image2,
-      imgAlt: "image-2",
+      imgAlt: "Home Hero Image 2",
+      title: "Home Hero Image 2",
     },
     {
       imgURL: image3,
-      imgAlt: "image-3",
+      imgAlt: "Home Hero Image 3",
+      title: "Home Hero Image 3",
     },
     {
       imgURL: image4,
-      imgAlt: "image-4",
+      imgAlt: "Home Hero Image 4",
+      title: "Home Hero Image 4",
     },
     {
       imgURL: image5,
-      imgAlt: "image-5",
+      imgAlt: "Home Hero Image 5",
+      title: "Home Hero Image 5",
     },
     {
       imgURL: image6,
-      imgAlt: "image-6",
+      imgAlt: "Home Hero Image 6",
+      title: "Home Hero Image 6",
     },
   ];
 
@@ -59,12 +65,19 @@ const Home = () => {
           name="description"
           content="Narcissus Hotel & Apartment - Khách sạn cao cấp trung tâm Hà Nội"
         />
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="https://www.narcissus.com.vn" />
       </Helmet>
       <HomeNav onLanguageChange={handleLanguageChange} />
       <HomeHero>
         {home_hero_images.map((image, index) => {
-          return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
+          return (
+            <img
+              key={index}
+              src={image.imgURL}
+              alt={image.imgAlt}
+              title={image.title}
+            />
+          );
         })}
       </HomeHero>
       <BubbleChat />

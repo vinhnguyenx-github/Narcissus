@@ -8,24 +8,24 @@ const Footer = ({ language }) => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-col">
-          <h4>{language === "English" ? "Address" : "Địa chỉ"}</h4>
+          <h3>{language === "English" ? "Address" : "Địa chỉ"}</h3>
           <div className="address">
-            <h5>
+            <h4>
               {language === "English"
                 ? "Location 1: No. 84 Le Duan, Cua Nam ward, Hoan Kiem district, Ha Noi, Viet Nam"
                 : "CS1: 84 Lê Duẩn, phường Cửa Nam, quận Hoàn Kiếm, Hà Nội, Việt Nam"}
-            </h5>
+            </h4>
           </div>
           <div className="address">
-            <h5>
+            <h4>
               {language === "English"
                 ? "Location 2: No. 33 Tuc Mac lane, Cua Nam ward, Hoan Kiem district, Ha Noi, Viet Nam"
                 : "CS2: 33 ngõ Tức Mặc, phường Cửa Nam, quận Hoàn Kiếm, Hà Nội, Việt Nam"}
-            </h5>
+            </h4>
           </div>
         </div>
         <div className="footer-col">
-          <h4>{language === "English" ? "Contact" : "Liên hệ"}</h4>
+          <h3>{language === "English" ? "Contact" : "Liên hệ"}</h3>
           <p>
             {language === "English" ? "Telphone: " : "Số Điện Thoại: "}
             <a href="tel:0337248276">0337248276</a>
@@ -38,7 +38,7 @@ const Footer = ({ language }) => {
           </p>
         </div>
         <div className="footer-col">
-          <h4>{language === "English" ? "Social Media" : "Mạng xã hội"}</h4>
+          <h3>{language === "English" ? "Social Media" : "Mạng xã hội"}</h3>
           <a
             href="https://www.facebook.com/narcissus.apartment"
             target="_blank"
