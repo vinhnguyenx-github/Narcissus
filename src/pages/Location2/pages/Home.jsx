@@ -13,12 +13,12 @@ const Home2 = () => {
   return (
     <div>
       <Helmet>
-        <title>Narcissus Tức Mặc</title>
+        <title>Narcissus Lê Duẩn</title>
         <meta
           name="description"
           content="Narcissus Hotel & Apartment - Khách sạn cao cấp trung tâm Hà Nội"
         />
-        <link rel="canonical" href="https://www.narcissus.com.vn/33-tuc-mac" />
+        <link rel="canonical" href="https://www.narcissus.com.vn/84-le-duan" />
       </Helmet>
       <LocationNav />
       <LocationHero />
