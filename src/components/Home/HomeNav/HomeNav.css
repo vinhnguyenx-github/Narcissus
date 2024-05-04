@@ -46,6 +46,23 @@ nav ul li:hover {
   visibility: hidden;
 }
 
+.switching-language-button {
+  color: white;
+  background-color: #606061;
+  width: 160px;
+  padding: 14px 25px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-left: 30px;
+}
+
+.switching-language-button:hover {
+  background-color: #747474;
+}
+
 /* --- media --- */
 
 @media (max-width: 1200px) {
@@ -76,6 +93,18 @@ nav ul li:hover {
     display: block;
     margin: 30px 80px;
     color: white;
+  }
+
+  .switching-language-button {
+    display: block;
+    margin: 30px 80px;
+    background-color: white;
+    color: black;
+    width: 60%;
+  }
+
+  .switching-language-button:hover {
+    background-color: rgb(124, 124, 124);
   }
 
   .menu-icon {

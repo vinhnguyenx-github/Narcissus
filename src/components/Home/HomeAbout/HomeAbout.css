@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.home-about h3 {
+.home-about h1 {
   font-weight: 600;
   font-size: 1rem;
   color: #606160;
@@ -41,6 +41,7 @@
 @media (max-width: 800px) {
   .home-about {
     flex-direction: column;
+    margin-top: 50px;
   }
   .home-about-left {
     flex-basis: 100%;
@@ -60,7 +61,7 @@
   }
 
   .home-about {
-    margin: 0;
+    margin-top: 50px;
   }
 
   .home-about h3 {

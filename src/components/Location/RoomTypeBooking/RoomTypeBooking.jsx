@@ -51,7 +51,7 @@ const RoomTypeBooking = () => {
             Sự thoải mái sang trọng trong không gian tinh tế.
           </h5>
           <ol>
-            <li>3 khách</li>
+            <li>2 khách</li>
             <li className="room-type-information-li">1 giường</li>
             <li className="room-type-information-li">1 phòng tắm</li>
             <li className="room-type-information-li">1 nhà bếp</li>

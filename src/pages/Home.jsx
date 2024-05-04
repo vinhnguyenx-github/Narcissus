@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeNav from "../components/Home/HomeNav/HomeNav";
 import HomeHero from "../components/Home/HomeHero/HomeHero";
 import HomeAbout from "../components/Home/HomeAbout/HomeAbout";
@@ -15,6 +15,9 @@ import image5 from "../assets/Home/HomeHeroImages/banner5.jpg";
 import image6 from "../assets/Home/HomeHeroImages/banner6.jpg";
 
 const Home = () => {
+  // State to track the current language
+  const [language, setLanguage] = useState("Vietnamese");
+
   const home_hero_images = [
     {
       imgURL: image1,
@@ -41,9 +44,15 @@ const Home = () => {
       imgAlt: "image-6",
     },
   ];
+
+  // Function to handle language change
+  const handleLanguageChange = (newLanguage) => {
+    setLanguage(newLanguage);
+  };
+
   return (
     <div>
-      <HomeNav />
+      <HomeNav onLanguageChange={handleLanguageChange} />
       <HomeHero>
         {home_hero_images.map((image, index) => {
           return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
@@ -51,16 +60,25 @@ const Home = () => {
       </HomeHero>
       <BubbleChat />
       <div className="container">
-        <HomeAbout />
+        <HomeAbout language={language} />
         <HomeTitle
-          subTitle="Các Cơ sở"
-          title="KHÁM PHÁ ĐỊA ĐIỂM KHÁCH SẠN CỦA CHÚNG TÔI"
+          subTitle={language === "English" ? "Locations" : "Các Cơ sở"}
+          title={
+            language === "English"
+              ? "DISCOVER OUR HOTEL LOCATIONS"
+              : "KHÁM PHÁ ĐỊA ĐIỂM KHÁCH SẠN CỦA CHÚNG TÔI"
+          }
         />
         <HomeLocations />
-        <HomeTitle subTitle="Liên Hệ" title="Kết nối với chúng tôi" />
-        <HomeContact />
+        <HomeTitle
+          subTitle={language === "English" ? "Contact" : "Liên Hệ"}
+          title={
+            language === "English" ? "Connect with Us" : "Kết nối với chúng tôi"
+          }
+        />
+        <HomeContact language={language} />
       </div>
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 };

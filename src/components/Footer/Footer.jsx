@@ -3,27 +3,32 @@ import "./Footer.css";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = ({ language }) => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer-top">
         <div className="footer-col">
-          <h4>Địa chỉ</h4>
+          <h4>{language === "English" ? "Address" : "Địa chỉ"}</h4>
           <div className="address">
             <h5>
-              33 ngõ Tức Mặc, phường Cửa Nam, quận Hoàn Kiếm, Hà Nội, Việt Nam
+              {language === "English"
+                ? "Location 1: No. 84 Le Duan, Cua Nam ward, Hoan Kiem district, Ha Noi, Viet Nam"
+                : "CS1: 84 Lê Duẩn, phường Cửa Nam, quận Hoàn Kiếm, Hà Nội, Việt Nam"}
             </h5>
           </div>
           <div className="address">
             <h5>
-              84 Lê Duẩn, phường Văn Miếu, quận Hoàn Kiếm, Hà Nội, Việt Nam
+              {language === "English"
+                ? "Location 2: No. 33 Tuc Mac lane, Cua Nam ward, Hoan Kiem district, Ha Noi, Viet Nam"
+                : "CS2: 33 ngõ Tức Mặc, phường Cửa Nam, quận Hoàn Kiếm, Hà Nội, Việt Nam"}
             </h5>
           </div>
         </div>
         <div className="footer-col">
-          <h4>Liên hệ</h4>
+          <h4>{language === "English" ? "Contact" : "Liên hệ"}</h4>
           <p>
-            Số điện thoại: <a href="tel:0337248276">0337248276</a>
+            {language === "English" ? "Telphone: " : "Số Điện Thoại: "}
+            <a href="tel:0337248276">0337248276</a>
           </p>
           <p>
             Email:{" "}
@@ -33,7 +38,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="footer-col">
-          <h4>Mạng xã hội</h4>
+          <h4>{language === "English" ? "Social Media" : "Mạng xã hội"}</h4>
           <a
             href="https://www.facebook.com/narcissus.apartment"
             target="_blank"
@@ -51,29 +56,38 @@ const Footer = () => {
       <hr></hr>
       <div className="footer-bottom">
         <div className="footer-copyright">
-          @{new Date().getFullYear()} Narcissus. Bảo lưu mọi quyền.
+          @{new Date().getFullYear()} Narcissus.{" "}
+          {language === "English"
+            ? "All rights reserved."
+            : "Bảo lưu mọi quyền."}
         </div>
         <div className="footer-below">
           <div className="footer-link">
             <a href="">
               <div>
-                <p>Điều khoản & Điều kiện</p>
+                <p>
+                  {language === "English"
+                    ? "Terms & Conditions"
+                    : "Điều khoản & Điều kiện"}
+                </p>
               </div>
             </a>
             <a href="">
               <div>
-                <p>Quyền riêng tư</p>
+                <p>
+                  {language === "English" ? "Privacy Policy" : "Quyền riêng tư"}
+                </p>
               </div>
             </a>
             <a href="">
               <div>
-                <p>Bảo mật</p>
+                <p>{language === "English" ? "Security" : "Bảo mật"}</p>
               </div>
             </a>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

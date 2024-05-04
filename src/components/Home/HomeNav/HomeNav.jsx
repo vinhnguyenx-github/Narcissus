@@ -4,14 +4,22 @@ import { FaAlignJustify } from "react-icons/fa";
 import logo from "../../../assets/logo.png";
 import "./HomeNav.css";
 
-const HomeNav = () => {
+const HomeNav = ({ onLanguageChange }) => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [language, setLanguage] = useState("Vietnamese"); // Default language is English
+
   const toggleMenu = () => {
     setMobileMenu(!mobileMenu);
   };
 
   const closeMenu = () => {
     setMobileMenu(false);
+  };
+
+  const handleLanguageChange = () => {
+    const newLanguage = language === "English" ? "Vietnamese" : "English";
+    setLanguage(newLanguage);
+    onLanguageChange(newLanguage); // Notify parent component about language change
   };
 
   return (
@@ -33,7 +41,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Trang chủ
+              {language === "English" ? "Home" : "Trang chủ"}
             </Link>
           </li>
           <li>
@@ -44,7 +52,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Giới thiệu
+              {language === "English" ? "About" : "Giới thiệu"}
             </Link>
           </li>
           <li>
@@ -56,7 +64,7 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Cơ Sở
+              {language === "English" ? "Locations" : "Cơ Sở"}
             </Link>
           </li>
           <li>
@@ -67,9 +75,15 @@ const HomeNav = () => {
               duration={500}
               onClick={closeMenu}
             >
-              Liên hệ
+              {language === "English" ? "Contact" : "Liên hệ"}
             </Link>
           </li>
+          <button
+            onClick={handleLanguageChange}
+            className="switching-language-button"
+          >
+            {language === "English" ? "Vietnamese" : "English"}
+          </button>
         </ul>
         <FaAlignJustify
           size={30}
