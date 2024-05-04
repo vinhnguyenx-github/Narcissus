@@ -13,6 +13,7 @@ import image3 from "../assets/Home/HomeHeroImages/banner3.jpg";
 import image4 from "../assets/Home/HomeHeroImages/banner4.jpeg";
 import image5 from "../assets/Home/HomeHeroImages/banner5.jpg";
 import image6 from "../assets/Home/HomeHeroImages/banner6.jpg";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   // State to track the current language
@@ -52,6 +53,14 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Narcissus Hotel & Apartment</title>
+        <meta
+          name="description"
+          content="Narcissus Hotel & Apartment - Khách sạn cao cấp trung tâm Hà Nội"
+        />
+        <link rel="canonical" href="/" />
+      </Helmet>
       <HomeNav onLanguageChange={handleLanguageChange} />
       <HomeHero>
         {home_hero_images.map((image, index) => {

@@ -7,10 +7,19 @@ import LocationTitle from "../../../components/Location/LocationTitle/LocationTi
 import RoomPreview from "../../../components/Room/RoomPreview";
 import Footer from "../../../components/Footer/Footer";
 import LocationServices from "../../../components/Location/LocationServices/LocationServices";
+import { Helmet } from "react-helmet-async";
 
 const Home1 = () => {
   return (
     <div>
+      <Helmet>
+        <title>Narcissus Hotel & Apartment</title>
+        <meta
+          name="description"
+          content="Narcissus Hotel & Apartment - Khách sạn cao cấp trung tâm Hà Nội"
+        />
+        <link rel="canonical" href="/33-tuc-mac" />
+      </Helmet>
       <LocationNav />
       <LocationHero />
       <BubbleChat />

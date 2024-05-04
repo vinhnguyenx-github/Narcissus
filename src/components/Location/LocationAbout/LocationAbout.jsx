@@ -36,7 +36,7 @@ const LocationAbout = () => {
 
   return (
     <div className="location-about">
-      <h2>{currentAboutContent.header}</h2>
+      <h1>{currentAboutContent.header}</h1>
       <p>
         {currentAboutContent.description1} <br />
         <br /> {currentAboutContent.description2} <br />
