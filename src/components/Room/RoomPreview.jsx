@@ -7,13 +7,14 @@ import "./RoomPreview.css";
 import { useRoomData } from "../../provider/roomtype/roomTypeProvider.jsx";
 import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
 import BookBtn from "../Location/BookBtn/BookBtn";
+import LazyLoad from "react-lazyload";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", color: "black", cursor: "pointer" }} // Customize styles as needed
+      style={{ ...style, display: "block", color: "black", cursor: "pointer" }}
       onClick={onClick}
     >
       <LiaAngleRightSolid size={24} className="next-arrow" />
@@ -26,7 +27,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", color: "black", cursor: "pointer" }} // Customize styles as needed
+      style={{ ...style, display: "block", color: "black", cursor: "pointer" }}
       onClick={onClick}
     >
       <LiaAngleLeftSolid size={24} className="next-arrow" />
@@ -77,16 +78,20 @@ function RoomPreview({ location, start, end }) {
       <Slider {...settings}>
         {firstTwoRooms.map((room) => (
           <div key={room.id} className="card">
-            <div className="card-top">
-              <img
-                src={defaultImage[room.id]} // Sử dụng defaultImage[room.id]
-                alt={room.name}
-                loading="lazy"
-                title="Room Image" // Thêm alt cho ảnh
-              />
-              <h3>{room.name}</h3>
-              <p>{room.description}</p>
-            </div>
+            <LazyLoad height={200} once>
+              <div className="card-top">
+                <img
+                  src={defaultImage[room.id]}
+                  alt={room.name}
+                  loading="lazy"
+                  title="Room Image"
+                  width="100%"
+                  height={300}
+                />
+                <h3>{room.name}</h3>
+                <p>{room.description}</p>
+              </div>
+            </LazyLoad>
             <div className="card-bottom">
               <Link
                 to={`/${location}/rooms/${room.name}`}

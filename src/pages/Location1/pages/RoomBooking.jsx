@@ -5,10 +5,22 @@ import LocationPageTitle from "../../../components/Location/LocationPageTitle/Lo
 import LocationRooms from "../../../components/Location/LocationRooms/LocationRooms";
 import BubbleChat from "../../../components/BubbleChat/BubbleChat";
 import Footer from "../../../components/Footer/Footer";
+import { Helmet } from "react-helmet-async";
 
 const RoomBooking1 = () => {
   return (
     <div>
+      <Helmet>
+        <title>Các Phòng Narcissus Tức Mặc</title>
+        <meta
+          name="description"
+          content="Khám phá các phòng và căn hộ sang trọng tại Narcissus Hotel & Apartment, tọa lạc tại trung tâm Hà Nội. Khám phá các phòng nghỉ tinh tế của chúng tôi, được thiết kế tỉ mỉ để mang lại sự thoải mái và sang trọng tối đa cho kỳ nghỉ của bạn tại Hà Nội. Đặt phòng ngay tại Narcissus Hotel & Apartment."
+        />
+        <link
+          rel="canonical"
+          href="https://www.narcissus.com.vn/33-tuc-mac/rooms"
+        />
+      </Helmet>
       <LocationNav />
       <LocationHero />
       <BubbleChat />

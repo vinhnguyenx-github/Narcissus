@@ -34,10 +34,10 @@ const LocationContactLocation = () => {
   );
   return (
     <div className="contact-location">
-      <h2>Liên hệ & Hướng dẫn đường đi</h2>
+      <h1>Liên hệ & Hướng dẫn đường đi</h1>
       <div className="contact-location-content">
         <div className="contact-location-content-col">
-          <h3>Cách đến khách sạn</h3>
+          <h2>Cách đến khách sạn</h2>
           <p className="contact-location-description">
             Tìm đường đến Khách sạn & Căn hộ Narcissus hoặc nhấp vào Xem Hướng
             dẫn bên dưới.

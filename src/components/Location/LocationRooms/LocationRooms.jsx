@@ -17,7 +17,7 @@ function LocationRooms({ location, start, end }) {
               src={defaultImage[room.id]} // Sử dụng defaultImage[room.id]
               alt={room.name} // Thêm alt cho ảnh
             />
-            <h4>{room.name}</h4>
+            <h2>{room.name}</h2>
             <p>{room.description}</p>
           </div>
           <div className="location-room-bottom">

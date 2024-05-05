@@ -1,5 +1,5 @@
 .location-rooms {
-  margin: 50px auto;
+  margin: 30px auto;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -31,7 +31,7 @@
   line-height: 1.5;
 }
 
-.location-room-top h4 {
+.location-room-top h2 {
   font-size: 1.6rem;
   margin: 20px;
   color: black;
@@ -77,7 +77,7 @@
     height: 250px;
   }
   .location-room {
-    height: 550px;
+    height: 600px;
   }
 }
 
