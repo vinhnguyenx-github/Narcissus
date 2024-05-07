@@ -18,8 +18,8 @@ const HomeAbout = ({ language }) => {
         <h1>{language === "English" ? "About Narcissus" : "Về Narcissus"}</h1>
         <h2>
           {language === "English"
-            ? "Discover the Excellence of the Hotel"
-            : "Khám Phá Sự Xuất Sắc của Khách Sạn"}
+            ? "Discover the Excellence of Narcissus"
+            : "Khám Phá Sự Xuất Sắc của Narcissus"}
         </h2>
         <p>
           {language === "English" ? (
