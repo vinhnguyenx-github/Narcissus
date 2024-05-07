@@ -15,12 +15,11 @@ const HomeAbout = ({ language }) => {
         ></iframe>
       </div>
       <div className="home-about-right">
-        <h1>{language === "English" ? "About Narcissus" : "Về Narcissus"}</h1>
-        <h2>
+        <h1>
           {language === "English"
-            ? "Discover the Excellence of Narcissus"
-            : "Khám Phá Sự Xuất Sắc của Narcissus"}
-        </h2>
+            ? "About Narcissus Hotel & Apartment"
+            : "Về Khách Sạn Narcissus"}
+        </h1>
         <p>
           {language === "English" ? (
             <>

@@ -31,6 +31,7 @@ const HomeNav = ({ onLanguageChange }) => {
           className={mobileMenu ? "toggle-logo" : "logo"}
           title="logo"
           width={180}
+          height={100}
           loading="lazy"
         />
       </a>

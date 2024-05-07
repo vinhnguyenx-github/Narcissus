@@ -8,12 +8,8 @@
 
 .home-about h1 {
   font-weight: 600;
-  font-size: 1rem;
-  color: #606160;
-}
-
-.home-about h2 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  color: black;
   margin-bottom: 10px;
 }
 
@@ -21,6 +17,7 @@
   margin-bottom: 15px;
   color: black;
   font-size: 0.85rem;
+  text-align: justify;
 }
 
 .home-about-left {

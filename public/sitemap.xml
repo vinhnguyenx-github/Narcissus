@@ -41,4 +41,10 @@
       <changefreq>monthly</changefreq> <!-- Change frequency of updates (optional) -->
       <priority>0.8</priority> <!-- Priority of this URL relative to other URLs on your site (optional) -->
    </url>
+   <url>
+      <loc>https://www.narcissus.com.vn/84-le-duan/amenities</loc> <!-- Replace with the URL of another page -->
+      <lastmod>2024-07-05</lastmod> <!-- Replace with the last modification date of this page -->
+      <changefreq>monthly</changefreq> <!-- Change frequency of updates (optional) -->
+      <priority>0.8</priority> <!-- Priority of this URL relative to other URLs on your site (optional) -->
+   </url>
 </urlset>
