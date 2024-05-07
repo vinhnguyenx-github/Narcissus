@@ -7,10 +7,10 @@ import HomeLocations from "../components/Home/HomeLocations/HomeLocations";
 import HomeContact from "../components/Home/HomeContact/HomeContact";
 import Footer from "../components/Footer/Footer";
 import BubbleChat from "../components/BubbleChat/BubbleChat";
-import image1 from "../assets/Home/HomeHeroImages/banner1.png";
+import image1 from "../assets/Home/HomeHeroImages/banner1.jpg";
 import image2 from "../assets/Home/HomeHeroImages/banner2.jpg";
 import image3 from "../assets/Home/HomeHeroImages/banner3.jpg";
-import image4 from "../assets/Home/HomeHeroImages/banner4.jpeg";
+import image4 from "../assets/Home/HomeHeroImages/banner4.jpg";
 import image5 from "../assets/Home/HomeHeroImages/banner5.jpg";
 import image6 from "../assets/Home/HomeHeroImages/banner6.jpg";
 import { Helmet } from "react-helmet-async";
@@ -23,32 +23,32 @@ const Home = () => {
     {
       imgURL: image1,
       imgAlt: "Home Hero Image 1",
-      title: "Home Hero Image 1",
+      title: "Phòng khách sạn Narcissus Hà Nội",
     },
     {
       imgURL: image2,
       imgAlt: "Home Hero Image 2",
-      title: "Home Hero Image 2",
+      title: "Phòng khách sạn Narcissus Hà Nội",
     },
     {
       imgURL: image3,
       imgAlt: "Home Hero Image 3",
-      title: "Home Hero Image 3",
+      title: "Coffe Roof Top Khách sạn Narcissus Hà Nội",
     },
     {
       imgURL: image4,
       imgAlt: "Home Hero Image 4",
-      title: "Home Hero Image 4",
+      title: "Đồ ăn khách sạn Narcissus Hà Nội",
     },
     {
       imgURL: image5,
       imgAlt: "Home Hero Image 5",
-      title: "Home Hero Image 5",
+      title: "Theme khách sạn Narcissus Hà Nội",
     },
     {
       imgURL: image6,
       imgAlt: "Home Hero Image 6",
-      title: "Home Hero Image 6",
+      title: "Lobby Khách sạn Narcissus Hà Nội",
     },
   ];
 

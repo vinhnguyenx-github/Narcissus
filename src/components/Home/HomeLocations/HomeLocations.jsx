@@ -2,7 +2,7 @@ import React from "react";
 import "./HomeLocations.css";
 import { Link } from "react-router-dom";
 import location1 from "../../../assets/Home/HomeLocationsImages/location1.jpg";
-import location2 from "../../../assets/Home/HomeLocationsImages/location2.png";
+import location2 from "../../../assets/Home/HomeLocationsImages/location2.jpg";
 import { LuExternalLink } from "react-icons/lu";
 
 const HomeLocations = () => {
@@ -15,6 +15,8 @@ const HomeLocations = () => {
             alt="Location 1 Image"
             loading="lazy"
             title="Ảnh cơ sở Tức Mặc"
+            width="100%"
+            height="auto"
           />
           <div className="home-location-caption">
             <LuExternalLink size={40} className="home-location-caption-icon" />
@@ -29,6 +31,8 @@ const HomeLocations = () => {
             alt="Location 2 Image"
             loading="lazy"
             title="Ảnh cơ sở Lê Duẩn"
+            width="100%"
+            height="auto"
           />
           <div className="home-location-caption">
             <LuExternalLink size={40} className="home-location-caption-icon" />
