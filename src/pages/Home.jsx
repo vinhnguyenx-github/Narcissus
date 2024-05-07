@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HomeNav from "../components/Home/HomeNav/HomeNav";
 import HomeHero from "../components/Home/HomeHero/HomeHero";
 import HomeAbout from "../components/Home/HomeAbout/HomeAbout";
@@ -19,11 +19,27 @@ const Home = () => {
   // State to track the current language
   const [language, setLanguage] = useState("Vietnamese");
 
-  const home_hero_images = [
+  // Function to handle language change
+  const handleLanguageChange = (newLanguage) => {
+    setLanguage(newLanguage);
+  };
+
+  // Effect hook to set default language based on browser settings
+  useEffect(() => {
+    const browserLanguage = navigator.language || navigator.userLanguage;
+    if (browserLanguage.startsWith("en")) {
+      setLanguage("English");
+    }
+  }, []); // Run only once on component mount
+
+  // Array of home hero images
+  const homeHeroImages = [
     {
       imgURL: image1,
       imgAlt: "Home Hero Image 1",
       title: "Phòng khách sạn Narcissus Hà Nội",
+      width: 1080,
+      height: 680,
     },
     {
       imgURL: image2,
@@ -52,11 +68,6 @@ const Home = () => {
     },
   ];
 
-  // Function to handle language change
-  const handleLanguageChange = (newLanguage) => {
-    setLanguage(newLanguage);
-  };
-
   return (
     <div>
       <Helmet>
@@ -69,16 +80,16 @@ const Home = () => {
       </Helmet>
       <HomeNav onLanguageChange={handleLanguageChange} />
       <HomeHero>
-        {home_hero_images.map((image, index) => {
-          return (
-            <img
-              key={index}
-              src={image.imgURL}
-              alt={image.imgAlt}
-              title={image.title}
-            />
-          );
-        })}
+        {homeHeroImages.map((image, index) => (
+          <img
+            key={index}
+            src={image.imgURL}
+            alt={image.imgAlt}
+            title={image.title}
+            width={image.width}
+            height={image.height}
+          />
+        ))}
       </HomeHero>
       <BubbleChat />
       <div className="container">
