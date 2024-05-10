@@ -1,7 +1,10 @@
 import React from "react";
 import "./GalleryGrid.css";
+import { useData } from "../../../provider/gallery/galleryProvider.jsx";
 
-const GalleryGrid = () => {
+function GalleryGrid() {
+  const { imagesLinks } = useData();
+
   return (
     <div className="gallery-grid">
       <div className="gallery-list">
@@ -14,7 +17,18 @@ const GalleryGrid = () => {
           <li>COMMON AREAS</li>
         </ul>
       </div>
-      <div className="images-grid">a</div>
+      <div className="images-grid">
+        {imagesLinks.map((image, index) => {
+            if (index === 0) return null;
+            return (
+              <img
+                key={index}
+                src={image}
+                alt={`Room Image ${index}`}
+              />
+            );
+          })}
+      </div>
     </div>
   );
 };

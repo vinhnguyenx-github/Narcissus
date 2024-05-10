@@ -12,3 +12,33 @@
   color: white;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
 }
+.profile-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+.profile-container h1 {
+  margin-bottom: 20px;
+}
+.profile-info {
+  text-align: left;
+}
+.profile-info p {
+  margin: 10px 0;
+}
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+}
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

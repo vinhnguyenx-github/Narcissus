@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "https://narcissus-backend.de.r.appspot.com/api";
-// const BASE_URL = "http://localhost:8080/api";
+// const BASE_URL = "https://narcissus-backend.de.r.appspot.com/api";
+const BASE_URL = "http://localhost:8080/api";
 
 function fixImagePath(imagePath) {
   return imagePath.replace(/\\/g, "/");
@@ -28,6 +28,21 @@ class APIService {
   }
   getImageByRoom(id) {
     return axios.get(`${BASE_URL}/gallery/find/${id}`);
+  }
+  //Authentication
+  login(data){
+    return axios.post(`${BASE_URL}/auth/authenticate`, data);
+  }
+  userProfile(token){
+    return axios.get(`${BASE_URL}/auth/profile`, {
+      headers: {
+        'authentication': token
+      }
+    });
+  }
+  // Staff
+  getAllStaff(){
+    return axios.get(`${BASE_URL}/staff/find`);
   }
 }
 

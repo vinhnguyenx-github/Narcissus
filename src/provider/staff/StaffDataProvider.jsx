@@ -1,20 +1,20 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import APIService from "../../services/APIService";
 
-const GalleryDataContext = createContext();
+const StaffDataContext = createContext();
 
-export const useData = () => useContext(GalleryDataContext);
+export const useData = () => useContext(StaffDataContext);
 
-export const GalleryDataProvider = ({ children }) => {
-  const [imagesLinks, setImagesLinks] = useState([]);
+export const StaffDataProvider = ({ children }) => {
+  const [staffs, setStaffs] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await APIService.getAllImages();
+        const response = await APIService.getAllStaff();
         const { data } = response;
         if (Array.isArray(data)) {
-          setImagesLinks(data);
+            setStaffs(data);
         } else {
           console.error("Data received from API is not an array:", data);
         }
@@ -27,8 +27,8 @@ export const GalleryDataProvider = ({ children }) => {
   }, []);
 
   return (
-    <GalleryDataContext.Provider value={{ imagesLinks }}>
+    <StaffDataContext.Provider value={{ staffs }}>
       {children}
-    </GalleryDataContext.Provider>
+    </StaffDataContext.Provider>
   );
 };
