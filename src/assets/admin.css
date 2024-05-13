@@ -2,6 +2,7 @@
   gap: 20px;
   display: flex;
   padding: 20px;
+
 }
 
 .admin-dashboard-content {
@@ -12,15 +13,83 @@
   color: white;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
 }
+
 .profile-container {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  max-width: 100%;
   width: 100%;
+}
+
+.profile-container-left {
+  width: 25%;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top; 
+}
+
+.profile-container-right {
+  width: 75%;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.profile-container-left .profile-info .name {
+  color: #000;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.profile-container-left button{
+  background-color: #337AB7;
+  border-radius: 5px;
+  border: 0px;
+  padding: 15px;
+  color: white;
+  width: 100%;
+  font-size: 16px;
+}
+
+.profile-container-left .profile-picture,
+.profile-container-right {
+  text-align: center; /* Canh giữa nội dung */
+}
+
+.profile-container-right .about-me,
+.hotel-info {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: black;
+  margin: 10px;
+  text-align: left;
+}
+
+.about-me p {
+  margin-top: 20px;
   text-align: center;
 }
+.profile-container-right .user-links {
+  border: 1px solid rgba(0, 0, 0, 0.15); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+.user-links h2 {
+  color: black;
+  text-align: start;
+  margin-bottom: 30px;
+}
+.user-links p {
+  margin: 15px;
+}
+
+.profile-container-left .profile-info,
+.profile-container-right .user-links {
+  padding: 20px;
+}
+
 .profile-container h1 {
   margin-bottom: 20px;
 }
@@ -31,11 +100,11 @@
   margin: 10px 0;
 }
 .profile-picture {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 20px;
+  margin: 0 20px;
 }
 .profile-picture img {
   width: 100%;

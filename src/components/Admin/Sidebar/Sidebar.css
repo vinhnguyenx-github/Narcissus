@@ -5,6 +5,11 @@
   height: 94vh;
 }
 
+.admin-menu-list p {
+  color: #606160;
+  font-size: 1.2rem;
+}
+
 .admin-menu-list h2 {
   color: #606160;
   font-size: 0.9rem;

@@ -6,7 +6,7 @@ import { AuthDataContext } from "../../../provider/auth/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
 const LoginSignupForm = () => {
-  const { authentication } = useContext(AuthDataContext);
+  const { authentication, user } = useContext(AuthDataContext);
   const navigate = useNavigate();
   const [login, setLogin] = useState({ email: "", password: "" });
   const [submitted, setSubmitted] = useState(false);
@@ -21,7 +21,7 @@ const LoginSignupForm = () => {
     try {
       const response = await APIService.login(login);
       setSubmitted(true);
-      console.log("Đăng nhập thành công:", response.data);
+      // console.log("Đăng nhập thành công:", response.data);
       authentication(response.data.data);
       navigate("/admin/dashboard");
     } catch (error) {

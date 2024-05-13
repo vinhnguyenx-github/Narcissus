@@ -4,7 +4,6 @@ import { useData } from "../../../provider/staff/StaffDataProvider";
 
 const StaffTable = () => {
   const { staffs } = useData();
-  console.log(staffs)
   return (
     <div className="staff-table">
       <h2>Chỉnh sửa thông tin nhân viên</h2>

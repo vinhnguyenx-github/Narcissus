@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 import { BiBookAlt, BiHomeAlt2, BiUserCircle } from "react-icons/bi";
@@ -8,25 +8,10 @@ import {
   FaArrowRightToBracket,
   FaPhotoFilm,
 } from "react-icons/fa6";
-import APIService from "../../../services/APIService";
 import { AuthDataContext } from "../../../provider/auth/AuthProvider";
 
 const AdminSidebar = ({ activeItem }) => {
-  const { token } = useContext(AuthDataContext);
-  const [user, setUser] = useState(null);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await APIService.userProfile(token);
-        setUser(response.data.data);
-        
-      } catch (error) {
-        console.error("Failed to fetch data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const { logout, user } = useContext(AuthDataContext);
   return (
     <div className="admin-menu">
       <Link to="/admin/dashboard">
@@ -35,13 +20,9 @@ const AdminSidebar = ({ activeItem }) => {
           <h2>Narcissus</h2>
         </div>
       </Link>
-      <div className="user">
-        <h2>User Profile</h2>
-        {/* <p>Welcome, {user ? user.username : 'Guest'}!</p> */}
-        <p>Welcome, {user ? user.firstName : 'loading'}!</p>
-      </div>
 
       <div className="admin-menu-list">
+        <p>Welcome, {user ? user.name : 'loading'}!</p>
         <Link
           to="/admin/dashboard"
           className={`admin-item ${
@@ -98,7 +79,7 @@ const AdminSidebar = ({ activeItem }) => {
           Tạo Phòng Mới
         </Link>
         <h2>Cài Đặt</h2>
-        <Link to="" className="admin-item">
+        <Link to="/admin" className="admin-item" onClick={logout}>
           <FaArrowRightToBracket />
           Đăng Xuất
         </Link>
