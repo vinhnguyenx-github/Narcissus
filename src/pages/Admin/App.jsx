@@ -12,7 +12,7 @@ import AdminGallery from "./pages/Gallery";
 
 const PrivateRoute = ({ element: Element }) => {
   console.log("Please login before you use the admin page")
-  return localStorage.getItem('jwtToken') ? <Element /> : <Navigate to="/admin" />;
+  return localStorage.getItem('token') ? <Element /> : <Navigate to="/admin" />;
 };
 
 const AppAdmin = () => {
