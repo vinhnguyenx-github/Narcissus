@@ -21,7 +21,6 @@ const LoginSignupForm = () => {
     try {
       const response = await APIService.login(login);
       setSubmitted(true);
-      // console.log("Đăng nhập thành công:", response.data);
       authentication(response.data.data);
       navigate("/admin/dashboard");
     } catch (error) {

@@ -11,13 +11,13 @@ const StaffTable = () => {
         <table>
           <thead>
               <tr>
-                  <th>Staff ID</th>
+                  <th>ID</th>
                   <th>Hotel</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
+                  <th>Full Name</th>
                   <th>Phone</th>
                   <th>Email</th>
                   <th>Privileges</th>
+                  <th></th>
               </tr>
           </thead>
           <tbody>
@@ -25,8 +25,7 @@ const StaffTable = () => {
                 <tr key={index}>
                   <td>{staff.id}</td>
                   <td>{staff.hotel.address}</td>
-                  <td>{staff.firstName}</td>
-                  <td>{staff.lastName}</td>
+                  <td>{staff.firstName} {staff.lastName}</td>
                   <td>{staff.phone}</td>
                   <td>{staff.email}</td>
                   <td>
@@ -34,6 +33,7 @@ const StaffTable = () => {
                       <span key={roleIndex}>{role.name}</span>
                     ))}
                   </td>
+                  <td><span className="edit-info">EDIT</span></td>
                 </tr>
               ))}
           </tbody>

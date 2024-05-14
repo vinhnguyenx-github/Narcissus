@@ -1,0 +1,53 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+.gallery-item img {
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item {
+    position: relative;
+    /* display: inline-block; */
+    vertical-align: top;
+    margin-right: 10px;
+    white-space: normal;
+  }
+
+.gallery-item:hover {
+    opacity: 0.7;
+}
+.gallery-item:hover .btn-container {
+    display: block;
+}
+  
+.btn-container {
+    display: none;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.btn-container button {
+    font-size: 14px;
+    background-color: blue; /* Màu nền trong suốt */
+    color: #fff; /* Màu chữ */
+    border: none; /* Loại bỏ đường viền */
+    padding: 8px 16px; /* Kích thước padding */
+    cursor: pointer; /* Con trỏ chuột thành pointer khi hover */
+    transition: background-color 0.3s ease; /* Hiệu ứng mượt khi hover */
+    margin: 10px;
+    width: 80px;
+}
+
+.btn-container button:hover {
+    background-color: rgba(24, 167, 43, 0.9); /* Màu nền với opacity */
+  }

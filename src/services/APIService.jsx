@@ -29,6 +29,9 @@ class APIService {
   getImageByRoom(id) {
     return axios.get(`${BASE_URL}/gallery/find/${id}`);
   }
+  getImageByType(type) {
+    return axios.get(`${BASE_URL}/gallery/findByType?type=${type}`);
+  }
   //Authentication
   login(data){
     return axios.post(`${BASE_URL}/auth/authenticate`, data);
