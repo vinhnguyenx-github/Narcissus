@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 import { BiBookAlt, BiHomeAlt2, BiUserCircle } from "react-icons/bi";
@@ -8,8 +8,10 @@ import {
   FaArrowRightToBracket,
   FaPhotoFilm,
 } from "react-icons/fa6";
+import { AuthDataContext } from "../../../provider/auth/AuthProvider";
 
 const AdminSidebar = ({ activeItem }) => {
+  const { logout, user } = useContext(AuthDataContext);
   return (
     <div className="admin-menu">
       <Link to="/admin/dashboard">
@@ -18,7 +20,9 @@ const AdminSidebar = ({ activeItem }) => {
           <h2>Narcissus</h2>
         </div>
       </Link>
+
       <div className="admin-menu-list">
+        <p>Welcome, {user ? user.name : 'loading'}!</p>
         <Link
           to="/admin/dashboard"
           className={`admin-item ${
@@ -75,7 +79,7 @@ const AdminSidebar = ({ activeItem }) => {
           Tạo Phòng Mới
         </Link>
         <h2>Cài Đặt</h2>
-        <Link to="" className="admin-item">
+        <Link to="/admin" className="admin-item" onClick={logout}>
           <FaArrowRightToBracket />
           Đăng Xuất
         </Link>

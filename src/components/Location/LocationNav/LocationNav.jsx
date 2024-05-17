@@ -51,7 +51,7 @@ const LocationNav = () => {
           </Link>
         )}
         {currentLocationPath && (
-          <Link>
+          <Link to={currentLocationPath.galleryPath}>
             <li className="nav-link">Thư viện ảnh</li>
           </Link>
         )}
