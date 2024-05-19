@@ -11,21 +11,78 @@ import excelRoomServiceIcon from "../../../assets/Location/AssetsAndAmenitites/w
 import rooftopCoffeShopIcon from "../../../assets/Location/AssetsAndAmenitites/rooftop.png";
 import freeParkingIcon from "../../../assets/Location/AssetsAndAmenitites/free-parking.png";
 
-const LocationServices = () => {
+const LocationServices = ({ language }) => {
   const servicesAndAmenities = [
-    { iconURL: icon1, iconDescription: "Buffet sáng miễn phí" },
-    { iconURL: airportServiceIcon, iconDescription: "Xe đưa đón sân bay" },
-    { iconURL: freeWifiIcon, iconDescription: "Wifi miễn phí" },
-    { iconURL: smokeAreaIcon, iconDescription: "Chỗ hút thuốc" },
-    { iconURL: motorbikeRentalIcon, iconDescription: "Cho thuê xe máy" },
-    { iconURL: laundryServiceIcon, iconDescription: "Dịch vụ giặt là" },
-    { iconURL: twentyFourHoursIcon, iconDescription: "Dịch vụ 24/7" },
+    {
+      iconURL: icon1,
+      iconDescriptions: {
+        English: "Free breakfast buffet",
+        Vietnamese: "Buffet sáng miễn phí",
+      },
+    },
+    {
+      iconURL: airportServiceIcon,
+      iconDescriptions: {
+        English: "Airport shuttle service",
+        Vietnamese: "Xe đưa đón sân bay",
+      },
+    },
+    {
+      iconURL: freeWifiIcon,
+      iconDescriptions: {
+        English: "Free Wifi",
+        Vietnamese: "Wifi miễn phí",
+      },
+    },
+    {
+      iconURL: smokeAreaIcon,
+      iconDescriptions: {
+        English: "Smoking area",
+        Vietnamese: "Chỗ hút thuốc",
+      },
+    },
+    {
+      iconURL: motorbikeRentalIcon,
+      iconDescriptions: {
+        English: "Motorbike rental",
+        Vietnamese: "Cho thuê xe máy",
+      },
+    },
+    {
+      iconURL: laundryServiceIcon,
+      iconDescriptions: {
+        English: "Laundry service",
+        Vietnamese: "Dịch vụ giặt là",
+      },
+    },
+    {
+      iconURL: twentyFourHoursIcon,
+      iconDescriptions: {
+        English: "24/7 service",
+        Vietnamese: "Dịch vụ 24/7",
+      },
+    },
     {
       iconURL: excelRoomServiceIcon,
-      iconDescription: "Dịch vụ phòng xuất sắc",
+      iconDescriptions: {
+        English: "Excellent room service",
+        Vietnamese: "Dịch vụ phòng xuất sắc",
+      },
     },
-    { iconURL: rooftopCoffeShopIcon, iconDescription: "Rooftop Coffee" },
-    { iconURL: freeParkingIcon, iconDescription: "Đỗ xe miễn phí" },
+    {
+      iconURL: rooftopCoffeShopIcon,
+      iconDescriptions: {
+        English: "Rooftop Coffee",
+        Vietnamese: "Rooftop Coffee",
+      },
+    },
+    {
+      iconURL: freeParkingIcon,
+      iconDescriptions: {
+        English: "Free parking",
+        Vietnamese: "Đỗ xe miễn phí",
+      },
+    },
   ];
 
   return (
@@ -33,7 +90,7 @@ const LocationServices = () => {
       {servicesAndAmenities.map((service, index) => (
         <div key={index} className="location-service">
           <img alt="" src={service.iconURL} className="location-service-icon" />
-          <p>{service.iconDescription}</p>
+          <p>{service.iconDescriptions[language]}</p>
         </div>
       ))}
     </div>
