@@ -1,0 +1,51 @@
+.admin-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  height: 94vh;
+}
+
+.admin-menu-list p {
+  color: #606160;
+  font-size: 1.2rem;
+}
+
+.admin-menu-list h2 {
+  color: #606160;
+  font-size: 0.9rem;
+}
+
+.admin-sidebar-logo {
+  text-align: center;
+  color: #34332d;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.admin-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-menu-list .admin-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+  color: #34332d;
+  transition: 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+.admin-menu-list .admin-item:hover,
+.admin-item-active {
+  background-color: #8d8d8d;
+  color: white !important;
+}

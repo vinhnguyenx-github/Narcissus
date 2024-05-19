@@ -1,0 +1,20 @@
+.BookBtn {
+  border: 1px solid #606160;
+  height: 45px;
+  width: 190px;
+  color: #606160;
+  border-radius: 5px;
+  background-color: white;
+  transition: 0.2s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.BookBtn:hover {
+  border: none;
+  background-color: #606160;
+  color: white;
+  outline: none;
+}

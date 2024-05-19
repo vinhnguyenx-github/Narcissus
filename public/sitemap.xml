@@ -1,0 +1,50 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://narcissus.com.vn/</loc> <!-- Replace with your homepage URL -->
+      <lastmod>2024-05-05</lastmod> <!-- Replace with the last modification date of your homepage -->
+      <changefreq>daily</changefreq> <!-- Change frequency of updates (optional) -->
+      <priority>1.0</priority> <!-- Priority of this URL relative to other URLs on your site (optional) -->
+   </url>
+   <url>
+      <loc>https://www.narcissus.com.vn/33-tuc-mac</loc> <!-- Replace with the URL of another page -->
+      <lastmod>2024-05-05</lastmod> <!-- Replace with the last modification date of this page -->
+      <changefreq>monthly</changefreq> <!-- Change frequency of updates (optional) -->
+      <priority>0.8</priority> <!-- Priority of this URL relative to other URLs on your site (optional) -->
+   </url>
+   <url>
+      <loc>https://www.narcissus.com.vn/33-tuc-mac/rooms</loc> <!-- Replace with the URL of another page -->
+      <lastmod>2024-05-05</lastmod> <!-- Replace with the last modification date of this page -->
+      <changefreq>monthly</changefreq> <!-- Change frequency of updates (optional) -->
+      <priority>0.8</priority> <!-- Priority of this URL relative to other URLs on your site (optional) -->
+   </url>
+   <url>
+      <loc>https://www.narcissus.com.vn/33-tuc-mac/contact-us-directions</loc> <!-- Replace with the URL of another page -->
+      <lastmod>2024-05-05</lastmod> <!-- Replace with the last modification date of this page -->
+      <changefreq>monthly</changefreq> <!-- Change frequency of updates (optional) -->
+      <priority>0.8</priority> <!-- Priority of this URL relative to other URLs on your site (optional) -->
+   </url>
+   <url>
+      <loc>https://www.narcissus.com.vn/84-le-duan</loc> <!-- Replace with the URL of another page -->
+      <lastmod>2024-05-05</lastmod> <!-- Replace with the last modification date of this page -->
+      <changefreq>monthly</changefreq> <!-- Change frequency of updates (optional) -->
+      <priority>0.8</priority> <!-- Priority of this URL relative to other URLs on your site (optional) -->
+   </url>
+      <url>
+      <loc>https://www.narcissus.com.vn/84-le-duan/rooms</loc> <!-- Replace with the URL of another page -->
+      <lastmod>2024-05-05</lastmod> <!-- Replace with the last modification date of this page -->
+      <changefreq>monthly</changefreq> <!-- Change frequency of updates (optional) -->
+      <priority>0.8</priority> <!-- Priority of this URL relative to other URLs on your site (optional) -->
+   </url>
+   <url>
+      <loc>https://www.narcissus.com.vn/84-le-duan/contact-us-directions</loc> <!-- Replace with the URL of another page -->
+      <lastmod>2024-05-05</lastmod> <!-- Replace with the last modification date of this page -->
+      <changefreq>monthly</changefreq> <!-- Change frequency of updates (optional) -->
+      <priority>0.8</priority> <!-- Priority of this URL relative to other URLs on your site (optional) -->
+   </url>
+   <url>
+      <loc>https://www.narcissus.com.vn/84-le-duan/amenities</loc> <!-- Replace with the URL of another page -->
+      <lastmod>2024-07-05</lastmod> <!-- Replace with the last modification date of this page -->
+      <changefreq>monthly</changefreq> <!-- Change frequency of updates (optional) -->
+      <priority>0.8</priority> <!-- Priority of this URL relative to other URLs on your site (optional) -->
+   </url>
+</urlset>

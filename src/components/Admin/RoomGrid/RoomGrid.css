@@ -1,0 +1,26 @@
+.admin-room-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 30px;
+  position: relative;
+}
+
+.admin-item-button {
+  border: 1px solid white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #dcdcdc;
+  transition: 0.2s ease;
+}
+
+.admin-item-button:hover {
+  background-color: #ebebeb;
+}
+
+@media (max-width: 950px) {
+  .admin-room-grid {
+    grid-template-columns: 1fr;
+  }
+}

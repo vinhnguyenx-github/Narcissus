@@ -1,0 +1,149 @@
+.slider-container {
+  width: 100%;
+  margin: 50px auto;
+}
+
+.slick-slide > div {
+  margin: 0 20px;
+}
+.slick-list {
+  margin: 0 -20px;
+}
+
+.card {
+  border: 2px solid #cdcfd2;
+  background: white;
+  overflow: hidden;
+  height: 630px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-top h3 {
+  font-size: 1.5rem;
+  margin: 20px;
+  color: black;
+  text-align: center;
+  font-weight: 450;
+}
+
+.card-top p {
+  font-size: 0.7rem;
+  margin: 15px 20px;
+  color: black;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.card-top > img {
+  object-fit: cover;
+}
+
+.card-bottom {
+  display: flex;
+  margin: 10px 83px;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.card-bottom p {
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 0.7rem;
+}
+
+.room-preview-btn {
+  border: 1px solid #606160;
+  height: 45px;
+  width: 190px;
+  color: #606160;
+  border-radius: 5px;
+  background-color: white;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.disable-button {
+  border: 1px solid #606160;
+  height: 45px;
+  width: 190px;
+  color: #606160;
+  border-radius: 5px;
+  background-color: white;
+  transition: 0.2s ease;
+  cursor: not-allowed;
+  margin-top: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 20px;
+}
+
+.room-preview-btn:hover {
+  border: none;
+  background-color: #606160;
+  color: white;
+  outline: none;
+}
+
+.category {
+  position: relative;
+}
+.category::before {
+  content: "";
+  background: rgb(255, 61, 61);
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.card-readmore {
+  font-size: 0.81rem;
+  margin: 10px;
+  color: black;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.card-readmore:hover {
+  text-decoration: underline;
+  text-decoration-color: #606160;
+}
+
+.next-arrow {
+  margin-left: 0px;
+}
+
+.disable-room {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5qq);
+}
+
+@media (max-width: 1150px) {
+  .card-top > img {
+    height: 300px;
+  }
+
+  .card {
+    height: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-top > img {
+    height: 230px;
+  }
+
+  .card {
+    height: 550px;
+  }
+}

@@ -1,0 +1,51 @@
+.NavBtn {
+  color: white;
+  background-color: #606061;
+  width: 160px;
+  padding: 14px 25px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.NavBtn:hover {
+  background-color: #7f807f;
+}
+
+.switching__btn {
+  color: black;
+  background-color: white;
+  width: 160px;
+  padding: 14px 25px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid #606061;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-left: 30px;
+}
+
+.switching__btn:hover {
+  background-color: #606061;
+  color: white;
+}
+
+@media (max-width: 950px) {
+  .NavBtn {
+    display: block;
+    width: 80%;
+    margin: 30px 80px;
+    background-color: #2e2d2a;
+  }
+}
+
+@media (max-width: 650px) {
+  .NavBtn {
+    display: block;
+    width: 60%;
+    margin: 30px 80px;
+    background-color: #2e2d2a;
+  }
+}

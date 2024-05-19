@@ -1,0 +1,154 @@
+.booking-form {
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 30px;
+}
+
+.booking-form-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.booking-form-header h5 {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.booking-form-header p {
+  font-size: 0.9rem;
+  color: #606160;
+}
+
+.checkin-checkout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.checkin {
+  appearance: none; /* Removes default browser styling */
+  -webkit-appearance: none; /* For WebKit browsers */
+  -moz-appearance: none; /* For Firefox */
+  width: 50%;
+  padding: 15px;
+  border: 1px solid #b0b0b0;
+  border-right: 0;
+  outline: none;
+  border-top-left-radius: 10px;
+}
+
+.checkout {
+  appearance: none; /* Removes default browser styling */
+  -webkit-appearance: none; /* For WebKit browsers */
+  -moz-appearance: none; /* For Firefox */
+  width: 50%;
+  padding: 15px;
+  outline: none;
+  border: 1px solid #b0b0b0;
+  border-top-right-radius: 10px;
+}
+
+.checkin:focus,
+.checkout:focus,
+.select-people:focus,
+.user-input:focus {
+  border: 1px solid black;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button {
+  cursor: pointer;
+}
+
+.select-people {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #b0b0b0;
+  border-top: 0;
+  outline: none;
+  font-size: 0.9rem;
+  color: black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.reserve-button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 20px;
+  background-color: #606160;
+  border: none;
+  color: white;
+  transition: 0.3s ease;
+  cursor:pointer
+}
+
+.reserve-button:hover {
+  background-color: #7f807f;
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.total-price p {
+  font-size: 0.9rem;
+}
+
+.service-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+.service-price p {
+  font-size: 0.9rem;
+}
+
+.final-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.final-price h6 {
+  font-size: 0.9rem;
+}
+
+.booking-user-info {
+  width: 100%;
+}
+
+.user-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #b0b0b0;
+  outline: none;
+  border-top: 0;
+  color: black;
+}
+
+.user-input::placeholder {
+  color: black;
+}
+
+@media (max-width: 933px) {
+  .checkin,
+  .user-input,
+  .reserve-button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

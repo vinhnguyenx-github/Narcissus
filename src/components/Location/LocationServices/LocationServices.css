@@ -1,0 +1,40 @@
+.location-services {
+  margin: 50px auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 30px;
+  text-align: center;
+}
+
+.location-service {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.location-service p {
+  color: black;
+  font-size: 0.95rem;
+}
+
+.location-service-icon {
+  color: black;
+  width: 40px;
+  margin-right: 5px;
+}
+
+@media (max-width: 840px) {
+  .location-services {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-services {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+}

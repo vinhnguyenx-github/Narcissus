@@ -1,0 +1,21 @@
+.location-about {
+  margin: 50px 200px 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-about h1 {
+  color: #47463c;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.location-about p {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 840px) {
+  .location-about {
+    margin: 50px auto;
+  }
+}

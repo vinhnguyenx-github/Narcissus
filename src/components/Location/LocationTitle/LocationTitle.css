@@ -1,0 +1,28 @@
+.location-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-title h2 {
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.location-title-link {
+  color: #47463c;
+  font-size: 0.8rem;
+}
+
+.location-title-link:hover {
+  color: #606160;
+  text-decoration: underline;
+}
+
+@media (max-width: 840px) {
+  .location-title-link {
+    text-align: right;
+  }
+}

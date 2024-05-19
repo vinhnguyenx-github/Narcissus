@@ -1,0 +1,23 @@
+.home-title {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 70px 0 30px;
+}
+
+.home-title h2 {
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+.home-title p {
+  color: #47463c;
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+}

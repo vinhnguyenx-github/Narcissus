@@ -1,0 +1,127 @@
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.logo {
+  background-color: transparent;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  color: black;
+  margin: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  align-items: center;
+}
+
+nav ul li:hover {
+  padding-bottom: 12px;
+  border-bottom: 3px solid #606160;
+}
+
+.menu-icon {
+  display: none;
+}
+.toggle-btn {
+  color: white;
+  transition: 0.2s ease;
+}
+
+.toggle-logo {
+  width: 180px;
+  visibility: hidden;
+}
+
+.switching-language-button {
+  color: white;
+  background-color: #606061;
+  width: 160px;
+  padding: 14px 25px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-left: 30px;
+}
+
+.switching-language-button:hover {
+  background-color: #747474;
+}
+
+/* --- media --- */
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 950px) {
+  nav {
+    padding: 15px 0;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #606160;
+    z-index: -1;
+    width: 100%;
+    padding-top: 70px;
+    transition: 0.5s ease;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 30px 80px;
+    color: white;
+  }
+
+  .switching-language-button {
+    display: block;
+    margin: 30px 80px;
+    background-color: white;
+    color: black;
+    width: 60%;
+  }
+
+  .switching-language-button:hover {
+    background-color: rgb(124, 124, 124);
+  }
+
+  .menu-icon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .toggle-menu {
+    right: -100%;
+  }
+
+  nav ul li:hover {
+    padding-bottom: 12px;
+    border-bottom: 3px solid black;
+  }
+
+  .toggle-logo {
+    visibility: hidden;
+  }
+}

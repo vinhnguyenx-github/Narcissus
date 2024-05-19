@@ -1,0 +1,33 @@
+.gallery-grid {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.gallery-list ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  background-color: #d9d9d9;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.gallery-list ul li {
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.list-active {
+  font-weight: 600;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  width: 100%;
+}

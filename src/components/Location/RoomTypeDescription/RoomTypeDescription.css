@@ -1,0 +1,10 @@
+.room-type-description {
+  border-top: 1px solid #cbcbcb;
+  margin-top: 30px;
+  padding-top: 25px;
+  margin-bottom: 30px;
+}
+
+.room-type-description p {
+  font-size: 0.9rem;
+}
