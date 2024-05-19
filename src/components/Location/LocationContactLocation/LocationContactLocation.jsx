@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import GoogleMap from "../../GoogleMap/GoogleMap";
 import { Link, useLocation } from "react-router-dom";
 import icon1 from "../../../assets/Location/ContactLocationIcons/send.png";
@@ -7,13 +7,6 @@ import icon3 from "../../../assets/Location/ContactLocationIcons/envelope.png";
 import "./LocationContactLocation.css";
 
 const LocationContactLocation = () => {
-  const [language, setLanguage] = useState("Vietnamese");
-  const toggleLanguage = () => {
-    setLanguage((prevLanguage) =>
-      prevLanguage === "Vietnamese" ? "English" : "Vietnamese"
-    );
-  };
-
   const googleMapPaths = [
     {
       id: 1,
@@ -39,59 +32,37 @@ const LocationContactLocation = () => {
   const currentGoogleMapPath = googleMapPaths.find((loc) =>
     googleMapPath.pathname.startsWith(loc.path)
   );
-
   return (
     <div className="contact-location">
-      <h1>
-        {language === "Vietnamese"
-          ? "Liên hệ & Hướng dẫn đường đi"
-          : "Contact & Directions"}
-      </h1>
-      <button onClick={toggleLanguage} className="language-toggle-button">
-        {language === "Vietnamese" ? "English" : "Vietnamese"}
-      </button>
+      <h1>Liên hệ & Hướng dẫn đường đi</h1>
       <div className="contact-location-content">
         <div className="contact-location-content-col">
-          <h2>
-            {language === "Vietnamese"
-              ? "Cách đến khách sạn"
-              : "How to get to the hotel"}
-          </h2>
+          <h2>Cách đến khách sạn</h2>
           <p className="contact-location-description">
-            {language === "Vietnamese"
-              ? "Tìm đường đến Khách sạn & Căn hộ Narcissus hoặc nhấp vào Xem Hướng dẫn bên dưới."
-              : "Find your way to Narcissus Hotel & Apartment or click See Directions below."}
+            Tìm đường đến Khách sạn & Căn hộ Narcissus hoặc nhấp vào Xem Hướng
+            dẫn bên dưới.
           </p>
           <p style={{ marginBottom: "20px" }}>
-            {language === "Vietnamese"
-              ? "Chúng tôi rất mong được chào đón bạn."
-              : "We look forward to welcoming you."}
+            Chúng tôi rất mong được chào đón bạn.
           </p>
           <div className="contact-location-info">
             <img src={icon1} alt="" className="contact-location-icon" />
             <div className="contact-information">
-              <a href={currentGoogleMapPath.mapURL}>
-                {language === "Vietnamese" ? "Xem Hướng dẫn" : "See Directions"}
-              </a>
+              <a href={currentGoogleMapPath.mapURL}>Xem Hướng dẫn</a>
               <p>{currentGoogleMapPath.addressLine1}</p>
-              <p>
-                {language === "Vietnamese"
-                  ? "Quận Hoàn Kiếm, Hà Nội, Việt Nam"
-                  : "Hoan Kiem District, Hanoi, Vietnam"}
-              </p>
+              <p>Quận Hoàn Kiếm, Hà Nội, Việt Nam</p>
             </div>
           </div>
           <div className="contact-location-info">
             <img src={icon2} alt="" className="contact-location-icon" />
             <div className="contact-information">
               <p>
-                {language === "Vietnamese" ? "Điện thoại" : "Phone"}:{" "}
-                <a href="tel:0337248276">0337248276</a>
+                Điện thoại: <a href="tel:0337248276">0337248276</a>
               </p>
               <p>
-                {language === "Vietnamese"
-                  ? "Đại diện của chúng tôi sẵn lòng phục vụ mỗi ngày từ 3:00 sáng đến 11:00 tối giờ chuẩn Thái Bình Dương. Nếu bạn gọi vào ngoài thời gian đó, vui lòng gọi trực tiếp cho khách sạn."
-                  : "Our representatives are available every day from 3:00 AM to 11:00 PM Pacific Standard Time. If you call outside these hours, please contact the hotel directly."}
+                Đại diện của chúng tôi sẵn lòng phục vụ mỗi ngày từ 3:00 sáng
+                đến 11:00 tối giờ chuẩn Thái Bình Dương. Nếu bạn gọi vào ngoài
+                thời gian đó, vui lòng gọi trực tiếp cho khách sạn.
               </p>
             </div>
           </div>
