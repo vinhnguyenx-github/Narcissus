@@ -1,28 +1,31 @@
-import React, { Fragment, useState, useEffect, useRef } from "react";
+import React, { Fragment, useState, useEffect, useRef, useContext } from "react";
+import APIService from "../../../services/APIService";
+import { AuthDataContext } from "../../../provider/auth/AuthProvider";
 import "./ChangeInfoRoom.css";
 
-const ChangeInfoRoom = ({ room, isOpen, onClose, preview_image }) => {
+const ChangeInfoRoom = ({ room, isOpen, onClose, onUpdate, preview_image }) => {
   const [roomName, setRoomName] = useState(room.name);
   const [roomDescription, setRoomDescription] = useState(room.description);
   const [roomPrice, setRoomPrice] = useState(room.pricePerNight);
+  const [roomCapacity, setRoomCapacity] = useState(room.capacity);
   const imageRef = useRef(null);
   const [image, setImage] = useState("");
+  const { token } = useContext(AuthDataContext);
 
   const handleImageClick = () => {
     imageRef.current.click();
   };
 
-  const handleImagechange = (event) => {
-    event.target.files[0];
+  const handleImageChange = (event) => {
     setImage(event.target.files[0]);
   };
 
-  // Update state when room prop changes
   useEffect(() => {
     setRoomName(room.name);
     setRoomDescription(room.description);
     setRoomPrice(room.pricePerNight);
-  }, [room.name, room.description, room.pricePerNight]);
+    setRoomCapacity(room.capacity);
+  }, [room.name, room.description, room.pricePerNight, room.capacity]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -36,8 +39,39 @@ const ChangeInfoRoom = ({ room, isOpen, onClose, preview_image }) => {
       case "price":
         setRoomPrice(value);
         break;
+      case "capacity":
+        setRoomCapacity(value);
+        break;
       default:
         break;
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const updatedRoom = {
+      name: roomName,
+      description: roomDescription,
+      pricePerNight: roomPrice,
+      capacity: roomCapacity,
+    };
+
+    try {
+      await APIService.updateRoom(room.id, updatedRoom, token);
+      if (image) {
+        const formData = new FormData();
+        formData.append("image", image);
+
+        await APIService.updateRoomImages(room.id, formData, token);
+      }
+
+      alert("Room updated successfully!");
+      onUpdate();
+      onClose();
+    } catch (error) {
+      console.error("Failed to update room:", error);
+      alert("Failed to update room. Please try again.");
     }
   };
 
@@ -55,7 +89,7 @@ const ChangeInfoRoom = ({ room, isOpen, onClose, preview_image }) => {
               />
             </div>
             <h2>{room.name}</h2>
-            <form action="">
+            <form onSubmit={handleSubmit}>
               <div className="room-form-row">
                 <label>Tên Phòng: </label>
                 <input
@@ -83,20 +117,31 @@ const ChangeInfoRoom = ({ room, isOpen, onClose, preview_image }) => {
                   onChange={handleInputChange}
                 />
               </div>
+              <div className="room-form-row">
+                <label>Kích cỡ: </label>
+                <input
+                  type="number"
+                  name="capacity"
+                  value={roomCapacity}
+                  onChange={handleInputChange}
+                />
+              </div>
               <div className="room-form-image">
-                <label style={{ color: "black" }}>Chỉnh sửa ảnh preview</label>
+                <label style={{ color: "black" }}>Chỉnh sửa ảnh preview
+                <span></span>
+                </label>
                 <div className="image-area" onClick={handleImageClick}>
                   {image ? (
-                    <img src={URL.createObjectURL(image)} />
+                    <img src={URL.createObjectURL(image)} alt="Preview" />
                   ) : (
-                    <img src={preview_image[room.id]} />
+                    <img src={preview_image[room.id]} alt="Preview" />
                   )}
                   <input
                     type="file"
                     accept="image/*"
                     ref={imageRef}
                     style={{ display: "none" }}
-                    onChange={handleImagechange}
+                    onChange={handleImageChange}
                   />
                 </div>
               </div>

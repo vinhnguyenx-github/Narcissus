@@ -79,6 +79,7 @@
   border: 1px solid #606160;
   background-color: white;
   float: right;
+  color: black;
   transition: 0.3s ease;
 }
 
@@ -90,4 +91,11 @@
 
 .room-form-row input[type="file"] {
   height: 200px;
+}
+
+.room-form-image span {
+  display: block;
+  color: red;
+  font-size: 10px;
+  margin-top: 10px;
 }

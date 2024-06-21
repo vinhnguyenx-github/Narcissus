@@ -2,7 +2,44 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-  }
+}
+
+.admin-dashboard-add {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px; /* Khoảng cách dưới nếu cần */
+}
+
+.admin-dashboard-add button {
+    display: flex;
+    align-items: center;
+    background-color: #007BFF; /* Màu xanh dương */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+}
+
+.admin-dashboard-add button img {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+}
+
+.admin-dashboard-add button:hover {
+    background-color: #0056b3;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
 
 .gallery-item img {
     max-height: 300px;

@@ -6,7 +6,6 @@ import { addDays } from "date-fns";
 import APIService from "../../../services/APIService";
 
 const BookingForm = ({ roomId, price }) => {
-  // console.log(roomId + " " + typeof roomId);
   const initialBookingState = {
     room: "",
     checkInDate: "",
@@ -14,7 +13,6 @@ const BookingForm = ({ roomId, price }) => {
     fullName: "",
     phone: "",
     email: "",
-    address: "",
     totalPrice: "",
   };
   const [booking, setBooking] = useState(initialBookingState);
@@ -139,15 +137,6 @@ const BookingForm = ({ roomId, price }) => {
             placeholder="Email: "
             className="user-input"
             value={booking.email}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            name="address"
-            placeholder="Địa chỉ"
-            className="user-input"
-            value={booking.address}
             onChange={handleInputChange}
             required
           />

@@ -43,7 +43,7 @@ const AdminSidebar = ({ activeItem }) => {
           Quản Trị Nhân Viên
         </Link>
         <Link
-          to=""
+          to="/admin/guest"
           className={`admin-item ${
             activeItem === "customers" ? "admin-item-active" : ""
           }`}
@@ -70,11 +70,13 @@ const AdminSidebar = ({ activeItem }) => {
           Quản Trị Mục Hình Ảnh
         </Link>
         <h2>Tạo</h2>
-        <Link to="" className="admin-item">
+        <Link 
+          to="/admin/register" 
+          className="admin-item">
           <FaArrowRightToBracket />
           Tạo Tài Khoản
         </Link>
-        <Link to="" className="admin-item">
+        <Link to="/admin/addRoom" className="admin-item">
           <FaArrowRightToBracket />
           Tạo Phòng Mới
         </Link>

@@ -7,7 +7,9 @@ export const useRoomData = () => useContext(RoomDataContext);
 
 export const RoomDataProvider = ({ children }) => {
   const [rooms, setRooms] = useState([]);
+  const [hotel, setHotel] = useState([]);
   const [defaultImage, setDefaultImage] = useState({});
+  const [filteredRooms, setFilteredRooms] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,6 +28,26 @@ export const RoomDataProvider = ({ children }) => {
 
     fetchData();
   }, []);
+
+  const fetchFilteredRooms = async () => {
+    try {
+      const response = await APIService.getTypes();
+      const { data } = response;
+      if (Array.isArray(data)) {
+        const filteredData = data.map(room => ({
+          id: room.id,
+          name: room.name,
+          price: room.pricePerNight,
+          // Add other fields you need
+        }));
+        setFilteredRooms(filteredData);
+      } else {
+        console.error("Data received from API is not an array:", data);
+      }
+    } catch (error) {
+      console.error("Failed to fetch filtered room data:", error);
+    }
+  };
 
   useEffect(() => {
     const fetchImagesForRooms = async () => {
@@ -61,7 +83,7 @@ export const RoomDataProvider = ({ children }) => {
   }, [rooms]);
 
   return (
-    <RoomDataContext.Provider value={{ rooms, defaultImage }}>
+    <RoomDataContext.Provider value={{ rooms, defaultImage, fetchFilteredRooms, filteredRooms }}>
       {children}
     </RoomDataContext.Provider>
   );

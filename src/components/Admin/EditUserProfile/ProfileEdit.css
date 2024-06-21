@@ -1,0 +1,66 @@
+.profile-edit-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.profile-edit-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.profile-edit-form .form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-edit-form .form-row label {
+    width: 48%;
+}
+
+.profile-edit-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.profile-edit-form .checkbox-group {
+    margin-bottom: 20px;
+}
+
+.profile-edit-form .checkbox-label {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #555;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.profile-edit-form input,
+.profile-edit-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.profile-edit-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-edit-form button:hover {
+    background-color: #0056b3;
+}

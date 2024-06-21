@@ -7,11 +7,14 @@ import { RoomDataProvider } from "../../provider/roomtype/roomTypeProvider";
 import { StaffDataProvider } from "../../provider/staff/StaffDataProvider";
 import { AuthProvider } from "../../provider/auth/AuthProvider";
 import { GalleryDataProvider } from "../../provider/gallery/galleryProvider";
+import { BookingDataProvider } from "../../provider/guest/GuestDataProvider";
 import AdminStaff from "./pages/Staff";
 import AdminGallery from "./pages/Gallery";
+import AdminRegister from "./pages/Register";
+import AdminGuest from "./pages/Guest";
+import AdminCreateRoom from "./pages/CreateRoom";
 
 const PrivateRoute = ({ element: Element }) => {
-  console.log("Please login before you use the admin page")
   return localStorage.getItem('token') ? <Element /> : <Navigate to="/admin" />;
 };
 
@@ -21,13 +24,18 @@ const AppAdmin = () => {
       <StaffDataProvider>
         <AuthProvider>
           <GalleryDataProvider>
-            <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/dashboard" element={<PrivateRoute element={HomeAdmin} />} />
-              <Route path="/staff" element={<PrivateRoute element={AdminStaff} />} />
-              <Route path="/rooms" element={<PrivateRoute element={AdminRooms} />} />
-              <Route path="/gallery" element={<PrivateRoute element={AdminGallery} />} />
-            </Routes>
+            <BookingDataProvider>
+              <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/dashboard" element={<PrivateRoute element={HomeAdmin} />} />
+                <Route path="/staff" element={<PrivateRoute element={AdminStaff} />} />
+                <Route path="/rooms" element={<PrivateRoute element={AdminRooms} />} />
+                <Route path="/register" element={<PrivateRoute element={AdminRegister} />} />
+                <Route path="/addRoom" element={<PrivateRoute element={AdminCreateRoom} />} />
+                <Route path="/gallery" element={<PrivateRoute element={AdminGallery} />} />
+                <Route path="/guest" element={<PrivateRoute element={AdminGuest} />} />
+              </Routes>
+            </BookingDataProvider>
           </GalleryDataProvider>
         </AuthProvider>
       </StaffDataProvider>

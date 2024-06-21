@@ -11,48 +11,30 @@ export const GalleryDataProvider = ({ children }) => {
   const [imagesLinks, setImagesLinks] = useState([]);
   const [groupedImages, setGroupedImages] = useState({});
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await APIService.getAllImages();
-        const { data } = response;
-        if (Array.isArray(data)) {
-          setImagesLinks(data);
-        } else {
-          console.error("Data received from API is not an array:", data);
-        }
-      } catch (error) {
-        console.error("Failed to fetch data:", error);
+  const fetchData = async () => {
+    const imagesByType = {};
+    try {
+      const response = await APIService.getAllImages();
+      const { data } = response;
+      setImagesLinks(data);
+
+      for (const type of imageTypes) {
+        const response = await APIService.getImageByType(type);
+        const { data: typeData } = response;
+        imagesByType[type] = typeData;
       }
-    };
-
-    fetchData();
-  }, []);
+      setGroupedImages(imagesByType);
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      const imagesByType = {};
-      try {
-        for (const type of imageTypes) {
-          const response = await APIService.getImageByType(type);
-          const { data } = response;
-          if (Array.isArray(data)) {
-            imagesByType[type] = data;
-          } else {
-            console.error(`Data received from API for ${type} is not an array:`, data);
-          }
-        }
-        setGroupedImages(imagesByType);
-      } catch (error) {
-        console.error("Failed to fetch data:", error);
-      }
-    };
-
     fetchData();
   }, []);
 
   return (
-    <GalleryDataContext.Provider value={{ imagesLinks, groupedImages }}>
+    <GalleryDataContext.Provider value={{ imagesLinks, groupedImages, fetchData }}>
       {children}
     </GalleryDataContext.Provider>
   );

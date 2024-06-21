@@ -1,0 +1,67 @@
+.guest-table-container {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+.guest-table-container h2{
+    color: black;
+}
+
+.search-input {
+    width: 20%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.guest-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #c3c3c3;
+}
+
+.guest-table th, .guest-table td {
+    border-radius: 2px;
+    color: black;
+    padding: 8px;
+    text-align: left;
+}
+
+.guest-table th {
+    background-color: #f2f2f2;
+}
+
+.guest-picture {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.room-picture {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.icon-btn .fas {
+    color: #555;
+}
+
+.icon-btn.edit-btn .fas {
+    color: #28a745;
+}
+
+.icon-btn.delete-btn .fas {
+    color: #dc3545;
+}
