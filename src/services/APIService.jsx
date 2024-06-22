@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const BASE_URL = "https://narcissus-backend.de.r.appspot.com/api";
-const BASE_URL = "http://localhost:8080/api";
+const BASE_URL = "https://narcissus-backend.de.r.appspot.com/api";
+//const BASE_URL = "http://localhost:8080/api";
 
 function fixImagePath(imagePath) {
   return imagePath.replace(/\\/g, "/");
@@ -18,16 +18,16 @@ class APIService {
   deleteBooking(id, token) {
     return axios.delete(`${BASE_URL}/booking/delete/${id}`, {
       headers: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
   updateBooking(id, data, token) {
     return axios.patch(`${BASE_URL}/booking/update/${id}`, data, {
       headers: {
         Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
-      }
+        "Content-Type": "application/json",
+      },
     });
   }
   // Room
@@ -43,29 +43,29 @@ class APIService {
   updateRoom(id, data, token) {
     return axios.put(`${BASE_URL}/roomType/update/${id}`, data, {
       headers: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
   updateRoomImages(id, data, token) {
     return axios.patch(`${BASE_URL}/roomType/update/${id}`, data, {
       headers: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
   createRoom(data, token) {
     return axios.post(`${BASE_URL}/room/insert`, data, {
       headers: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
   createRoomType(data, token) {
     return axios.post(`${BASE_URL}/roomType/insert`, data, {
       headers: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
   // Gallery
@@ -81,22 +81,22 @@ class APIService {
   uploadImage(data, token) {
     return axios.post(`${BASE_URL}/upload`, data, {
       headers: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
   deleteImage(imageName, token) {
     return axios.delete(`${BASE_URL}/delete/${imageName}`, {
       headers: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
   //Authentication
   login(data) {
     return axios.post(`${BASE_URL}/auth/authenticate`, data);
   }
-  register(data){
+  register(data) {
     return axios.post(`${BASE_URL}/auth/register`, data);
   }
   userProfile(token) {
@@ -110,11 +110,11 @@ class APIService {
   getAllStaff() {
     return axios.get(`${BASE_URL}/staff/find`);
   }
-  updateStaff(id, data, token){
+  updateStaff(id, data, token) {
     return axios.put(`${BASE_URL}/staff/update/${id}`, data, {
       headers: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
 }
