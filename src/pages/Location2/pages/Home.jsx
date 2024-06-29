@@ -9,7 +9,7 @@ import Footer from "../../../components/Footer/Footer";
 import LocationServices from "../../../components/Location/LocationServices/LocationServices";
 import { Helmet } from "react-helmet-async";
 
-const Home2 = () => {
+const Home2 = ({ language, onLanguageChange }) => {
   return (
     <div>
       <Helmet>
@@ -20,25 +20,29 @@ const Home2 = () => {
         />
         <link rel="canonical" href="https://www.narcissus.com.vn/84-le-duan" />
       </Helmet>
-      <LocationNav />
+      <LocationNav language={language} onLanguageChange={onLanguageChange} />
       <LocationHero />
       <BubbleChat />
       <div className="container">
-        <LocationAbout />
+        <LocationAbout language={language} />
         <LocationTitle
-          left="Phòng"
-          right="Xem tất cả các phòng"
+          left={language === "English" ? "Rooms" : "Phòng"}
+          right={
+            language === "English" ? "See all rooms" : "Xem tất cả các phòng"
+          }
           rightURL="rooms"
         />
-        <RoomPreview location="84-le-duan" start={2} end={7} />
+        <RoomPreview location="84-le-duan" start={2} end={5} />
         <LocationTitle
-          left="Tiện ích"
-          right="Xem tất cả tiện ích"
+          left={language === "English" ? "Amenities" : "Tiện Ích"}
+          right={
+            language === "English" ? "See all amenities" : "Xem tất cả tiện ích"
+          }
           rightURL="/84-le-duan/amenities"
         />
-        <LocationServices />
+        <LocationServices language={language} />
       </div>
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 };
